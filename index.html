@@ -3,1391 +3,332 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#2A7C13">
-<meta name="description" content="SHUAA AL MADAR Electronics Trading LLC, Baniyas Complex, Deira, Dubai. Wholesale mobile devices, appliances, electronic spare parts, computers, and enterprise software.">
+<meta name="theme-color" content="#063B00">
+<meta name="description" content="SHUAA AL MADAR Electronics Trading LLC, Office B 805, Baniyas Complex, Deira, Dubai. Wholesale mobiles, appliances, spare parts, computers and software.">
 <title>SHUAA AL MADAR | Electronics Trading LLC - Dubai, UAE</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 <style>
-:root{
-  --top-bg: #2A7C13;
-  --top-text: #ffffff;
-  --g: #06D001;
-  --g-dark: #063B00;
-  --olive: #90B800;
-  --sage-bg: #C2D099;
-  --footer-bg: #0F3040;
-  --bg: #031204;
-  --card: rgba(6, 35, 11, 0.88);
-  --bd: rgba(144, 184, 0, 0.32);
-  --bdh: #06D001;
-  --mut: #d2e4d0;
-  --sub: #9bbd99;
-  --brand: linear-gradient(135deg, #06D001 0%, #2A7C13 100%);
-  --modal-bg: #F4F8EB;
-  --modal-text: #062b02;
-  --modal-mut: #314a2a;
-  --modal-bd: rgba(6, 59, 0, 0.18);
-  --t: .25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
+:root{--g:#06D001;--gd:#063B00;--mid:#2A7C13;--olive:#90B800;--sage:#C2D099;--navy:#0F3040;--mint:#AAFFC7;--bg:#031204;--mut:#d2e4d0;--bd:rgba(144,184,0,.32);--brand:linear-gradient(135deg,#06D001,#2A7C13);--t:.25s cubic-bezier(.16,1,.3,1)}
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{
-  font-family:'Plus Jakarta Sans',sans-serif;
-  background:var(--bg);
-  color:#fff;
-  line-height:1.5;
-  font-size:0.875rem;
-  overflow-x:hidden;
-  -webkit-tap-highlight-color:transparent
-}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:#fff;font-size:.9rem;line-height:1.55;overflow-x:hidden}
 body.lock{overflow:hidden}
-button{font:inherit;color:inherit;cursor:pointer}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--g);outline-offset:2px}
-h1,h2,h3,h4,.brand-t{font-family:'Space Grotesk',sans-serif}
+h1,h2,h3,h4,.ff{font-family:'Space Grotesk',sans-serif}
+img{max-width:100%}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 
-.bgfx{
-  position:fixed;inset:0;z-index:0;pointer-events:none;
-  background:
-    radial-gradient(650px 420px at 0 0, rgba(6, 208, 1, 0.10), transparent),
-    radial-gradient(750px 480px at 100% 100%, rgba(144, 184, 0, 0.12), transparent);
-}
-
-/* TOP BAR (#2A7C13) */
-.topbar{
-  position:relative;z-index:1001;
-  background:var(--top-bg);
-  border-bottom:1px solid rgba(255, 255, 255, 0.18);
-  padding:8px 5%;
-  display:flex;justify-content:space-between;align-items:center;
-  font-size:.78rem;color:var(--top-text);
-  font-weight:600;
-  box-shadow:0 2px 10px rgba(0,0,0,0.15);
-}
-.topbar-left{display:flex;align-items:center;gap:18px}
-.topbar i{color:#dcfce7}
-.admin-btn{
-  display:inline-flex;align-items:center;gap:7px;
-  background:rgba(0,0,0,0.25);
-  border:1px solid rgba(255,255,255,0.35);
-  color:#fff;
-  padding:5px 14px;border-radius:20px;
-  font-weight:700;font-size:.74rem;transition:var(--t)
-}
-.admin-btn:hover,.admin-btn.on{background:#fff;color:#2A7C13;border-color:#fff}
-.admin-btn.on{box-shadow:0 0 10px rgba(255,255,255,0.4)}
-
-/* HEADER */
-header{
-  position:sticky;top:0;z-index:1000;
-  background:rgba(3, 20, 6, 0.94);
-  backdrop-filter:blur(16px);
-  -webkit-backdrop-filter:blur(16px);
-  border-bottom:1px solid rgba(144, 184, 0, 0.25);
-  padding:12px 5%;
-  display:flex;justify-content:space-between;align-items:center;gap:14px
-}
+.topbar{background:linear-gradient(90deg,#1f5e0e,var(--mid) 50%,#1f5e0e);padding:8px 5%;display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:.78rem;font-weight:600;padding-top:calc(8px + env(safe-area-inset-top,0px))}
+.topbar-l{display:flex;gap:18px;flex-wrap:wrap}
+.admin-btn{display:inline-flex;align-items:center;gap:7px;background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.35);padding:5px 14px;border-radius:20px;font-weight:700;font-size:.74rem;transition:var(--t)}
+.admin-btn:hover,.admin-btn.on{background:#fff;color:var(--mid)}
+header{position:sticky;top:0;z-index:1000;background:rgba(3,20,6,.93);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--bd);padding:11px 5%;display:flex;justify-content:space-between;align-items:center;gap:14px}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand-logo-img{
-  width:44px;height:44px;
-  object-fit:contain;
-  border-radius:10px;
-  background:rgba(6, 59, 0, 0.85);
-  padding:3px;
-  border:1.5px solid var(--bd);
-}
-.brand-t{font-weight:800;font-size:1.08rem;letter-spacing:1px;line-height:1.1;color:#fff}
-.brand-s{font-size:.60rem;font-weight:700;color:var(--g);letter-spacing:2px;text-transform:uppercase}
-
+.logo img{width:44px;height:44px;border-radius:10px;background:var(--gd);padding:3px;border:1.5px solid var(--bd);object-fit:contain}
+.brand-t{font-weight:700;font-size:1.08rem;letter-spacing:1px;line-height:1.1}
+.brand-s{font-size:.6rem;font-weight:700;color:var(--g);letter-spacing:2px;text-transform:uppercase}
 nav ul{display:flex;list-style:none;gap:24px}
 nav a{color:var(--mut);text-decoration:none;font-weight:600;font-size:.84rem;padding:4px 0;border-bottom:2px solid transparent;transition:var(--t)}
 nav a:hover,nav a.act{color:var(--g);border-color:var(--g)}
-
-.cta{
-  background:var(--brand);
-  padding:8px 20px;border-radius:40px;
-  text-decoration:none;font-weight:800;font-size:.82rem;
-  display:inline-flex;align-items:center;gap:8px;
-  color:#031204;
-  border:1px solid rgba(255,255,255,.35);
-  box-shadow:0 4px 15px rgba(6, 208, 1, .3);
-  transition:var(--t)
-}
-.cta:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(6, 208, 1, .55)}
-.burger{display:none;width:40px;height:40px;border-radius:10px;background:rgba(6, 59, 0, 0.8);border:1px solid var(--bd);font-size:1.1rem;color:var(--g)}
-
-/* HERO */
-.hero{position:relative;z-index:2;height:76vh;min-height:520px;overflow:hidden}
-.sl{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .7s,visibility .7s;background:#031204 center/cover}
-.sl.act{opacity:1;visibility:visible}
-.sl::before{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(90deg, rgba(3, 18, 4, 0.96) 0%, rgba(6, 59, 0, 0.85) 55%, rgba(3, 18, 4, 0.5) 100%)
-}
-.hc{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 7%;max-width:860px}
-.tag{
-  display:inline-flex;align-items:center;gap:8px;
-  background:rgba(6, 59, 0, 0.85);
-  border:1px solid var(--olive);
-  padding:5px 14px;border-radius:24px;
-  color:var(--g);font-size:.74rem;font-weight:700;width:fit-content;margin-bottom:14px;
-  letter-spacing:.5px;
-}
-.hero h1{font-size:clamp(1.75rem, 3.6vw, 2.75rem);line-height:1.18;margin-bottom:14px;font-weight:800}
-.hero h1 em{font-style:normal;color:var(--g)}
-.hero p{font-size:clamp(.88rem, 1.3vw, 1.02rem);color:var(--mut);margin-bottom:26px;max-width:600px;line-height:1.6}
-.btns{display:flex;gap:12px;flex-wrap:wrap}
-.b1,.b2{
-  padding:11px 24px;border-radius:30px;font-weight:700;text-decoration:none;
-  display:inline-flex;align-items:center;gap:8px;font-size:.84rem;transition:var(--t)
-}
-.b1{background:var(--g);color:#031204;border:1px solid #06D001}
-.b2{background:rgba(6, 59, 0, 0.7);border:1px solid var(--olive);color:#fff}
-.b1:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(6, 208, 1, .45)}
-.b2:hover{border-color:var(--g);color:var(--g)}
-.harr{position:absolute;bottom:28px;right:6%;z-index:5;display:flex;gap:10px}
-.ab{width:42px;height:42px;border-radius:50%;background:rgba(6, 59, 0, 0.85);border:1px solid var(--olive);color:#fff;transition:var(--t);display:grid;place-items:center}
-.ab:hover{background:var(--g);color:#031204;border-color:var(--g)}
-.dots{position:absolute;bottom:36px;left:7%;z-index:5;display:flex;gap:6px}
-.dot{width:22px;height:5px;border-radius:8px;background:rgba(255,255,255,.3);border:0;padding:0;transition:var(--t)}
-.dot.act{width:42px;background:var(--g)}
-
-/* STATS */
-.stats{
-  position:relative;z-index:2;background:rgba(4, 25, 7, 0.98);
-  border-block:1px solid var(--bd);padding:22px 7%;
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px
-}
-.st{display:flex;align-items:center;gap:14px}
-.st i{
-  width:44px;height:44px;flex:none;border-radius:12px;
-  background:rgba(6, 208, 1, 0.12);border:1px solid var(--bd);
-  display:grid;place-items:center;font-size:1.2rem;color:var(--g)
-}
-.st b{display:block;font-size:1.2rem;font-family:'Space Grotesk',sans-serif;line-height:1.15}
-.st span{font-size:.78rem;color:var(--mut)}
-
-/* SECTIONS */
-section{position:relative;z-index:2;padding:70px 7%}
-.sh{text-align:center;max-width:720px;margin:0 auto 40px}
-.sh small{
-  font-weight:800;font-size:.74rem;text-transform:uppercase;letter-spacing:1.8px;
-  padding:4px 14px;border-radius:20px;
-  display:inline-block;margin-bottom:10px;
-}
-.sh h2{font-size:clamp(1.45rem, 2.6vw, 2.1rem);line-height:1.22;margin:4px 0 10px;font-weight:800}
-.sh p{font-size:.88rem;line-height:1.6}
-
-/* LICENSED TRADE ACTIVITIES (#C2D099) */
-#activities{
-  background: var(--sage-bg) !important;
-  color: #063B00;
-  border-block: 1px solid rgba(6, 59, 0, 0.22);
-}
-#activities .sh small{
-  background: #063B00;
-  color: #06D001;
-  border: 1px solid #2A7C13;
-}
-#activities .sh h2{
-  color: #062b02;
-}
-#activities .sh p{
-  color: #1a3814;
-  font-weight: 500;
-}
-
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:24px}
-
-.card{
-  background: rgba(255, 255, 255, 0.94);
-  border: 1.5px solid rgba(6, 59, 0, 0.18);
-  border-radius: 20px;
-  padding: 24px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  transition: transform var(--t), border-color var(--t), box-shadow var(--t), background var(--t);
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  isolation: isolate;
-  cursor: pointer;
-  box-shadow: 0 10px 30px rgba(6, 59, 0, 0.09);
-  backdrop-filter: blur(8px);
-}
-.card-bg{
-  position: absolute; inset: 0; z-index: -2;
-  background-size: cover; background-position: center;
-  transition: transform .6s ease, opacity .35s ease;
-  opacity: .07;
-  filter: grayscale(30%);
-}
-.card-glass{
-  position: absolute; inset: 0; z-index: -1;
-  background: linear-gradient(180deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.98) 90%);
-  pointer-events: none;
-}
-.card:hover{
-  transform: translateY(-6px);
-  border-color: #2A7C13;
-  box-shadow: 0 18px 40px rgba(6, 59, 0, 0.2);
-  background: #ffffff;
-}
-.card:hover .card-bg{
-  transform: scale(1.08);
-  opacity: .14;
-}
-.ct{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
-.ci-wrap{display:flex;align-items:center;gap:12px}
-.ci{
-  width:46px;height:46px;border-radius:14px;
-  background: #063B00;
-  border: 1.5px solid #90B800;
-  display:grid;place-items:center;font-size:1.2rem;color:var(--g);
-  box-shadow:0 4px 12px rgba(6,59,0,0.2)
-}
-.card-code{
-  font-family:'Space Grotesk',sans-serif;font-size:.70rem;letter-spacing:1px;
-  color: #063B00; background: #eaf1da;
-  padding:3px 9px;border-radius:6px;border:1px solid #90B800;font-weight:800
-}
-.card-badges{display:flex;align-items:center;gap:6px}
-.badge{
-  display:inline-flex;align-items:center;gap:5px;
-  background: rgba(6, 59, 0, 0.08);
-  border: 1px solid rgba(6, 59, 0, 0.22);
-  color: #063B00; font-size:.70rem;font-weight:800;
-  padding:4px 9px;border-radius:18px;
-}
-.badge-dot{width:6px;height:6px;border-radius:50%;background:#06D001;box-shadow:0 0 6px #06D001}
-.stock-pill{
-  background: #f3f7e8; border: 1px solid #c7d8a6;
-  color: #063B00; font-size:.70rem;font-weight:800;padding:4px 9px;border-radius:18px;
-  display:inline-flex;align-items:center;gap:5px;
-}
-.stock-pill i{color:#063B00;font-size:.7rem}
-
-.card-body{display:flex;flex-direction:column;gap:10px;flex:1}
-.card h3{font-size:1.12rem;line-height:1.3;color:#062b02;font-weight:800}
-.card p{color:#2a4421;font-size:.84rem;line-height:1.55}
-
-.card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
-.c-tag{
-  font-size:.68rem;font-weight:700;color:#063B00;
-  background: #edf5dc;
-  border: 1px solid #c0d497;
-  padding:3px 8px;border-radius:6px;display:inline-flex;align-items:center;gap:5px;
-}
-.c-tag i{font-size:.62rem;color:#2A7C13}
-
-.card-meta{
-  display:flex;flex-wrap:wrap;gap:8px 16px;padding-top:12px;
-  border-top: 1px solid #e1ebcc;margin-top:4px
-}
-.meta-item{display:flex;align-items:center;gap:6px;font-size:.74rem;color:#27431e;font-weight:700}
-.meta-item i{color:#2A7C13;font-size:.78rem}
-
-.card-foot{
-  display:flex;justify-content:space-between;align-items:center;
-  padding-top:12px;border-top: 1px solid #e7efd3;margin-top:auto
-}
-.more{color:#063B00;font-weight:800;font-size:.82rem;display:flex;align-items:center;gap:6px;transition:var(--t)}
-.card:hover .more{gap:10px;color:#06D001}
-.rfq-hint{font-size:.76rem;font-weight:800;color:#063B00;display:inline-flex;align-items:center;gap:5px}
-
-/* ========================================================
-   ENHANCED GRADIENT & ELEGANT STYLING: RFQ SECTION
-   ======================================================== */
-#rfqSection{
-  position: relative;
-  background: linear-gradient(145deg, #021a07 0%, #063812 35%, #084819 68%, #031c0a 100%) !important;
-  color: #fff;
-  border-top: 1px solid rgba(6, 208, 1, 0.28);
-  border-bottom: 1px solid rgba(6, 208, 1, 0.28);
-  overflow: hidden;
-  box-shadow: inset 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 -20px 40px rgba(0, 0, 0, 0.4);
-}
-
-/* Ambient Radial Glow Overlays */
-#rfqSection::before{
-  content: '';
-  position: absolute;
-  top: -120px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 900px;
-  height: 480px;
-  background: radial-gradient(circle, rgba(6, 208, 1, 0.18) 0%, rgba(144, 184, 0, 0.10) 45%, transparent 70%);
-  pointer-events: none;
-  z-index: 0;
-}
-#rfqSection::after{
-  content: '';
-  position: absolute;
-  bottom: -150px;
-  right: 5%;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(42, 124, 19, 0.22) 0%, transparent 65%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-#rfqSection .sh{
-  position: relative;
-  z-index: 1;
-}
-#rfqSection .sh small{
-  background: linear-gradient(135deg, rgba(6, 59, 0, 0.9) 0%, rgba(15, 48, 64, 0.85) 100%);
-  color: #9effa2;
-  border: 1px solid rgba(6, 208, 1, 0.5);
-  box-shadow: 0 4px 16px rgba(6, 208, 1, 0.18);
-  letter-spacing: 2px;
-}
-#rfqSection .sh h2{
-  background: linear-gradient(135deg, #ffffff 20%, #ddfed8 60%, #90b800 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  filter: drop-shadow(0 2px 14px rgba(0, 0, 0, 0.4));
-}
-#rfqSection .sh p{
-  color: #c9e4c5;
-  font-weight: 500;
-  max-width: 640px;
-  margin: 0 auto;
-}
-
-.rfq-container{
-  max-width: 1040px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-/* Luxurious Gradient Frame */
-.rfq-card-frame{
-  background: linear-gradient(145deg, rgba(6, 208, 1, 0.45) 0%, rgba(144, 184, 0, 0.25) 45%, rgba(6, 59, 0, 0.6) 100%);
-  padding: 1.5px;
-  border-radius: 26px;
-  box-shadow: 
-    0 25px 60px rgba(0, 0, 0, 0.65), 
-    0 0 40px rgba(6, 208, 1, 0.12),
-    inset 0 1px 2px rgba(255, 255, 255, 0.35);
-  overflow: hidden;
-}
-
-/* Elegant Header Ribbon */
-.rfq-header-strip{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(90deg, #052a0a 0%, #083c14 50%, #0a4d1b 100%);
-  color: #fff;
-  padding: 18px 30px;
-  border-bottom: 1px solid rgba(144, 184, 0, 0.35);
-  flex-wrap: wrap;
-  gap: 12px;
-  position: relative;
-}
-.rfq-header-strip::after{
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #06D001, #90B800, transparent);
-}
-.rfq-header-strip span{
-  font-size: .88rem;
-  font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  letter-spacing: .3px;
-}
-.rfq-header-strip span i{
-  color: #06D001;
-  filter: drop-shadow(0 0 6px rgba(6, 208, 1, 0.6));
-}
-.rfq-badge-fast{
-  background: linear-gradient(135deg, #06D001 0%, #90B800 100%);
-  color: #031505 !important;
-  font-size: .70rem !important;
-  font-weight: 800 !important;
-  padding: 5px 14px;
-  border-radius: 20px;
-  text-transform: uppercase;
-  letter-spacing: .8px;
-  box-shadow: 0 4px 14px rgba(6, 208, 1, 0.35);
-}
-
-/* RFQ Form Body */
-.rfq-card{
-  background: linear-gradient(165deg, #ffffff 0%, #f6faf6 40%, #eef6ee 100%);
-  border-radius: 0 0 24px 24px;
-  padding: 36px 36px 32px;
-  color: #063B00;
-  position: relative;
-}
-.rfq-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px 22px;
-}
-.rfq-grid .full{grid-column: 1 / -1}
-
-/* Form Fields */
-.f-group{
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-.f-group label{
-  font-size: .75rem;
-  font-weight: 800;
-  color: #083c14;
-  text-transform: uppercase;
-  letter-spacing: .6px;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
-.f-group label i{
-  color: #2A7C13;
-  font-size: .82rem;
-}
-
-.rfq-card .in{
-  background: linear-gradient(180deg, #ffffff 0%, #fbfdfb 100%);
-  border: 1.5px solid #c9dec8;
-  border-radius: 12px;
-  padding: 12px 16px;
-  color: #062b02;
-  font-size: .88rem;
-  font-weight: 600;
-  width: 100%;
-  outline: none;
-  transition: all var(--t);
-  font-family: inherit;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.03);
-}
-.rfq-card .in:hover{
-  border-color: #8bbd89;
-  background: #ffffff;
-}
-.rfq-card .in:focus{
-  border-color: #059212;
-  background: #ffffff;
-  box-shadow: 0 0 0 3.5px rgba(5, 146, 18, 0.16), 0 2px 8px rgba(5, 146, 18, 0.08);
-}
-.rfq-card .in::placeholder{
-  color: #879f84;
-  font-weight: 500;
-}
-.rfq-card select.in{
-  cursor: pointer;
-}
-.rfq-card select.in option{
-  background: #ffffff;
-  color: #063B00;
-  font-weight: 600;
-}
-.rfq-card textarea.in{
-  resize: vertical;
-  min-height: 90px;
-  line-height: 1.5;
-}
-
-/* Trust Badges Strip */
-.rfq-trust-strip{
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  padding: 20px 0 8px;
-  margin-top: 14px;
-  border-top: 1px dashed rgba(6, 59, 0, 0.18);
-  font-size: .76rem;
-  color: #174218;
-  font-weight: 700;
-}
-.rfq-trust-strip span{
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: linear-gradient(135deg, #e9f5e8 0%, #e0efe0 100%);
-  border: 1px solid #c0dcbe;
-  padding: 6px 14px;
-  border-radius: 20px;
-  box-shadow: 0 2px 6px rgba(6, 59, 0, 0.04);
-}
-.rfq-trust-strip span i{
-  color: #059212;
-  font-size: .84rem;
-}
-
-/* Actions Row */
-.rfq-actions{
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-  padding-top: 8px;
-}
-.btn-wa{
-  background: linear-gradient(135deg, #28e06c 0%, #20ba59 50%, #159544 100%);
-  color: #021a07;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  padding: 13px 28px;
-  border-radius: 35px;
-  font-weight: 800;
-  font-size: .86rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  transition: all var(--t);
-  cursor: pointer;
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
-}
-.btn-wa:hover{
-  background: linear-gradient(135deg, #34eb79 0%, #25d366 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 26px rgba(37, 211, 102, 0.5);
-  color: #000;
-}
-.btn-wa i{
-  font-size: 1.1rem;
-}
-
-.btn-mail{
-  background: linear-gradient(135deg, #053b11 0%, #0a4f1a 50%, #05260c 100%);
-  color: #ffffff;
-  border: 1.5px solid #06D001;
-  padding: 13px 30px;
-  border-radius: 35px;
-  font-weight: 800;
-  font-size: .86rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  transition: all var(--t);
-  cursor: pointer;
-  box-shadow: 0 6px 20px rgba(6, 59, 0, 0.35);
-  position: relative;
-  overflow: hidden;
-}
-.btn-mail::after{
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
-  transform: translateX(-100%);
-  transition: transform 0.6s ease;
-}
-.btn-mail:hover::after{
-  transform: translateX(100%);
-}
-.btn-mail:hover{
-  background: linear-gradient(135deg, #06D001 0%, #2A7C13 100%);
-  color: #031505;
-  border-color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(6, 208, 1, 0.45);
-}
-
-/* OFFICE AND LOCATION (#AAFFC7 GRADIENT WITH GLASSMORPHISM UI) */
-.cs{
-  background: linear-gradient(135deg, #AAFFC7 0%, #B9FFD2 45%, #CEFFE0 100%) !important;
-  color: #0A261D;
-  position: relative;
-  overflow: hidden;
-  border-block: 1px solid rgba(15, 48, 64, 0.15);
-}
-.cs::before{
-  content:'';
-  position: absolute; inset:0; pointer-events: none;
-  background:
-    radial-gradient(550px 350px at 15% 20%, rgba(255, 255, 255, 0.75), transparent),
-    radial-gradient(650px 400px at 85% 80%, rgba(42, 124, 19, 0.15), transparent);
-}
-.cs .sh small{
-  background: #0F3040;
-  color: #AAFFC7;
-  border: 1px solid #2A7C13;
-}
-.cs .sh h2{
-  color: #092219;
-  font-weight: 800;
-}
-.cs .sh p{
-  color: #174233;
-  font-weight: 600;
-}
-
-.cg{
-  display:grid;
-  grid-template-columns:1.05fr 1.25fr;
-  gap:28px;
-  position: relative;
-  z-index: 2;
-}
-
-.ci-box{
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1.5px solid rgba(255, 255, 255, 0.85);
-  border-radius: 24px;
-  padding: 30px 26px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  box-shadow: 0 20px 45px rgba(10, 40, 25, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.9);
-}
-.cr{display:flex;gap:16px;align-items:flex-start}
-.cr i{
-  width:46px;height:46px;flex:none;border-radius:14px;
-  background: #0F3040;
-  border: 1.5px solid #2A7C13;
-  display:grid;place-items:center;color:#AAFFC7;font-size:1.2rem;
-  box-shadow: 0 4px 12px rgba(15, 48, 64, 0.2);
-}
-.cr h5{
-  font-size:.76rem;color:#1e4d3d;font-weight:800;text-transform:uppercase;letter-spacing:.6px;margin-bottom:2px
-}
-.cr p,.cr a{font-weight:700;font-size:.88rem;color:#072118;text-decoration:none;line-height:1.45}
-.cr a:hover{color:#2A7C13}
-
-.open{
-  display:inline-block;margin-top:6px;font-size:.72rem;
-  font-weight:800;padding:3px 12px;border-radius:20px;
-}
-.open.y{background:#dcfce7;color:#15803d;border:1.5px solid #86efac}
-.open.n{background:#fee2e2;color:#b91c1c;border:1.5px solid #fca5a5}
-
-.address-actions{
-  display:flex;gap:8px;margin-top:6px;flex-wrap:wrap;
-}
-.mini-btn{
-  background: rgba(15, 48, 64, 0.08);
-  border: 1px solid rgba(15, 48, 64, 0.2);
-  color: #0F3040;
-  font-size: .72rem;
-  font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 14px;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  transition: var(--t);
-  cursor: pointer;
-}
-.mini-btn:hover{background:#0F3040;color:#fff}
-
-.gps-card{
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(15, 48, 64, 0.16);
-  border-radius: 16px;
-  padding: 14px 16px;
-  display:flex;flex-direction:column;gap:10px;margin-top:4px;
-}
-.gps-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-.gps-header b{font-size:.80rem;color:#0F3040;display:flex;align-items:center;gap:7px}
-.gps-btn{
-  background:#0F3040;color:#AAFFC7;border:1px solid #2A7C13;
-  padding:7px 15px;border-radius:20px;font-size:.76rem;font-weight:800;
-  display:inline-flex;align-items:center;gap:6px;transition:var(--t)
-}
-.gps-btn:hover{background:#2A7C13;color:#fff;transform:translateY(-1px)}
-.gps-info{font-size:.76rem;color:#1c4b3a;font-weight:600;line-height:1.4}
-
-.mapw{
-  border: 2px solid rgba(255, 255, 255, 0.9);
-  border-radius: 24px;
-  overflow: hidden;
-  height: 520px;
-  display: flex;
-  flex-direction: column;
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 20px 45px rgba(10, 40, 25, 0.15);
-  position: relative;
-}
-.map-top-bar{
-  padding:14px 20px;background:#0F3040;
-  font-size:.80rem;color:#fff;font-weight:700;
-  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
-  border-bottom:2px solid #2A7C13;z-index:2;
-}
-.map-top-bar span{display:inline-flex;align-items:center;gap:8px}
-.map-top-bar span i{color:#AAFFC7}
-.map-top-bar a{
-  background: rgba(170, 255, 199, 0.18);
-  border: 1px solid #AAFFC7;
-  color:#fff;text-decoration:none;
-  display:inline-flex;align-items:center;gap:7px;
-  font-size:.75rem;padding:5px 13px;border-radius:20px;
-  transition: var(--t);
-  font-weight:700;
-}
-.map-top-bar a:hover{background:#AAFFC7;color:#0F3040}
-.gmap-frame{
-  width:100%;
-  flex:1;
-  border:0;
-  min-height:400px;
-  background:#dbece1;
-}
-
-/* WIDER RESPONSIVE MODAL */
-.ov{
-  position:fixed;inset:0;z-index:2200;
-  background:rgba(3, 18, 4, 0.88);
-  backdrop-filter:blur(14px);
-  display:flex;align-items:center;justify-content:center;
-  padding:20px;opacity:0;visibility:hidden;transition:.3s
-}
-.ov.on{opacity:1;visibility:visible}
-.md{
-  background:var(--modal-bg);
-  color:var(--modal-text);
-  border:2px solid #90B800;
-  border-radius:24px;
-  width:94vw;
-  max-width:1320px;
-  height:88vh;
-  max-height:860px;
-  display:flex;flex-direction:column;overflow:hidden;
-  transform:translateY(24px) scale(.98);transition:.35s;
-  box-shadow:0 30px 80px rgba(0,0,0,0.65);
-}
-.ov.on .md{transform:none}
-
-.mh{
-  padding:14px 24px;
-  background:#063B00;
-  color:#fff;
-  border-bottom:2px solid #90B800;
-  display:flex;justify-content:space-between;align-items:center;gap:14px
-}
-.mh h3{font-size:1.15rem;line-height:1.2;color:#fff;font-weight:800}
-.mh small{color:var(--g);font-size:.76rem;font-weight:700}
-.mh .ci{
-  width:42px;height:42px;font-size:1.15rem;
-  background:#90B800;color:#063B00;border:1.5px solid #fff
-}
-.x{
-  width:36px;height:36px;flex:none;border-radius:50%;
-  background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);
-  font-size:1.3rem;color:#fff;transition:var(--t);
-  display:grid;place-items:center;
-}
-.x:hover{background:#ef4444;border-color:#ef4444;color:#fff}
-
-.mb{flex:1;display:grid;grid-template-columns:260px 1fr;min-height:0}
-.side{
-  background:rgba(215, 227, 180, 0.75);
-  border-right:1px solid var(--modal-bd);
-  padding:16px 12px;overflow-y:auto;display:flex;flex-direction:column;gap:8px
-}
-.si{
-  display:flex;align-items:center;gap:10px;
-  padding:10px 12px;border-radius:12px;
-  background:rgba(255,255,255,0.75);
-  border:1px solid rgba(6, 59, 0, 0.15);
-  color:#063B00;font-size:.82rem;font-weight:700;
-  text-align:left;width:100%;transition:var(--t);
-}
-.si i{width:20px;text-align:center;color:#063B00}
-.si:hover{background:#fff;border-color:#90B800;color:#000}
-.si.act{background:#063B00;color:#fff;border-color:#063B00}
-.si.act i{color:var(--g)}
-.si b{margin-left:auto;background:rgba(6, 59, 0, 0.12);font-size:.70rem;padding:2px 7px;border-radius:10px;color:inherit}
-.si.act b{background:rgba(255,255,255,0.25);color:#fff}
-
-.main{display:flex;flex-direction:column;min-height:0;min-width:0;background:var(--modal-bg)}
-.pv{
-  flex:1;overflow-y:auto;padding:26px 32px;
-  display:grid;grid-template-columns:360px 1fr;gap:32px;
-  align-content:start;color:var(--modal-text);
-}
-.pimg{position:sticky;top:0;align-self:start}
-.pimg img{
-  width:100%;height:320px;object-fit:cover;
-  border-radius:18px;border:2px solid #90B800;background:#d8e4b8;
-  box-shadow:0 12px 28px rgba(0,0,0,0.12);
-}
-.pb{
-  position:absolute;top:12px;left:12px;
-  background:#063B00;border:1px solid var(--g);
-  color:#fff;font-size:.70rem;font-weight:800;padding:4px 12px;border-radius:18px
-}
-.sku{color:#063B00;font-size:.78rem;font-weight:800;letter-spacing:1px;text-transform:uppercase}
-.pn{font-size:1.45rem;line-height:1.25;margin:4px 0 8px;color:#062b02;font-weight:800}
-.pi{color:var(--modal-mut);font-size:.86rem;margin-bottom:18px;line-height:1.55}
-
-.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-bottom:20px}
-.sp{
-  background:rgba(255,255,255,0.85);
-  border:1px solid rgba(6, 59, 0, 0.16);
-  border-radius:12px;padding:10px 12px;display:flex;gap:10px;align-items:center;
-}
-.sp i{
-  width:32px;height:32px;flex:none;border-radius:10px;
-  background:rgba(6, 59, 0, 0.1);display:grid;place-items:center;
-  color:#063B00;font-size:.9rem
-}
-.sp small{display:block;font-size:.68rem;color:var(--modal-mut);font-weight:800;text-transform:uppercase}
-.sp span{font-size:.82rem;font-weight:700;line-height:1.3;color:#062b02;display:block}
-
-.act-bar{
-  display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
-  background:rgba(255,255,255,0.92);
-  border:1.5px solid #90B800;border-radius:14px;padding:12px 18px;
-}
-.act-bar small{color:var(--modal-mut);display:block;font-size:.76rem;font-weight:700}
-.act-bar b{color:#063B00;font-size:1.05rem;font-family:'Space Grotesk',sans-serif}
-.modal-actions{display:flex;gap:10px;align-items:center}
-.wa{
-  background:#063B00;color:#fff;text-decoration:none;
-  padding:9px 18px;border-radius:30px;font-weight:800;font-size:.82rem;
-  display:inline-flex;align-items:center;gap:7px;transition:var(--t);
-  border:1px solid #06D001
-}
-.wa:hover{background:#06D001;color:#031204;transform:translateY(-1px)}
-.btn-rfq-fill{
-  background:#90B800;color:#031204;border:1px solid #063B00;
-  padding:9px 16px;border-radius:30px;font-weight:800;font-size:.82rem;
-  display:inline-flex;align-items:center;gap:7px;transition:var(--t)
-}
-.btn-rfq-fill:hover{background:#063B00;color:#fff}
-
-.del{
-  background:none;border:1px solid #dc2626;color:#dc2626;
-  border-radius:20px;padding:6px 14px;font-size:.74rem;margin-top:12px;font-weight:800
-}
-.mf{
-  padding:12px 24px;
-  background:#063B00;
-  color:#fff;
-  border-top:1px solid var(--olive);
-  display:flex;justify-content:space-between;align-items:center;gap:10px
-}
-.nb{
-  width:36px;height:36px;border-radius:50%;
-  background:rgba(255,255,255,.15);border:1px solid var(--olive);
-  color:#fff;transition:var(--t);display:grid;place-items:center;font-size:.88rem;
-}
-.nb:hover{background:var(--g);color:#031204;border-color:var(--g)}
-.mf>div{display:flex;gap:8px;align-items:center}
-.pills{gap:6px!important}
-.pill{width:8px;height:8px;border-radius:8px;background:rgba(255,255,255,.3);border:0;padding:0;transition:var(--t)}
-.pill.act{width:26px;background:var(--g)}
-.cnt{font-size:.80rem;color:var(--mut)}
-
-/* ADMIN LOGIN & PANEL STYLES */
-.admin-card-modal{
-  background: #091C12 !important;
-  color: #fff !important;
-  border: 1.5px solid rgba(6, 208, 1, 0.4) !important;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(6, 208, 1, 0.15) !important;
-}
-.admin-header-strip{
-  padding: 16px 24px;
-  background: linear-gradient(90deg, #052a0a 0%, #0F3040 100%);
-  border-bottom: 2px solid #2A7C13;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.admin-header-strip h3{
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.admin-badge-tag{
-  background: rgba(6, 208, 1, 0.15);
-  border: 1px solid #06D001;
-  color: #06D001;
-  font-size: .68rem;
-  font-weight: 800;
-  padding: 3px 8px;
-  border-radius: 12px;
-  text-transform: uppercase;
-}
-
-.admin-login-body{
-  padding: 28px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.login-field-box{
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.login-field-box label{
-  font-size: .74rem;
-  font-weight: 700;
-  color: #9bbd99;
-  text-transform: uppercase;
-  letter-spacing: .5px;
-}
-.input-with-icon{
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.input-with-icon i.field-icon{
-  position: absolute;
-  left: 14px;
-  color: #06D001;
-  font-size: .95rem;
-}
-.input-with-icon .in{
-  width: 100%;
-  background: rgba(3, 22, 10, 0.7);
-  border: 1.5px solid rgba(144, 184, 0, 0.4);
-  border-radius: 12px;
-  padding: 12px 42px 12px 40px;
-  color: #fff;
-  font-size: .88rem;
-  font-weight: 600;
-  outline: none;
-  transition: var(--t);
-  font-family: inherit;
-}
-.input-with-icon .in:focus{
-  border-color: #06D001;
-  background: rgba(6, 35, 11, 0.95);
-  box-shadow: 0 0 0 3px rgba(6, 208, 1, 0.2);
-}
-.toggle-pwd{
-  position: absolute;
-  right: 12px;
-  background: transparent;
-  border: 0;
-  color: #9bbd99;
-  padding: 6px;
-  cursor: pointer;
-  transition: var(--t);
-}
-.toggle-pwd:hover{color: #fff}
-
-.demo-chip{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px dashed rgba(6, 208, 1, 0.4);
-  border-radius: 10px;
-  padding: 8px 12px;
-  font-size: .72rem;
-  color: #d2e4d0;
-}
-.demo-chip b{color: #06D001}
-.btn-auto-fill{
-  background: rgba(6, 208, 1, 0.2);
-  border: 1px solid #06D001;
-  color: #fff;
-  border-radius: 6px;
-  padding: 3px 8px;
-  font-size: .68rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: var(--t);
-}
-.btn-auto-fill:hover{background: #06D001; color: #000}
-
-.alert-msg{
-  display: none;
-  background: rgba(239, 68, 68, 0.15);
-  border: 1px solid rgba(239, 68, 68, 0.4);
-  color: #fca5a5;
-  font-size: .76rem;
-  padding: 8px 12px;
-  border-radius: 10px;
-  font-weight: 600;
-}
-.alert-msg.show{display: flex; align-items: center; gap: 8px;}
-
-/* ADMIN INVENTORY MANAGEMENT PANEL */
-.admin-panel-md{
-  max-width: 920px !important;
-  width: 92vw !important;
-  height: 86vh !important;
-}
-.admin-tab-bar{
-  display: flex;
-  background: rgba(0, 0, 0, 0.35);
-  border-bottom: 1px solid rgba(144, 184, 0, 0.3);
-  padding: 0 16px;
-  gap: 8px;
-}
-.admin-tab{
-  background: none;
-  border: none;
-  border-bottom: 3px solid transparent;
-  padding: 12px 16px;
-  font-size: .82rem;
-  font-weight: 700;
-  color: #9bbd99;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: var(--t);
-  cursor: pointer;
-}
-.admin-tab:hover{color: #fff}
-.admin-tab.act{
-  color: #06D001;
-  border-bottom-color: #06D001;
-  background: rgba(6, 208, 1, 0.05);
-}
-.admin-tab b{
-  background: rgba(6, 208, 1, 0.2);
-  color: #fff;
-  font-size: .66rem;
-  padding: 2px 7px;
-  border-radius: 10px;
-}
-.admin-content-area{
-  flex: 1;
-  overflow-y: auto;
-  padding: 22px 26px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-.admin-form-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-.admin-form-grid .full{grid-column: 1 / -1}
-.adm-group{
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.adm-group label{
-  font-size: .74rem;
-  font-weight: 800;
-  color: #c4dec1;
-  text-transform: uppercase;
-  letter-spacing: .5px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.adm-group label i{color: #06D001}
-.adm-group .in{
-  background: rgba(3, 20, 8, 0.8);
-  border: 1.5px solid rgba(144, 184, 0, 0.35);
-  border-radius: 10px;
-  padding: 10px 14px;
-  color: #fff;
-  font-size: .84rem;
-  font-weight: 600;
-  outline: none;
-  transition: var(--t);
-  font-family: inherit;
-}
-.adm-group .in:focus{
-  border-color: #06D001;
-  box-shadow: 0 0 0 3px rgba(6, 208, 1, 0.18);
-  background: rgba(4, 28, 12, 0.95);
-}
-.adm-group select.in option{background: #06230b; color: #fff}
-
-.img-preview-row{
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-.img-preview-box{
-  width: 64px;
-  height: 64px;
-  border-radius: 10px;
-  border: 1.5px solid var(--olive);
-  background: #031204;
-  overflow: hidden;
-  display: grid;
-  place-items: center;
-  flex: none;
-}
-.img-preview-box img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.custom-list-wrap{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.custom-item-card{
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(144, 184, 0, 0.25);
-  border-radius: 12px;
-  padding: 12px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  transition: var(--t);
-}
-.custom-item-card:hover{
-  background: rgba(255, 255, 255, 0.08);
-  border-color: #06D001;
-}
-.custom-item-thumb{
-  width: 48px;
-  height: 48px;
-  border-radius: 8px;
-  object-fit: cover;
-  border: 1px solid #90B800;
-  background: #031204;
-  flex: none;
-}
-.custom-item-info{
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-.custom-item-info h5{
-  font-size: .88rem;
-  font-weight: 700;
-  color: #fff;
-}
-.custom-item-info span{
-  font-size: .72rem;
-  color: #9bbd99;
-}
-.custom-empty{
-  text-align: center;
-  padding: 36px 16px;
-  color: #8dae8b;
-  font-size: .86rem;
-}
-.custom-empty i{
-  font-size: 2.2rem;
-  color: rgba(6, 208, 1, 0.4);
-  display: block;
-  margin-bottom: 10px;
-}
-
-/* FOOTER (#0F3040) */
-footer{
-  position:relative;z-index:2;
-  background: var(--footer-bg) !important;
-  color: #fff !important;
-  border-top: 3px solid #06D001;
-  padding:55px 7% 24px;
-}
-.fg{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:32px;margin-bottom:36px}
-.fg p{color: #c0d8e4; font-size:.84rem;margin:10px 0; font-weight:500; line-height: 1.6}
-.fh{font-size:.98rem;margin-bottom:14px;color: #ffffff; font-weight:800; text-transform: uppercase; letter-spacing: .5px}
-.fl{list-style:none;display:flex;flex-direction:column;gap:7px}
-.fl button,.fl a{
-  background:none;border:0;color: #d1e4ed; font-size:.82rem;
-  font-weight: 600; text-align:left;padding:3px 0;text-decoration:none;
-  display:flex;gap:8px;align-items:center;
-  font-family:inherit;cursor:pointer;transition:var(--t)
-}
-.fl button:hover,.fl a:hover{color: #2dd4bf; transform: translateX(3px)}
-.fl i{color: #06D001; font-size:.74rem;width:12px}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
-.chips span{
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(6, 208, 1, 0.4);
-  font-size:.72rem;color: #ffffff; font-weight: 700;
-  padding:4px 10px;border-radius:6px
-}
-.fb{
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  padding-top:20px;
-  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
-  color: #a0c2d3; font-size:.80rem; font-weight: 600;
-}
-.top{
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid #06D001;
-  color: #ffffff;
-  padding:6px 16px;border-radius:24px;font-weight:700;font-size:.76rem;
-  transition: var(--t);
-}
-.top:hover{background: #06D001; color: #0F3040; border-color: #06D001}
-.fwa{
-  position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));right:20px;
-  background:#25d366;color:#021004;width:54px;height:54px;border-radius:50%;
-  display:grid;place-items:center;font-size:1.7rem;z-index:999;
-  text-decoration:none;box-shadow:0 8px 28px rgba(37,211,102,.5);transition:var(--t)
-}
-.fwa:hover{transform:scale(1.08)}
-
-/* DRAWER */
-.drawer{
-  position:fixed;inset:0;z-index:1500;
-  background:rgba(3, 18, 4, 0.98);
-  display:flex;flex-direction:column;padding:85px 8% 30px;gap:10px;
-  transform:translateX(100%);transition:.35s;visibility:hidden
-}
+.cta{background:var(--brand);color:#031204;padding:8px 20px;border-radius:40px;text-decoration:none;font-weight:800;font-size:.82rem;display:inline-flex;align-items:center;gap:8px;box-shadow:0 4px 15px rgba(6,208,1,.3);transition:var(--t)}
+.cta:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(6,208,1,.5)}
+.burger{display:none;width:40px;height:40px;border-radius:10px;background:rgba(6,59,0,.8);border:1px solid var(--bd);color:var(--g);place-items:center;position:relative;z-index:1600}
+.drawer{position:fixed;inset:0;z-index:1500;background:linear-gradient(160deg,#021a07,#063812);display:flex;flex-direction:column;padding:90px 8% 30px;gap:8px;transform:translateX(100%);transition:.35s;visibility:hidden}
 .drawer.on{transform:none;visibility:visible}
 .drawer a{padding:14px 4px;font-size:1.05rem;font-weight:700;text-decoration:none;border-bottom:1px solid var(--bd)}
 
-/* RESPONSIVE DESIGN */
-@media(max-width:1100px){
-  .pv{grid-template-columns:300px 1fr;gap:20px;padding:20px}
-  .pimg img{height:260px}
-  .mb{grid-template-columns:220px 1fr}
-}
-@media(max-width:920px){
-  .cg{grid-template-columns:1fr}
-  .fg{grid-template-columns:1fr 1fr}
-  .rfq-grid{grid-template-columns:1fr}
-  .admin-form-grid{grid-template-columns:1fr}
-}
+.hero{position:relative;height:78vh;min-height:540px;overflow:hidden}
+.sl{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .8s,visibility .8s;background:#031204 center/cover}
+.sl.act{opacity:1;visibility:visible}
+.sl::before{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(3,18,4,.96) 0%,rgba(6,59,0,.82) 55%,rgba(3,18,4,.35) 100%)}
+.hc{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 7%;max-width:880px}
+.tag{display:inline-flex;align-items:center;gap:8px;background:rgba(6,59,0,.85);border:1px solid var(--olive);padding:5px 14px;border-radius:24px;color:var(--g);font-size:.74rem;font-weight:700;width:fit-content;margin-bottom:14px}
+.hero h1{font-size:clamp(1.8rem,3.8vw,2.9rem);line-height:1.15;margin-bottom:14px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,#06D001,#90B800);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{font-size:clamp(.9rem,1.3vw,1.05rem);color:var(--mut);margin-bottom:26px;max-width:600px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.b1,.b2{padding:11px 24px;border-radius:30px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;font-size:.84rem;transition:var(--t)}
+.b1{background:var(--g);color:#031204}.b2{background:rgba(6,59,0,.7);border:1px solid var(--olive)}
+.b1:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(6,208,1,.45)}.b2:hover{border-color:var(--g);color:var(--g)}
+.harr{position:absolute;bottom:28px;right:6%;z-index:5;display:flex;gap:10px}
+.ab{width:42px;height:42px;border-radius:50%;background:rgba(6,59,0,.85);border:1px solid var(--olive);display:grid;place-items:center;transition:var(--t)}
+.ab:hover{background:var(--g);color:#031204}
+.dots{position:absolute;bottom:36px;left:7%;z-index:5;display:flex;gap:6px}
+.dot{width:22px;height:5px;border-radius:8px;background:rgba(255,255,255,.3);transition:var(--t)}
+.dot.act{width:42px;background:var(--g)}
+
+.stats{background:linear-gradient(90deg,#041907,#063812,#041907);border-block:1px solid var(--bd);padding:22px 7%;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.st{display:flex;align-items:center;gap:14px}
+.st i{width:44px;height:44px;flex:none;border-radius:12px;background:rgba(6,208,1,.12);border:1px solid var(--bd);display:grid;place-items:center;font-size:1.15rem;color:var(--g)}
+.st b{display:block;font-size:1.1rem;font-family:'Space Grotesk';line-height:1.15}.st span{font-size:.78rem;color:var(--mut)}
+
+section{position:relative;padding:72px 7%}
+.sh{text-align:center;max-width:720px;margin:0 auto 40px}
+.sh small{font-weight:800;font-size:.74rem;padding:5px 14px;border-radius:20px;display:inline-block;margin-bottom:10px}
+.sh h2{font-size:clamp(1.5rem,2.7vw,2.15rem);line-height:1.2;margin:4px 0 10px}
+#activities{background:linear-gradient(160deg,#C2D099,#d6e2b4 55%,#b7c98a);color:var(--gd)}
+#activities .sh small{background:var(--gd);color:var(--g);border:1px solid var(--mid)}
+#activities .sh p{color:#1a3814;font-weight:500}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px}
+.card{background:#fff;border:1.5px solid rgba(6,59,0,.18);border-radius:20px;overflow:hidden;text-align:left;display:flex;flex-direction:column;transition:transform var(--t),box-shadow var(--t),border-color var(--t);box-shadow:0 10px 30px rgba(6,59,0,.1);color:#062b02}
+.card:hover{transform:translateY(-6px);border-color:var(--mid);box-shadow:0 18px 40px rgba(6,59,0,.22)}
+.card-img{position:relative;height:190px;overflow:hidden;background:var(--gd)}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card:hover .card-img img{transform:scale(1.07)}
+.card-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(3,18,4,.85))}
+.card-ic{position:absolute;left:16px;bottom:-1px;z-index:2;width:50px;height:50px;border-radius:14px 14px 0 0;background:var(--gd);color:var(--g);display:grid;place-items:center;font-size:1.25rem}
+.card-code{position:absolute;right:14px;top:14px;z-index:2;background:rgba(3,18,4,.75);color:var(--mint);font-family:'Space Grotesk';font-size:.7rem;font-weight:700;padding:4px 10px;border-radius:8px;border:1px solid var(--olive)}
+.card-lic{position:absolute;left:14px;top:14px;z-index:2;background:var(--g);color:#031204;font-size:.68rem;font-weight:800;padding:4px 10px;border-radius:18px}
+.card-body{padding:18px 22px 20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{font-size:1.1rem;line-height:1.3}.card p{color:#2a4421;font-size:.84rem}
+.card-tags{display:flex;flex-wrap:wrap;gap:6px}
+.c-tag{font-size:.68rem;font-weight:700;background:#edf5dc;border:1px solid #c0d497;padding:3px 8px;border-radius:6px}
+.card-meta{display:flex;flex-wrap:wrap;gap:6px 16px;padding-top:10px;border-top:1px solid #e1ebcc;font-size:.74rem;font-weight:700;color:#27431e}
+.card-meta i{color:var(--mid);margin-right:5px}
+.card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px;border-top:1px solid #e7efd3;font-weight:800;font-size:.82rem}
+.card:hover .more{color:var(--mid)}
+
+#rfqSection{background:linear-gradient(145deg,#021a07,#063812 40%,#084819 70%,#031c0a);border-block:1px solid rgba(6,208,1,.28);overflow:hidden}
+#rfqSection::before{content:'';position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:900px;height:480px;background:radial-gradient(circle,rgba(6,208,1,.18),transparent 70%);pointer-events:none}
+#rfqSection .sh{position:relative}
+#rfqSection .sh small{background:rgba(6,59,0,.9);color:#9effa2;border:1px solid rgba(6,208,1,.5)}
+#rfqSection .sh p{color:#c9e4c5}
+.rfq-wrap{max-width:1040px;margin:0 auto;position:relative;border-radius:26px;padding:1.5px;background:linear-gradient(145deg,rgba(6,208,1,.5),rgba(144,184,0,.25),rgba(6,59,0,.6));box-shadow:0 25px 60px rgba(0,0,0,.6)}
+.rfq-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;background:linear-gradient(90deg,#052a0a,#0a4d1b);padding:16px 30px;border-radius:25px 25px 0 0;font-weight:700;font-size:.88rem}
+.rfq-head i{color:var(--g)}
+.fast{background:linear-gradient(135deg,var(--g),var(--olive));color:#031505;font-size:.7rem;font-weight:800;padding:5px 14px;border-radius:20px}
+.rfq-card{background:linear-gradient(165deg,#fff,#eef6ee);border-radius:0 0 25px 25px;padding:34px;color:var(--gd)}
+.rfq-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 22px}.full{grid-column:1/-1}
+.fg1{display:flex;flex-direction:column;gap:6px}
+.fg1 label{font-size:.74rem;font-weight:800;color:#083c14;display:flex;gap:7px;align-items:center}
+.fg1 label i{color:var(--mid)}
+.in{background:#fff;border:1.5px solid #c9dec8;border-radius:12px;padding:12px 15px;color:#062b02;font:600 .88rem inherit;font-family:inherit;width:100%;outline:none;transition:var(--t)}
+.in:hover{border-color:#8bbd89}.in:focus{border-color:#059212;box-shadow:0 0 0 3.5px rgba(5,146,18,.16)}
+textarea.in{resize:vertical;min-height:90px}
+.trust{display:flex;gap:10px;flex-wrap:wrap;padding-top:18px;margin-top:16px;border-top:1px dashed rgba(6,59,0,.2);font-size:.76rem;font-weight:700}
+.trust span{background:#e6f3e5;border:1px solid #c0dcbe;padding:6px 14px;border-radius:20px}.trust i{color:#059212;margin-right:6px}
+.rfq-act{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px}
+.btn-wa,.btn-mail{padding:13px 28px;border-radius:35px;font-weight:800;font-size:.86rem;display:inline-flex;align-items:center;gap:9px;transition:var(--t);text-decoration:none}
+.btn-wa{background:linear-gradient(135deg,#28e06c,#159544);color:#021a07;box-shadow:0 6px 20px rgba(37,211,102,.35)}
+.btn-mail{background:linear-gradient(135deg,#053b11,#0a4f1a);color:#fff;border:1.5px solid var(--g);box-shadow:0 6px 20px rgba(6,59,0,.35)}
+.btn-wa:hover,.btn-mail:hover{transform:translateY(-2px)}.btn-mail:hover{background:var(--brand);color:#031505}
+
+.cs{background:linear-gradient(135deg,#AAFFC7,#B9FFD2 45%,#CEFFE0);color:#0A261D;overflow:hidden}
+.cs::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(550px 350px at 15% 20%,rgba(255,255,255,.75),transparent),radial-gradient(650px 400px at 85% 80%,rgba(42,124,19,.15),transparent)}
+.cs .sh small{background:var(--navy);color:var(--mint);border:1px solid var(--mid)}.cs .sh p{color:#174233;font-weight:600}
+.cg{display:grid;grid-template-columns:1fr 1.3fr;gap:26px;position:relative}
+.glass{background:rgba(255,255,255,.75);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1.5px solid rgba(255,255,255,.9);border-radius:24px;box-shadow:0 20px 45px rgba(10,40,25,.13)}
+.ci-box{padding:28px 24px;display:flex;flex-direction:column;gap:18px}
+.cr{display:flex;gap:14px;align-items:flex-start}
+.cr>i{width:44px;height:44px;flex:none;border-radius:14px;background:var(--navy);border:1.5px solid var(--mid);display:grid;place-items:center;color:var(--mint);font-size:1.1rem}
+.cr h5{font-size:.76rem;color:#1e4d3d;font-weight:800;margin-bottom:2px}
+.cr p,.cr a{font-weight:700;font-size:.88rem;text-decoration:none;color:#072118}.cr a:hover{color:var(--mid)}
+.open{display:inline-block;margin-top:6px;font-size:.72rem;font-weight:800;padding:3px 12px;border-radius:20px}
+.open.y{background:#dcfce7;color:#15803d;border:1.5px solid #86efac}.open.n{background:#fee2e2;color:#b91c1c;border:1.5px solid #fca5a5}
+.mini{background:rgba(15,48,64,.08);border:1px solid rgba(15,48,64,.22);color:var(--navy);font-size:.72rem;font-weight:700;padding:4px 11px;border-radius:14px;display:inline-flex;align-items:center;gap:5px;text-decoration:none;transition:var(--t)}
+.mini:hover{background:var(--navy);color:#fff}
+.chips2{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.gps{background:rgba(255,255,255,.65);border:1px solid rgba(15,48,64,.16);border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.gps-h{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-weight:800;font-size:.8rem;color:var(--navy)}
+.gps-btn{background:var(--navy);color:var(--mint);border:1px solid var(--mid);padding:7px 15px;border-radius:20px;font-size:.76rem;font-weight:800;transition:var(--t)}.gps-btn:hover{background:var(--mid);color:#fff}
+.gps-info{font-size:.76rem;color:#1c4b3a;font-weight:600}
+.mapw{height:590px;display:flex;flex-direction:column;overflow:hidden;position:relative}
+.map-bar{padding:12px 18px;background:var(--navy);color:#fff;font-size:.78rem;font-weight:700;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;border-bottom:2px solid var(--mid)}
+.map-bar i{color:var(--mint)}
+.seg{display:inline-flex;background:rgba(255,255,255,.12);border-radius:20px;padding:3px}
+.seg button{padding:4px 13px;border-radius:16px;font-size:.72rem;font-weight:700;color:#fff}.seg button.act{background:var(--mint);color:var(--navy)}
+.mapbox{position:relative;flex:1;min-height:0}
+.mapbox iframe{width:100%;height:100%;border:0;background:#dbece1}
+.pin-card{position:absolute;left:14px;bottom:14px;max-width:290px;background:rgba(6,59,0,.94);color:#fff;border:1px solid var(--g);border-radius:16px;padding:12px 16px;font-size:.78rem;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.pin-card b{display:flex;align-items:center;gap:8px;color:var(--g);font-size:.86rem;margin-bottom:3px}
+.pin-card b i{animation:pulse 1.8s infinite}
+@keyframes pulse{50%{transform:scale(1.25)}}
+
+.ov{position:fixed;inset:0;z-index:2200;background:rgba(3,18,4,.88);backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;visibility:hidden;transition:.3s}
+.ov.on{opacity:1;visibility:visible}
+.md{background:#F4F8EB;color:#062b02;border:2px solid var(--olive);border-radius:24px;width:94vw;max-width:1320px;height:88vh;max-height:860px;display:flex;flex-direction:column;overflow:hidden;transform:translateY(24px) scale(.98);transition:.35s;box-shadow:0 30px 80px rgba(0,0,0,.65)}
+.ov.on .md{transform:none}
+.mh{padding:14px 24px;background:linear-gradient(90deg,#063B00,#0a4d1b);color:#fff;border-bottom:2px solid var(--olive);display:flex;justify-content:space-between;align-items:center;gap:14px}
+.mh h3{font-size:1.12rem;line-height:1.2}.mh small{color:var(--g);font-weight:700;font-size:.76rem}
+.ci{width:42px;height:42px;flex:none;border-radius:12px;background:var(--olive);color:var(--gd);display:grid;place-items:center;font-size:1.1rem}
+.x{width:36px;height:36px;flex:none;border-radius:50%;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);font-size:1.3rem;color:#fff;transition:var(--t);display:grid;place-items:center}
+.x:hover{background:#ef4444}
+.mb{flex:1;display:grid;grid-template-columns:250px 1fr;min-height:0}
+.side{background:rgba(215,227,180,.75);border-right:1px solid rgba(6,59,0,.18);padding:14px 12px;overflow-y:auto;display:flex;flex-direction:column;gap:8px}
+.si{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.75);border:1px solid rgba(6,59,0,.15);color:var(--gd);font-size:.82rem;font-weight:700;text-align:left;width:100%;text-decoration:none;transition:var(--t)}
+.si i{width:20px;text-align:center}.si:hover{background:#fff;border-color:var(--olive)}
+.si.act{background:var(--gd);color:#fff}.si.act i{color:var(--g)}
+.si b{margin-left:auto;background:rgba(6,59,0,.12);font-size:.7rem;padding:2px 7px;border-radius:10px}
+.main{display:flex;flex-direction:column;min-height:0;min-width:0}
+.pv{flex:1;overflow-y:auto;padding:24px 30px;display:grid;grid-template-columns:400px 1fr;gap:30px;align-content:start}
+.gal{position:sticky;top:0;align-self:start}
+.gal-main{position:relative;border-radius:18px;overflow:hidden;border:2px solid var(--olive);background:#d8e4b8;aspect-ratio:4/3;box-shadow:0 12px 28px rgba(0,0,0,.14)}
+.gal-main img{width:100%;height:100%;object-fit:cover;cursor:zoom-in;transition:transform .4s}
+.gal-main img.zoom{transform:scale(1.8);cursor:zoom-out}
+.pb{position:absolute;top:12px;left:12px;z-index:2;background:var(--gd);border:1px solid var(--g);color:#fff;font-size:.7rem;font-weight:800;padding:4px 12px;border-radius:18px}
+.gnav{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:34px;height:34px;border-radius:50%;background:rgba(6,59,0,.85);color:#fff;display:grid;place-items:center}
+.gnav.l{left:10px}.gnav.r{right:10px}.gnav:hover{background:var(--g);color:#031204}
+.gcount{position:absolute;right:12px;bottom:12px;z-index:2;background:rgba(3,18,4,.8);color:#fff;font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:12px}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(68px,1fr));gap:8px;margin-top:10px}
+.thumbs button{aspect-ratio:1;border-radius:10px;overflow:hidden;border:2px solid transparent;opacity:.65;transition:var(--t)}
+.thumbs button.act{border-color:var(--g);opacity:1}.thumbs img{width:100%;height:100%;object-fit:cover}
+.sku{color:var(--gd);font-size:.78rem;font-weight:800;letter-spacing:1px}
+.pn{font-size:1.45rem;line-height:1.25;margin:4px 0 8px}
+.pi{color:#314a2a;font-size:.88rem;margin-bottom:16px}
+.tabs{display:flex;gap:4px;border-bottom:2px solid rgba(6,59,0,.15);margin-bottom:14px}
+.tabs button{padding:8px 16px;font-weight:800;font-size:.8rem;border-bottom:3px solid transparent;margin-bottom:-2px;color:#4a6640}
+.tabs button.act{color:var(--gd);border-color:var(--mid)}
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-bottom:18px}
+.sp{background:rgba(255,255,255,.88);border:1px solid rgba(6,59,0,.16);border-radius:12px;padding:10px 12px;display:flex;gap:10px;align-items:center}
+.sp i{width:34px;height:34px;flex:none;border-radius:10px;background:linear-gradient(135deg,#dff0c0,#c2d78f);display:grid;place-items:center;color:var(--gd)}
+.sp small{display:block;font-size:.68rem;color:#314a2a;font-weight:800}.sp span{font-size:.82rem;font-weight:700;line-height:1.3;display:block}
+.tbl{width:100%;border-collapse:collapse;font-size:.82rem;margin-bottom:18px;background:#fff;border-radius:12px;overflow:hidden}
+.tbl td{padding:9px 14px;border-bottom:1px solid #e1ebcc}.tbl td:first-child{font-weight:800;width:38%;background:#f1f7e2}
+.trade{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:18px}
+.trade div{background:#fff;border:1px solid #d5e4b6;border-radius:12px;padding:12px;font-size:.8rem}.trade b{display:block;color:var(--mid);margin-bottom:2px}
+.act-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;background:#fff;border:1.5px solid var(--olive);border-radius:14px;padding:12px 18px}
+.act-bar small{display:block;font-size:.76rem;font-weight:700;color:#314a2a}.act-bar b{font-size:1.05rem;font-family:'Space Grotesk'}
+.ma{display:flex;gap:10px;flex-wrap:wrap}
+.wa,.rf{padding:9px 18px;border-radius:30px;font-weight:800;font-size:.82rem;display:inline-flex;align-items:center;gap:7px;text-decoration:none;transition:var(--t)}
+.wa{background:var(--gd);color:#fff;border:1px solid var(--g)}.wa:hover{background:var(--g);color:#031204}
+.rf{background:var(--olive);color:#031204;border:1px solid var(--gd)}.rf:hover{background:var(--gd);color:#fff}
+.del{border:1px solid #dc2626;color:#dc2626;border-radius:20px;padding:6px 14px;font-size:.74rem;font-weight:800;margin-top:12px}
+.mf{padding:10px 24px;background:var(--gd);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.mf>div{display:flex;gap:8px;align-items:center}
+.nb{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.15);border:1px solid var(--olive);display:grid;place-items:center}.nb:hover{background:var(--g);color:#031204}
+.pill{width:8px;height:8px;border-radius:8px;background:rgba(255,255,255,.3);transition:var(--t)}.pill.act{width:26px;background:var(--g)}
+
+.dk{background:linear-gradient(160deg,#07200d,#0b2f1a 60%,#0F3040)!important;color:#fff!important;border-color:rgba(6,208,1,.4)!important}
+.lg{max-width:440px;height:auto;max-height:none}
+.dk-head{padding:16px 24px;background:linear-gradient(90deg,#052a0a,var(--navy));border-bottom:2px solid var(--mid);display:flex;justify-content:space-between;align-items:center;gap:10px}
+.dk-head h3{font-size:1.05rem;display:flex;align-items:center;gap:10px}
+.lbody{padding:26px 24px;display:flex;flex-direction:column;gap:14px}
+.lf label,.adm label{font-size:.72rem;font-weight:800;color:#b7d6b3;display:flex;gap:6px;align-items:center;margin-bottom:5px}
+.iwi{position:relative;display:flex;align-items:center}
+.iwi>i{position:absolute;left:14px;color:var(--g)}
+.dk .in{background:rgba(3,20,8,.8);border:1.5px solid rgba(144,184,0,.38);color:#fff;border-radius:11px;padding:11px 14px}
+.iwi .in{padding-left:40px;padding-right:42px}
+.dk .in:focus{border-color:var(--g);box-shadow:0 0 0 3px rgba(6,208,1,.2);background:rgba(4,28,12,.95)}
+.dk select.in option{background:#06230b}
+.eye{position:absolute;right:10px;color:#9bbd99;padding:6px}
+.demo{display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,.05);border:1px dashed rgba(6,208,1,.4);border-radius:10px;padding:8px 12px;font-size:.72rem}
+.demo b{color:var(--g)}
+.sm{background:rgba(6,208,1,.2);border:1px solid var(--g);color:#fff;border-radius:8px;padding:5px 11px;font-size:.72rem;font-weight:700;transition:var(--t)}.sm:hover{background:var(--g);color:#000}
+.sm.red{background:rgba(239,68,68,.2);border-color:#ef4444;color:#fca5a5}.sm.red:hover{background:#ef4444;color:#fff}
+.alert{display:none;background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.4);color:#fca5a5;font-size:.76rem;padding:8px 12px;border-radius:10px;font-weight:600}.alert.show{display:block}
+.adp{max-width:960px;width:92vw}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:16px 24px 0}
+.kpi{background:rgba(255,255,255,.06);border:1px solid rgba(144,184,0,.28);border-radius:14px;padding:10px 14px}
+.kpi b{font-size:1.3rem;font-family:'Space Grotesk';color:var(--g);display:block;line-height:1.1}.kpi span{font-size:.7rem;color:#b7d6b3}
+.atabs{display:flex;padding:8px 16px 0;gap:6px;border-bottom:1px solid rgba(144,184,0,.3)}
+.atab{padding:11px 16px;font-size:.82rem;font-weight:700;color:#9bbd99;border-bottom:3px solid transparent}.atab.act{color:var(--g);border-color:var(--g)}
+.atab b{background:rgba(6,208,1,.2);color:#fff;font-size:.66rem;padding:2px 7px;border-radius:10px;margin-left:4px}
+.acon{flex:1;overflow-y:auto;padding:20px 24px;display:flex;flex-direction:column;gap:16px}
+.agrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.upl{border:2px dashed rgba(6,208,1,.45);border-radius:14px;padding:16px;text-align:center;font-size:.8rem;color:#b7d6b3;transition:var(--t);cursor:pointer}
+.upl:hover,.upl.drag{background:rgba(6,208,1,.08);border-color:var(--g)}
+.prevs{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.prevs div{position:relative;width:64px;height:64px;border-radius:10px;overflow:hidden;border:1.5px solid var(--olive)}
+.prevs img{width:100%;height:100%;object-fit:cover}
+.prevs button{position:absolute;top:2px;right:2px;width:18px;height:18px;border-radius:50%;background:#ef4444;font-size:.6rem;display:grid;place-items:center}
+.item{background:rgba(255,255,255,.05);border:1px solid rgba(144,184,0,.25);border-radius:12px;padding:10px 14px;display:flex;align-items:center;gap:14px}
+.item img{width:50px;height:50px;border-radius:8px;object-fit:cover;border:1px solid var(--olive)}
+.item h5{font-size:.88rem}.item span{font-size:.72rem;color:#9bbd99}
+.empty{text-align:center;padding:36px 16px;color:#8dae8b}.empty i{font-size:2.2rem;color:rgba(6,208,1,.4);display:block;margin-bottom:10px}
+
+footer{background:linear-gradient(180deg,#0c2836,var(--navy));border-top:3px solid var(--g);padding:56px 7% calc(24px + env(safe-area-inset-bottom,0px))}
+.fgr{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:32px;margin-bottom:34px}
+.fgr p{color:#c0d8e4;font-size:.84rem;margin:10px 0}
+.fh{font-size:.95rem;margin-bottom:14px}
+.fl{list-style:none;display:flex;flex-direction:column;gap:7px}
+.fl a,.fl button{color:#d1e4ed;font-size:.82rem;font-weight:600;display:flex;gap:8px;align-items:center;text-decoration:none;text-align:left;transition:var(--t)}
+.fl a:hover,.fl button:hover{color:#2dd4bf;transform:translateX(3px)}.fl i{color:var(--g);width:14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.chips span{background:rgba(255,255,255,.08);border:1px solid rgba(6,208,1,.4);font-size:.72rem;font-weight:700;padding:4px 10px;border-radius:6px}
+.soc{display:flex;gap:8px;margin-top:14px}
+.soc a{width:36px;height:36px;border-radius:50%;border:1px solid rgba(6,208,1,.5);display:grid;place-items:center;transition:var(--t)}.soc a:hover{background:var(--g);color:#031204}
+.fb{border-top:1px solid rgba(255,255,255,.15);padding-top:18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;color:#a0c2d3;font-size:.8rem}
+.top{background:rgba(255,255,255,.1);border:1px solid var(--g);padding:6px 16px;border-radius:24px;font-weight:700;font-size:.76rem;transition:var(--t)}.top:hover{background:var(--g);color:var(--navy)}
+.fwa{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));right:20px;background:#25d366;color:#021004;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font-size:1.7rem;z-index:999;text-decoration:none;box-shadow:0 8px 28px rgba(37,211,102,.5);transition:var(--t)}
+.fwa:hover{transform:scale(1.08)}
+.toast{position:fixed;left:50%;bottom:calc(26px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:var(--gd);border:1px solid var(--g);color:#fff;padding:11px 22px;border-radius:30px;font-weight:700;font-size:.82rem;z-index:3000;opacity:0;pointer-events:none;transition:.3s;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+@media(max-width:1100px){.pv{grid-template-columns:320px 1fr;gap:20px}.mb{grid-template-columns:210px 1fr}}
+@media(max-width:920px){.cg,.rfq-grid,.agrid{grid-template-columns:1fr}.fgr{grid-template-columns:1fr 1fr}.kpis{grid-template-columns:1fr 1fr}}
 @media(max-width:820px){
-  nav,.hd-cta{display:none}
-  .burger{display:grid;place-items:center}
-  .fg{grid-template-columns:1fr}
-  .mapw{height:400px}
-  section{padding:50px 5%}
-  .rfq-card{padding:26px 20px}
-  .hero{height:72vh;min-height:480px}
-  .harr{display:none}.dots{bottom:20px}
-  .ov{padding:0}
-  .md{width:100vw;height:100%;max-height:none;border-radius:0;border:0}
-  .admin-panel-md{width:100vw !important;height:100% !important;border-radius:0 !important}
-  .mb{grid-template-columns:1fr;grid-template-rows:auto 1fr}
-  .side{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--modal-bd);padding:10px}
-  .si{width:auto;flex:none}.si b{display:none}
-  .pv{grid-template-columns:1fr;padding:16px}
-  .pimg{position:static}.pimg img{height:220px}
-  .sg{grid-template-columns:1fr}
-  .pn{font-size:1.2rem}
-  .act-bar{flex-direction:column;align-items:stretch;text-align:center}
-  .wa,.btn-rfq-fill{justify-content:center}
-  .mh{padding:12px 16px}
-  .mf{padding:10px 16px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px))}
-  .pills{display:none!important}
-  .topbar span.lic{display:none}
-  .stats{grid-template-columns:1fr 1fr;gap:14px;padding:18px 5%}
+nav,.hd-cta{display:none}.burger{display:grid}.fgr{grid-template-columns:1fr}
+section{padding:52px 5%}.rfq-card{padding:24px 18px}.hero{height:74vh;min-height:500px}.harr{display:none}.dots{bottom:20px}
+.ov{padding:0}.md{width:100vw;height:100%;max-height:none;border-radius:0;border:0}.adp{width:100vw}
+.mb{grid-template-columns:1fr;grid-template-rows:auto 1fr}.side{flex-direction:row;overflow-x:auto;border-right:0;padding:10px}.si{width:auto;flex:none}.si b{display:none}
+.pv{grid-template-columns:1fr;padding:16px}.gal{position:static}.pn{font-size:1.2rem}
+.act-bar{flex-direction:column;align-items:stretch;text-align:center}.wa,.rf{justify-content:center}
+.pills{display:none!important}.mf{padding-bottom:calc(10px + env(safe-area-inset-bottom,0px))}
+.topbar .lic{display:none}.stats{grid-template-columns:1fr 1fr;padding:18px 5%}.mapw{height:480px}
 }
 </style>
 </head>
 <body>
-<div class="bgfx"></div>
 
-<!-- Top Bar (#2A7C13) -->
 <div class="topbar">
-  <div class="topbar-left">
-    <span class="lic"><i class="fa-solid fa-circle-check"></i> Licensed UAE Electronics Entity</span>
-    <span><i class="fa-solid fa-clock"></i> Dubai Desk: Mon - Sat 9:00 AM - 8:00 PM</span>
-  </div>
+  <div class="topbar-l"><span class="lic"><i class="fa-solid fa-circle-check"></i> Licensed UAE Electronics Entity</span><span><i class="fa-solid fa-clock"></i> Mon - Sat 9:00 AM - 8:00 PM (Dubai)</span></div>
   <button class="admin-btn" id="adminBtn"><i class="fa-solid fa-user-shield"></i> <span>Admin Login</span></button>
 </div>
 
-<!-- Header -->
 <header>
-  <a href="#home" class="logo" aria-label="Shuaa Al Madar Home">
-    <img src="img/logo.png" alt="SHUAA AL MADAR" class="brand-logo-img" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'44\' height=\'44\' viewBox=\'0 0 44 44\'><rect width=\'44\' height=\'44\' rx=\'8\' fill=\'%23063B00\'/><text x=\'22\' y=\'27\' fill=\'%2306D001\' font-size=\'15\' font-weight=\'bold\' text-anchor=\'middle\'>SAM</text></svg>';">
-    <div>
-      <div class="brand-t">SHUAA AL MADAR</div>
-      <div class="brand-s">Electronics Trading LLC</div>
-    </div>
+  <a href="#home" class="logo" aria-label="Shuaa Al Madar home">
+    <img src="img/logo.png" alt="SHUAA AL MADAR" id="logoImg">
+    <div><div class="brand-t ff">SHUAA AL MADAR</div><div class="brand-s">Electronics Trading LLC</div></div>
   </a>
-  <nav>
-    <ul>
-      <li><a href="#home" class="act">Home</a></li>
-      <li><a href="#activities">Trade Activities</a></li>
-      <li><a href="#rfqSection">Wholesale RFQ</a></li>
-      <li><a href="#contact">Office &amp; Location</a></li>
-      <li><a href="tel:+97145663256">+971 4 566 3256</a></li>
-    </ul>
-  </nav>
+  <nav><ul>
+    <li><a href="#home" class="act">Home</a></li><li><a href="#activities">Trade Activities</a></li>
+    <li><a href="#rfqSection">Wholesale RFQ</a></li><li><a href="#contact">Office &amp; Location</a></li>
+    <li><a href="tel:+97145663256">+971 4 566 3256</a></li>
+  </ul></nav>
   <a href="#rfqSection" class="cta hd-cta"><i class="fa-solid fa-file-invoice-dollar"></i> Quick RFQ</a>
-  <button class="burger" id="burger" aria-label="Toggle navigation menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+  <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
 </header>
 
-<!-- Mobile Navigation Drawer -->
 <div class="drawer" id="drawer">
-  <a href="#home">Home</a>
-  <a href="#activities">Trade Activities</a>
-  <a href="#rfqSection">Wholesale RFQ Form</a>
-  <a href="#contact">Office and Location</a>
-  <a href="tel:+97145663256">Call: +971 4 566 3256</a>
-  <a href="#rfqSection" class="cta" style="margin-top:16px;justify-content:center;border:0">Submit RFQ</a>
+  <a href="#home">Home</a><a href="#activities">Trade Activities</a><a href="#rfqSection">Wholesale RFQ</a><a href="#contact">Office and Location</a><a href="tel:+97145663256">Call +971 4 566 3256</a>
+  <a href="#rfqSection" class="cta" style="margin-top:16px;justify-content:center">Submit RFQ</a>
 </div>
 
-<!-- Hero Section -->
 <section class="hero" id="home" style="padding:0">
   <div id="heroSlides"></div>
-  <div class="harr">
-    <button class="ab" id="hp" aria-label="Previous Slide"><i class="fa-solid fa-arrow-left"></i></button>
-    <button class="ab" id="hn" aria-label="Next Slide"><i class="fa-solid fa-arrow-right"></i></button>
-  </div>
+  <div class="harr"><button class="ab" id="hp" aria-label="Previous slide"><i class="fa-solid fa-arrow-left"></i></button><button class="ab" id="hn" aria-label="Next slide"><i class="fa-solid fa-arrow-right"></i></button></div>
   <div class="dots" id="heroDots"></div>
 </section>
 
-<!-- Stats Bar -->
 <div class="stats">
-  <div class="st"><i class="fa-solid fa-shield-halved"></i><div><b>100% Genuine</b><span>Original OEM Hardware</span></div></div>
-  <div class="st"><i class="fa-solid fa-boxes-stacked"></i><div><b>6 Activities</b><span>Commercial Classifications</span></div></div>
-  <div class="st"><i class="fa-solid fa-warehouse"></i><div><b>Baniyas Hub</b><span>Deira Central Logistics</span></div></div>
-  <div class="st"><i class="fa-solid fa-truck-fast"></i><div><b>GCC &amp; Global</b><span>Air &amp; Sea FOB Dispatch</span></div></div>
+  <div class="st"><i class="fa-solid fa-shield-halved"></i><div><b>100% Genuine</b><span>Original OEM hardware</span></div></div>
+  <div class="st"><i class="fa-solid fa-boxes-stacked"></i><div><b id="prodCount">0 Products</b><span>Across 6 licensed activities</span></div></div>
+  <div class="st"><i class="fa-solid fa-warehouse"></i><div><b>Baniyas, Deira</b><span>Central Dubai trade hub</span></div></div>
+  <div class="st"><i class="fa-solid fa-truck-fast"></i><div><b>GCC &amp; Global</b><span>Air &amp; sea FOB dispatch</span></div></div>
 </div>
 
-<!-- LICENSED TRADE ACTIVITIES (#C2D099) -->
 <section id="activities">
-  <div class="sh">
-    <small>Verified Dubai Commercial License</small>
-    <h2>Licensed Trade Classifications</h2>
-    <p>Select any activity line below to explore specifications, minimum order quantities (MOQ), and initiate wholesale inquiries directly with our Deira trading desk.</p>
-  </div>
+  <div class="sh"><small>Verified Dubai Commercial License</small><h2>Licensed Trade Classifications</h2><p>Open any activity to browse products with photo galleries, specifications, minimum order quantities and trade terms, then request a quotation from our Deira desk.</p></div>
   <div class="grid" id="actGrid"></div>
 </section>
 
-<!-- Product Details Modal (Ultra-Wide Responsive Layout) -->
 <div class="ov" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
   <div class="md">
     <div class="mh">
-      <div style="display:flex;gap:12px;align-items:center;min-width:0">
-        <div class="ci" id="mIcon"></div>
-        <div>
-          <h3 id="mTitle"></h3>
-          <small id="mSub"></small>
-        </div>
-      </div>
-      <button class="x" id="mClose" aria-label="Close dialog">&times;</button>
+      <div style="display:flex;gap:12px;align-items:center;min-width:0"><div class="ci" id="mIcon"></div><div><h3 id="mTitle"></h3><small id="mSub"></small></div></div>
+      <button class="x" id="mClose" aria-label="Close">&times;</button>
     </div>
     <div class="mb">
       <aside class="side" id="side"></aside>
       <div class="main">
         <div class="pv" id="pv"></div>
         <div class="mf">
-          <div>
-            <button class="nb" id="mp" aria-label="Previous Item"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="nb" id="mn" aria-label="Next Item"><i class="fa-solid fa-chevron-right"></i></button>
-          </div>
-          <div class="cnt">Item <b id="cur">1</b> of <b id="tot">1</b></div>
+          <div><button class="nb" id="mp" aria-label="Previous product"><i class="fa-solid fa-chevron-left"></i></button><button class="nb" id="mn" aria-label="Next product"><i class="fa-solid fa-chevron-right"></i></button></div>
+          <div style="font-size:.8rem">Product <b id="cur">1</b> of <b id="tot">1</b></div>
           <div class="pills" id="pills"></div>
         </div>
       </div>
@@ -1395,1031 +336,373 @@ footer{
   </div>
 </div>
 
-<!-- ===================================================
-     ELEGANT GRADIENT REQUEST FOR QUOTATION (RFQ)
-     =================================================== -->
 <section id="rfqSection">
-  <div class="sh">
-    <small><i class="fa-solid fa-shield-halved"></i> Direct B2B Procurement Desk</small>
-    <h2>Request For Quotation (RFQ)</h2>
-    <p>Submit your volume and delivery requirements. Receive official FOB Dubai or CIF pricing, inventory packing lists, and export paperwork promptly.</p>
-  </div>
-  <div class="rfq-container">
-    <div class="rfq-card-frame">
-      <div class="rfq-header-strip">
-        <span><i class="fa-solid fa-clipboard-check"></i> Official Commercial Quotation Desk</span>
-        <span class="rfq-badge-fast"><i class="fa-solid fa-bolt"></i> Fast Response (&lt; 2 Hours)</span>
-      </div>
-      <div class="rfq-card">
-        <form id="custRfqForm">
-          <div class="rfq-grid">
-            <div class="f-group">
-              <label><i class="fa-solid fa-building"></i> Company / Buyer Entity *</label>
-              <input class="in" id="rfqCompany" placeholder="e.g. Al Madina Trading LLC" required>
-            </div>
-            <div class="f-group">
-              <label><i class="fa-solid fa-user-tie"></i> Contact Person &amp; Role *</label>
-              <input class="in" id="rfqContact" placeholder="e.g. Tariq Mansoor (Purchasing)" required>
-            </div>
-            <div class="f-group">
-              <label><i class="fa-solid fa-envelope"></i> Corporate Email Address *</label>
-              <input class="in" type="email" id="rfqEmail" placeholder="procurement@company.com" required>
-            </div>
-            <div class="f-group">
-              <label><i class="fa-solid fa-phone"></i> WhatsApp / Mobile Number *</label>
-              <input class="in" type="tel" id="rfqPhone" placeholder="+971 50 000 0000" required>
-            </div>
-            <div class="f-group">
-              <label><i class="fa-solid fa-tags"></i> Trade Classification</label>
-              <select class="in" id="rfqActivity">
-                <option value="Mobile Phones & Accessories">Mobile Phones &amp; Accessories Trading</option>
-                <option value="Household Appliances">Refrigerators &amp; Washing Machines</option>
-                <option value="Spare Parts">Appliances Spare Parts Trading</option>
-                <option value="Computer Electric Accessories">Computer Electric Accessories</option>
-                <option value="Computers & Peripherals">Computers &amp; Peripheral Equipment</option>
-                <option value="Systems & Software">Computer Systems &amp; Software Trading</option>
-              </select>
-            </div>
-            <div class="f-group">
-              <label><i class="fa-solid fa-boxes-stacked"></i> Volume / Target Quantity</label>
-              <input class="in" id="rfqQty" placeholder="e.g. 50 Units / 2 Master Cartons">
-            </div>
-            <div class="f-group">
-              <label><i class="fa-solid fa-handshake"></i> Incoterms &amp; Logistics</label>
-              <select class="in" id="rfqIncoterm">
-                <option value="FOB Dubai Central">FOB Dubai Central</option>
-                <option value="EXW Baniyas Deira Warehouse">EXW Baniyas Deira Warehouse</option>
-                <option value="CIF Sea Freight (Jebel Ali)">CIF Sea Freight (Jebel Ali)</option>
-                <option value="Air Cargo GCC Fast Dispatch">Air Cargo GCC Fast Dispatch</option>
-                <option value="Local UAE Delivery">Local UAE Delivery</option>
-              </select>
-            </div>
-            <div class="f-group">
-              <label><i class="fa-solid fa-earth-americas"></i> Destination Country &amp; Port</label>
-              <input class="in" id="rfqDest" placeholder="e.g. Riyadh KSA / Muscat Oman / Local">
-            </div>
-            <div class="f-group full">
-              <label><i class="fa-solid fa-file-lines"></i> Product Models, SKUs or Specific Requirements</label>
-              <textarea class="in" id="rfqSpecs" rows="3" placeholder="Specify brand requirements, voltage, plug type, storage configuration, or paste catalog SKUs..."></textarea>
-            </div>
-          </div>
-
-          <div class="rfq-trust-strip">
-            <span><i class="fa-solid fa-file-contract"></i> Official Tax Invoicing (TRN Compliant)</span>
-            <span><i class="fa-solid fa-truck-ramp-box"></i> Pallet &amp; Carton Batch Inspections</span>
-            <span><i class="fa-solid fa-certificate"></i> Verified Certificate of Origin (COO)</span>
-          </div>
-
-          <div class="rfq-actions">
-            <button type="button" class="btn-wa" id="sendRfqWhatsApp"><i class="fa-brands fa-whatsapp"></i> Instant WhatsApp RFQ</button>
-            <button type="submit" class="btn-mail" id="sendRfqEmail"><i class="fa-solid fa-paper-plane"></i> Submit Official Email RFQ</button>
-          </div>
-        </form>
-      </div>
+  <div class="sh"><small><i class="fa-solid fa-shield-halved"></i> Direct B2B Procurement Desk</small><h2>Request for Quotation (RFQ)</h2><p>Send your volume and delivery needs. We reply with FOB Dubai or CIF pricing, packing lists and export paperwork.</p></div>
+  <div class="rfq-wrap">
+    <div class="rfq-head"><span><i class="fa-solid fa-clipboard-check"></i> Official Commercial Quotation Desk</span><span class="fast"><i class="fa-solid fa-bolt"></i> Reply within 2 hours</span></div>
+    <div class="rfq-card">
+      <form id="rfqForm">
+        <div class="rfq-grid">
+          <div class="fg1"><label for="rfqCompany"><i class="fa-solid fa-building"></i> Company / buyer *</label><input class="in" id="rfqCompany" placeholder="e.g. Al Madina Trading LLC" required></div>
+          <div class="fg1"><label for="rfqContact"><i class="fa-solid fa-user-tie"></i> Contact person &amp; role *</label><input class="in" id="rfqContact" placeholder="e.g. Tariq Mansoor (Purchasing)" required></div>
+          <div class="fg1"><label for="rfqEmail"><i class="fa-solid fa-envelope"></i> Corporate email *</label><input class="in" type="email" id="rfqEmail" placeholder="procurement@company.com" required></div>
+          <div class="fg1"><label for="rfqPhone"><i class="fa-solid fa-phone"></i> WhatsApp / mobile *</label><input class="in" type="tel" id="rfqPhone" placeholder="+971 50 000 0000" required></div>
+          <div class="fg1"><label for="rfqActivity"><i class="fa-solid fa-tags"></i> Trade classification</label><select class="in" id="rfqActivity"></select></div>
+          <div class="fg1"><label for="rfqQty"><i class="fa-solid fa-boxes-stacked"></i> Target quantity</label><input class="in" id="rfqQty" placeholder="e.g. 50 units / 2 master cartons"></div>
+          <div class="fg1"><label for="rfqIncoterm"><i class="fa-solid fa-handshake"></i> Incoterms &amp; logistics</label>
+            <select class="in" id="rfqIncoterm"><option>FOB Dubai Central</option><option>EXW Baniyas Deira Warehouse</option><option>CIF Sea Freight (Jebel Ali)</option><option>Air Cargo GCC Fast Dispatch</option><option>Local UAE Delivery</option></select></div>
+          <div class="fg1"><label for="rfqDest"><i class="fa-solid fa-earth-americas"></i> Destination country &amp; port</label><input class="in" id="rfqDest" placeholder="e.g. Riyadh KSA / Muscat Oman / Local"></div>
+          <div class="fg1 full"><label for="rfqSpecs"><i class="fa-solid fa-file-lines"></i> Models, SKUs or requirements</label><textarea class="in" id="rfqSpecs" rows="3" placeholder="Brand, voltage, plug type, storage configuration, or paste catalog SKUs..."></textarea></div>
+        </div>
+        <div class="trust"><span><i class="fa-solid fa-file-contract"></i> TRN-compliant tax invoicing</span><span><i class="fa-solid fa-truck-ramp-box"></i> Pallet &amp; carton inspection</span><span><i class="fa-solid fa-certificate"></i> Certificate of Origin</span></div>
+        <div class="rfq-act">
+          <button type="button" class="btn-wa" id="sendWa"><i class="fa-brands fa-whatsapp"></i> Send via WhatsApp</button>
+          <button type="submit" class="btn-mail"><i class="fa-solid fa-paper-plane"></i> Send by email</button>
+        </div>
+      </form>
     </div>
   </div>
 </section>
 
-<!-- OFFICE AND LOCATION (#AAFFC7 GRADIENT WITH GLASSMORPHISM UI) -->
 <section class="cs" id="contact">
-  <div class="sh">
-    <small>Deira Wholesale Hub</small>
-    <h2>Office and Location</h2>
-    <p>Situated in the heart of the Baniyas commercial district, offering swift cargo distribution, inspection facilities, and direct order collection.</p>
-  </div>
+  <div class="sh"><small>Deira Wholesale Hub</small><h2>Office and Location</h2><p>Find us at Office B 805 inside Baniyas Complex, Deira. Pickup, inspection and cargo batching happen here.</p></div>
   <div class="cg">
-    <div class="ci-box">
-      <div class="cr">
-        <i class="fa-solid fa-building-circle-check"></i>
-        <div>
-          <h5>Dubai Trading Office</h5>
-          <p id="officeAddressText">Office No.: B 805, Baniyas Complex,<br>Deira, Dubai, United Arab Emirates</p>
-          <div class="address-actions">
-            <button class="mini-btn" id="copyAddrBtn"><i class="fa-regular fa-copy"></i> Copy Address</button>
-            <a class="mini-btn" href="https://www.google.com/maps/search/?api=1&query=Office+No.+B+805,+Baniyas+Complex,+Deira,+Dubai,+United+Arab+Emirates" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Map</a>
-          </div>
-        </div>
-      </div>
-      <div class="cr">
-        <i class="fa-solid fa-phone-volume"></i>
-        <div>
-          <h5>Direct Landline &amp; Desk</h5>
-          <p><a href="tel:+97145663256">+971 4 566 3256</a></p>
-        </div>
-      </div>
-      <div class="cr">
-        <i class="fa-solid fa-envelope-open-text"></i>
-        <div>
-          <h5>Commercial Email</h5>
-          <p><a href="mailto:shuaaalmadar@gmail.com">shuaaalmadar@gmail.com</a></p>
-        </div>
-      </div>
-      <div class="cr">
-        <i class="fa-solid fa-business-time"></i>
-        <div>
-          <h5>Office Working Hours</h5>
-          <p>Monday - Saturday: 9:00 AM - 8:00 PM<br><span style="color:#0a5528;font-size:.78rem;font-weight:700">Sunday: Wholesale appointments only</span></p>
-          <span class="open" id="openNow"></span>
-        </div>
-      </div>
-
-      <!-- Real GPS Route & Location tool -->
-      <div class="gps-card">
-        <div class="gps-header">
-          <b><i class="fa-solid fa-location-crosshairs"></i> Live GPS Distance &amp; Route</b>
-          <button class="gps-btn" id="findGpsBtn"><i class="fa-solid fa-compass"></i> Route to Office</button>
-        </div>
-        <div class="gps-info" id="gpsStatus">Click "Route to Office" to detect your current location and calculate direct turn-by-turn navigation.</div>
+    <div class="ci-box glass">
+      <div class="cr"><i class="fa-solid fa-building-circle-check"></i><div>
+        <h5>Dubai trading office</h5>
+        <p>Office No.: B 805, Baniyas Complex,<br>Deira, Dubai, United Arab Emirates</p>
+        <div class="chips2">
+          <button class="mini" id="copyAddr"><i class="fa-regular fa-copy"></i> Copy address</button>
+          <a class="mini" id="lnkGoogle" target="_blank" rel="noopener"><i class="fa-brands fa-google"></i> Google Maps</a>
+          <a class="mini" id="lnkWaze" target="_blank" rel="noopener"><i class="fa-brands fa-waze"></i> Waze</a>
+          <a class="mini" id="lnkApple" target="_blank" rel="noopener"><i class="fa-brands fa-apple"></i> Apple Maps</a>
+        </div></div></div>
+      <div class="cr"><i class="fa-solid fa-phone-volume"></i><div><h5>Landline &amp; desk</h5><p><a href="tel:+97145663256">+971 4 566 3256</a></p></div></div>
+      <div class="cr"><i class="fa-solid fa-envelope-open-text"></i><div><h5>Commercial email</h5><p><a href="mailto:shuaaalmadar@gmail.com">shuaaalmadar@gmail.com</a></p></div></div>
+      <div class="cr"><i class="fa-solid fa-business-time"></i><div><h5>Working hours</h5><p>Monday - Saturday: 9:00 AM - 8:00 PM<br><span style="font-size:.78rem;color:#0a5528">Sunday: wholesale appointments only</span></p><span class="open" id="openNow"></span></div></div>
+      <div class="gps">
+        <div class="gps-h"><span><i class="fa-solid fa-location-crosshairs"></i> Route from where you are</span><button class="gps-btn" id="gpsBtn"><i class="fa-solid fa-compass"></i> Route to office</button></div>
+        <div class="gps-info" id="gpsStatus">Tap "Route to office" to share your location and see distance and directions.</div>
       </div>
     </div>
-
-    <!-- GOOGLE MAPS DISPLAY CONTAINER WITH EXACT OFFICE NAME -->
-    <div class="mapw">
-      <div class="map-top-bar">
-        <span><i class="fa-solid fa-map-location-dot"></i> Office No.: B 805, Baniyas Complex, Deira, Dubai</span>
-        <a id="gmapLink" href="https://www.google.com/maps/dir/?api=1&destination=Office+No.+B+805,+Baniyas+Complex,+Deira,+Dubai,+United+Arab+Emirates" target="_blank" rel="noopener">Open in Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <div class="mapw glass">
+      <div class="map-bar">
+        <span><i class="fa-solid fa-map-location-dot"></i> Office B 805, Baniyas Complex, Deira, Dubai</span>
+        <div class="seg" role="group" aria-label="Map type"><button class="act" data-mt="m">Map</button><button data-mt="k">Satellite</button></div>
       </div>
-      <iframe 
-        id="gmapFrame"
-        class="gmap-frame"
-        title="Office No.: B 805, Baniyas Complex, Deira, Dubai, United Arab Emirates - Shuaa Al Madar Electronics Trading"
-        src="https://maps.google.com/maps?q=Office%20No.%3A%20B%20805%2C%20Baniyas%20Complex%2C%20Deira%2C%20Dubai%2C%20United%20Arab%20Emirates&t=&z=16&ie=UTF8&iwloc=&output=embed"
-        loading="lazy"
-        allowfullscreen>
-      </iframe>
+      <div class="mapbox">
+        <iframe id="gmapFrame" title="Map showing SHUAA AL MADAR at Office B 805, Baniyas Complex, Deira, Dubai" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="pin-card"><b><i class="fa-solid fa-location-dot"></i> SHUAA AL MADAR</b>Office B 805, Baniyas Complex, Deira. Enter the complex and take the lift to level 8.</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ==========================================
-     ADMIN LOGIN MODAL
-     ========================================== -->
-<div class="ov" id="loginModal" role="dialog" aria-modal="true" aria-label="Admin Login">
-  <div class="md lg admin-card-modal">
-    <div class="admin-header-strip">
-      <h3><i class="fa-solid fa-shield-cat" style="color:var(--g)"></i> <span>Security Gateway</span></h3>
-      <span class="admin-badge-tag"><i class="fa-solid fa-lock"></i> Authorized Only</span>
-      <button class="x" data-close aria-label="Close">&times;</button>
-    </div>
-    <div class="admin-login-body">
-      <div class="login-field-box">
-        <label>Admin Identifier</label>
-        <div class="input-with-icon">
-          <i class="fa-solid fa-user field-icon"></i>
-          <input class="in" id="lgUser" placeholder="Enter username" autocomplete="username">
-        </div>
-      </div>
-
-      <div class="login-field-box">
-        <label>Password</label>
-        <div class="input-with-icon">
-          <i class="fa-solid fa-key field-icon"></i>
-          <input class="in" id="lgPass" type="password" placeholder="Enter password" autocomplete="current-password">
-          <button type="button" class="toggle-pwd" id="pwdToggle" aria-label="Toggle password view"><i class="fa-solid fa-eye"></i></button>
-        </div>
-      </div>
-
-      <div class="demo-chip">
-        <span>Demo: <b>admin</b> / <b>admin123</b></span>
-        <button type="button" class="btn-auto-fill" id="btnAutoFill"><i class="fa-solid fa-wand-magic-sparkles"></i> Auto-fill</button>
-      </div>
-
-      <div class="alert-msg" id="lgErr" role="alert"></div>
-
-      <button class="btn-mail" id="lgGo" style="justify-content:center;margin-top:6px">
-        <i class="fa-solid fa-right-to-bracket"></i> Sign in to Management Portal
-      </button>
+<div class="ov" id="loginModal" role="dialog" aria-modal="true" aria-label="Admin login">
+  <div class="md lg dk">
+    <div class="dk-head"><h3><i class="fa-solid fa-shield-halved" style="color:var(--g)"></i> Admin sign in</h3><button class="x" data-close aria-label="Close">&times;</button></div>
+    <div class="lbody">
+      <div class="lf"><label for="lgUser">Username</label><div class="iwi"><i class="fa-solid fa-user"></i><input class="in" id="lgUser" placeholder="Enter username" autocomplete="username"></div></div>
+      <div class="lf"><label for="lgPass">Password</label><div class="iwi"><i class="fa-solid fa-key"></i><input class="in" id="lgPass" type="password" placeholder="Enter password" autocomplete="current-password"><button type="button" class="eye" id="eye" aria-label="Show password"><i class="fa-solid fa-eye"></i></button></div></div>
+      <div class="demo"><span>Demo: <b>admin</b> / <b>admin123</b></span><button type="button" class="sm" id="autoFill">Fill in</button></div>
+      <div class="alert" id="lgErr" role="alert"></div>
+      <button class="btn-mail" id="lgGo" style="justify-content:center">Sign in</button>
+      <p style="font-size:.7rem;color:#8dae8b">Demo login runs in the browser only. Before launch, move sign-in and product storage to a server.</p>
     </div>
   </div>
 </div>
 
-<!-- ==========================================
-     ADMIN INVENTORY MANAGEMENT PANEL
-     ========================================== -->
-<div class="ov" id="adminModal" role="dialog" aria-modal="true" aria-label="Inventory Control Panel">
-  <div class="md admin-panel-md admin-card-modal">
-    <div class="admin-header-strip">
-      <div style="display:flex;align-items:center;gap:12px">
-        <div class="ci" style="width:36px;height:36px;font-size:1rem;background:#06D001;color:#031204;border:0"><i class="fa-solid fa-boxes-packing"></i></div>
-        <div>
-          <h3>Inventory Control Hub</h3>
-          <small style="color:#a5cf9f;font-size:.74rem">SHUAA AL MADAR Catalog &amp; Custom Units</small>
-        </div>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px">
-        <button class="btn-auto-fill" id="adOut" style="background:rgba(239,68,68,0.2);border-color:#ef4444;color:#fca5a5;padding:6px 14px;border-radius:20px"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign out</button>
-        <button class="x" data-close aria-label="Close">&times;</button>
-      </div>
+<div class="ov" id="adminModal" role="dialog" aria-modal="true" aria-label="Inventory control">
+  <div class="md adp dk">
+    <div class="dk-head">
+      <div style="display:flex;align-items:center;gap:12px"><div class="ci" style="background:var(--g);color:#031204"><i class="fa-solid fa-boxes-packing"></i></div><div><h3>Inventory Control Hub</h3><small style="color:#a5cf9f">Add, manage and back up your catalog</small></div></div>
+      <div style="display:flex;gap:10px;align-items:center"><button class="sm red" id="adOut"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign out</button><button class="x" data-close aria-label="Close">&times;</button></div>
     </div>
-
-    <!-- Panel Tabs -->
-    <div class="admin-tab-bar">
-      <button class="admin-tab act" id="tabAddBtn"><i class="fa-solid fa-circle-plus"></i> Add New Product</button>
-      <button class="admin-tab" id="tabManageBtn"><i class="fa-solid fa-list-check"></i> Manage Custom Products <b id="customCountBadge">0</b></button>
+    <div class="kpis"><div class="kpi"><b id="kBase">0</b><span>Built-in products</span></div><div class="kpi"><b id="kCustom">0</b><span>Your products</span></div><div class="kpi"><b id="kPhotos">0</b><span>Photos in your products</span></div><div class="kpi"><b id="kCats">6</b><span>Activities</span></div></div>
+    <div class="atabs"><button class="atab act" id="tA"><i class="fa-solid fa-circle-plus"></i> Add product</button><button class="atab" id="tM"><i class="fa-solid fa-list-check"></i> Manage <b id="cBadge">0</b></button></div>
+    <div class="acon adm" id="paneA">
+      <div class="agrid">
+        <div><label for="adCat"><i class="fa-solid fa-layer-group"></i> Trade classification *</label><select class="in" id="adCat"></select></div>
+        <div><label for="adBadge"><i class="fa-solid fa-tag"></i> Stock badge</label><input class="in" id="adBadge" placeholder="e.g. Dubai ready lot"></div>
+        <div style="grid-column:1/-1"><label for="adTitle"><i class="fa-solid fa-heading"></i> Product title *</label><input class="in" id="adTitle" placeholder="e.g. Inverter Multi-Door Refrigerator 620L"></div>
+        <div><label for="adMoq"><i class="fa-solid fa-boxes-stacked"></i> Minimum order (MOQ)</label><input class="in" id="adMoq" placeholder="e.g. 20 units"></div>
+        <div><label for="adOrigin"><i class="fa-solid fa-earth-americas"></i> Origin / lead time</label><input class="in" id="adOrigin" placeholder="e.g. China OEM, ready stock"></div>
+        <div style="grid-column:1/-1"><label for="adIntro"><i class="fa-solid fa-paragraph"></i> Overview</label><textarea class="in" id="adIntro" rows="2" placeholder="Short commercial overview..."></textarea></div>
+        <div style="grid-column:1/-1"><label><i class="fa-solid fa-images"></i> Photos (upload several, or paste URLs one per line)</label>
+          <div class="upl" id="upl"><i class="fa-solid fa-cloud-arrow-up"></i> Click or drop photos here<input type="file" id="adFiles" accept="image/*" multiple hidden></div>
+          <textarea class="in" id="adUrls" rows="2" style="margin-top:8px" placeholder="https://... (one image URL per line)"></textarea>
+          <div class="prevs" id="prevs"></div></div>
+        <div style="grid-column:1/-1"><div style="display:flex;justify-content:space-between;align-items:center"><label for="adSpecs"><i class="fa-solid fa-list-ul"></i> Specifications (Label: value, one per line)</label><button type="button" class="sm" id="tpl">Insert template</button></div><textarea class="in" id="adSpecs" rows="4" placeholder="Voltage: 220-240V / 50Hz"></textarea></div>
+      </div>
+      <div class="alert" id="adErr" role="alert"></div>
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px"><button class="sm" id="adReset" style="padding:10px 18px">Clear form</button><button class="btn-mail" id="adSave" style="padding:10px 26px"><i class="fa-solid fa-floppy-disk"></i> Save and publish</button></div>
     </div>
-
-    <!-- Tab 1: Add New Product -->
-    <div class="admin-content-area" id="tabAddContent">
-      <div class="admin-form-grid">
-        <div class="adm-group">
-          <label><i class="fa-solid fa-layer-group"></i> Trade Classification *</label>
-          <select class="in" id="adCat"></select>
-        </div>
-
-        <div class="adm-group">
-          <label><i class="fa-solid fa-tag"></i> Stock / Batch Badge</label>
-          <input class="in" id="adBadge" placeholder="e.g. Dubai Ready Lot, OEM Sealed">
-        </div>
-
-        <div class="adm-group full">
-          <label><i class="fa-solid fa-heading"></i> Product Title *</label>
-          <input class="in" id="adTitle" placeholder="e.g. Inverter Multi-Door Refrigerator 620L Tropical Spec">
-        </div>
-
-        <div class="adm-group">
-          <label><i class="fa-solid fa-boxes-stacked"></i> Minimum Order Quantity (MOQ)</label>
-          <input class="in" id="adMoq" placeholder="e.g. 20 Units / 1 Master Carton">
-        </div>
-
-        <div class="adm-group">
-          <label><i class="fa-solid fa-image"></i> Image URL (with auto-preview)</label>
-          <div class="img-preview-row">
-            <input class="in" id="adImg" placeholder="Paste https:// image URL...">
-            <div class="img-preview-box" id="imgPrevBox">
-              <i class="fa-solid fa-image" style="color:#9bbd99"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="adm-group full">
-          <label><i class="fa-solid fa-paragraph"></i> Product Overview / Intro</label>
-          <textarea class="in" id="adIntro" rows="2" placeholder="Brief commercial overview of the batch, origin, or key market compatibility..."></textarea>
-        </div>
-
-        <div class="adm-group full">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <label><i class="fa-solid fa-list-ul"></i> Technical Specifications (One per line)</label>
-            <button type="button" class="btn-auto-fill" id="btnSpecHelper" style="font-size:.66rem"><i class="fa-solid fa-plus"></i> Insert Template</button>
-          </div>
-          <textarea class="in" id="adSpecs" rows="4" placeholder="Voltage: 220-240V / 50Hz&#10;Compressor: Dual Inverter BLDC&#10;Certification: ESMA 5-Star / CE&#10;Origin: GCC Specification"></textarea>
-        </div>
-      </div>
-
-      <div class="alert-msg" id="adErr" role="alert"></div>
-
-      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-top:auto;padding-top:14px;border-top:1px solid rgba(255,255,255,0.1)">
-        <button type="button" class="btn-auto-fill" id="adReset" style="padding:10px 20px"><i class="fa-solid fa-rotate-left"></i> Clear Form</button>
-        <button class="btn-mail" id="adSave" style="padding:10px 28px"><i class="fa-solid fa-floppy-disk"></i> Save &amp; Publish Product</button>
-      </div>
-    </div>
-
-    <!-- Tab 2: Manage Custom Products -->
-    <div class="admin-content-area" id="tabManageContent" style="display:none">
-      <div class="custom-list-wrap" id="customListContainer">
-        <!-- Rendered dynamically -->
-      </div>
+    <div class="acon" id="paneM" style="display:none">
+      <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="sm" id="exp"><i class="fa-solid fa-download"></i> Export backup</button><button class="sm" id="imp"><i class="fa-solid fa-upload"></i> Import backup</button><input type="file" id="impFile" accept=".json" hidden></div>
+      <div id="list" style="display:flex;flex-direction:column;gap:10px"></div>
     </div>
   </div>
 </div>
 
-<!-- FOOTER (#0F3040) -->
 <footer>
-  <div class="fg">
+  <div class="fgr">
     <div>
-      <div class="brand-t" style="font-size:1.2rem;color:#ffffff">SHUAA AL MADAR</div>
-      <div class="brand-s" style="margin-bottom:8px;color:#06D001">Electronics Trading LLC</div>
-      <p>Wholesale distribution of certified mobile communications, home appliances, electrical spare parts, enterprise computing, and licensed digital software suites.</p>
-      <div class="chips">
-        <span><i class="fa-solid fa-shield"></i> TDRA Approved</span>
-        <span><i class="fa-solid fa-certificate"></i> ESMA Certified</span>
-        <span><i class="fa-solid fa-plane"></i> GCC Air Cargo</span>
-      </div>
+      <div class="brand-t ff" style="font-size:1.2rem">SHUAA AL MADAR</div><div class="brand-s">Electronics Trading LLC</div>
+      <p>Wholesale distribution of certified mobile devices, home appliances, electrical spare parts, enterprise computing and licensed software from Deira, Dubai.</p>
+      <div class="chips"><span><i class="fa-solid fa-shield"></i> TDRA approved</span><span><i class="fa-solid fa-certificate"></i> ESMA certified</span><span><i class="fa-solid fa-plane"></i> GCC air cargo</span></div>
+      <div class="soc"><a href="https://wa.me/97145663256" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a><a href="mailto:shuaaalmadar@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a><a href="tel:+97145663256" aria-label="Call"><i class="fa-solid fa-phone"></i></a></div>
     </div>
-    <div>
-      <h4 class="fh">Trade Activities</h4>
-      <ul class="fl" id="fLinks"></ul>
-    </div>
-    <div>
-      <h4 class="fh">Quick Contacts</h4>
-      <ul class="fl">
-        <li><a href="#contact"><i class="fa-solid fa-location-dot"></i> Office B 805, Baniyas Complex</a></li>
-        <li><a href="tel:+97145663256"><i class="fa-solid fa-phone"></i> +971 4 566 3256</a></li>
-        <li><a href="mailto:shuaaalmadar@gmail.com"><i class="fa-solid fa-envelope"></i> shuaaalmadar@gmail.com</a></li>
-        <li><a href="#rfqSection"><i class="fa-solid fa-file-lines"></i> Wholesale RFQ Portal</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="fh">Trade Logistics</h4>
-      <p style="margin:0 0 12px;font-size:.80rem">Bulk shipments handled daily through Deira Central Hub &amp; Jebel Ali Free Zone.</p>
-      <a href="#rfqSection" class="btn-mail" style="font-size:.76rem;padding:9px 16px;text-decoration:none;display:inline-flex"><i class="fa-solid fa-paper-plane"></i> Submit Quotation</a>
-    </div>
+    <div><h4 class="fh">Trade activities</h4><ul class="fl" id="fLinks"></ul></div>
+    <div><h4 class="fh">Contact</h4><ul class="fl">
+      <li><a href="#contact"><i class="fa-solid fa-location-dot"></i> B 805, Baniyas Complex, Deira</a></li>
+      <li><a href="tel:+97145663256"><i class="fa-solid fa-phone"></i> +971 4 566 3256</a></li>
+      <li><a href="mailto:shuaaalmadar@gmail.com"><i class="fa-solid fa-envelope"></i> shuaaalmadar@gmail.com</a></li>
+      <li><a href="#rfqSection"><i class="fa-solid fa-file-lines"></i> Wholesale RFQ</a></li></ul></div>
+    <div><h4 class="fh">Hours &amp; logistics</h4>
+      <p style="margin:0 0 6px">Mon - Sat: 9:00 AM - 8:00 PM<br>Sunday: by appointment</p>
+      <p style="margin:0 0 12px;font-size:.8rem">Bulk shipments leave daily through Deira and Jebel Ali Free Zone.</p>
+      <a href="#rfqSection" class="btn-mail" style="font-size:.76rem;padding:9px 16px"><i class="fa-solid fa-paper-plane"></i> Request quotation</a></div>
   </div>
-  <div class="fb">
-    <div>&copy; 2024-<span id="yr"></span> <strong>SHUAA AL MADAR ELECTRONICS TRADING LLC</strong>. Dubai, UAE.</div>
-    <button class="top" id="toTop"><i class="fa-solid fa-arrow-up"></i> Back to Top</button>
-  </div>
+  <div class="fb"><div>&copy; 2024-<span id="yr"></span> <strong>SHUAA AL MADAR ELECTRONICS TRADING LLC</strong>. Dubai, UAE.</div><button class="top" id="toTop"><i class="fa-solid fa-arrow-up"></i> Back to top</button></div>
 </footer>
 
-<!-- Floating WhatsApp -->
-<a class="fwa" target="_blank" rel="noopener" title="WhatsApp Trade Desk" aria-label="WhatsApp Trade Desk" href="https://wa.me/97145663256?text=Hello%20SHUAA%20AL%20MADAR%20Trading%20Desk%2C%20I%20am%20inquiring%20about%20wholesale%20electronics%20inventory.">
-  <i class="fa-brands fa-whatsapp"></i>
-</a>
-
+<a class="fwa" target="_blank" rel="noopener" aria-label="WhatsApp trade desk" href="https://wa.me/97145663256?text=Hello%20SHUAA%20AL%20MADAR%2C%20I%20am%20inquiring%20about%20wholesale%20electronics."><i class="fa-brands fa-whatsapp"></i></a>
 <div class="toast" id="toast" role="status"></div>
 
 <script>
-const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
-const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const ADMIN={user:'admin',pass:'admin123'};
-const PHONE='97145663256';
-const EXACT_LOCATION_QUERY = "Office No.: B 805, Baniyas Complex, Deira, Dubai, United Arab Emirates";
-const DEST_COORDS=[25.2684, 55.3085];
-const FALLBACK='data:image/svg+xml;utf8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400"><rect width="600" height="400" fill="#063B00"/><text x="300" y="210" fill="#06D001" font-size="24" font-weight="bold" text-anchor="middle" font-family="sans-serif">SHUAA AL MADAR</text></svg>');
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const ADMIN={user:'admin',pass:'admin123'},PHONE='97145663256';
+const ADDR='Office No.: B 805, Baniyas Complex, Deira, Dubai, United Arab Emirates';
+const MAPQ='Baniyas Complex, Deira, Dubai, United Arab Emirates';
+const DEST=[25.2697,55.3090];
+const FALLBACK='data:image/svg+xml;utf8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450"><rect width="600" height="450" fill="#063B00"/><text x="300" y="230" fill="#06D001" font-size="26" font-weight="bold" text-anchor="middle" font-family="sans-serif">SHUAA AL MADAR</text></svg>');
 const U=id=>`https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=900&q=80`;
-const S=(a,b,c)=>[a,b,c];
+const imgErr="this.onerror=null;this.src=FALLBACK";
+$('#logoImg').onerror=function(){this.onerror=null;this.src='data:image/svg+xml;utf8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44"><rect width="44" height="44" rx="8" fill="#063B00"/><text x="22" y="27" fill="#06D001" font-size="15" font-weight="bold" text-anchor="middle" font-family="sans-serif">SAM</text></svg>')};
 
+const P=(sku,title,badge,imgs,moq,intro,specs,trade)=>({sku,title,badge,imgs:imgs.map(U),moq,intro,specs,trade});
 const DB={
-mobile:{
-  code:'ACT-4741',
-  bg:U('1511707171634-5f897ff02aa9'),
-  t:'Mobile Phones & Accessories Trading',
-  short:'Mobile & Accessories',
-  i:'fa-mobile-screen-button',
-  d:'Wholesale supply of flagship 5G smartphones, active noise-cancelling wireless audio, magnetic power arrays, and certified GaN fast adapters.',
-  tags:['5G Flagships','GaN III Chargers','Hybrid ANC Audio','Global SIM Unlocked'],
-  origin:'GCC & Global Spec Units',
-  dispatch:'Deira Central Warehouse',
-  p:[
-    ['SAM-MOB-01','Ultra 5G Flagship Smartphone 256GB / 512GB','Dubai Central Stock',U('1592899677977-9c10ca588bbd'),'25 Units','Flagship with grade-5 titanium frame, 120Hz LTPO AMOLED display, and 200MP sensor array. Unlocked for global networks.',[S('fa-microchip','Processor','Snapdragon 8 Gen 3 (4nm TSMC)'),S('fa-tv','Display','6.8" Dynamic AMOLED 2X, 2600 nits'),S('fa-memory','RAM / Storage','12GB / 16GB LPDDR5X + 512GB UFS 4.0'),S('fa-camera','Cameras','200MP OIS + 50MP 5x Periscope + 12MP UW'),S('fa-battery-full','Battery & Charge','5000mAh, 45W PPS Wired + 15W Qi2'),S('fa-certificate','Approvals','TDRA UAE Approved, CE, FCC, RoHS')]],
-    ['SAM-ACC-02','Pro ANC Hybrid Wireless Earbuds','Stock Ready (2000+ pcs)',U('1590658268037-6bf12165a8df'),'100 Units','Active noise cancelling true wireless earbuds with 6-microphone ENC system and 36-hour charging case.',[S('fa-volume-high','Acoustics','11mm Beryllium drivers + aptX Lossless'),S('fa-shield-halved','Noise Filter','-48dB Dual Hybrid Active Noise Control'),S('fa-battery-three-quarters','Endurance','8.5h playback / 36h total case backup'),S('b:fa-bluetooth','Connection','Bluetooth 5.3 Multipoint Dual-Host'),S('fa-droplet','Ingress Spec','IPX5 sweat and moisture rating'),S('fa-box-open','Packaging','Commercial sealed retail packing')]],
-    ['SAM-ACC-03','Magnetic 10,000mAh 22.5W Power Bank','Aircraft Aluminium Chassis',U('1609592424109-dd9892f1b177'),'150 Units','Slim magnetic wireless battery pack with 22.5W bidirectional USB-C PD and integrated percentage LED display.',[S('fa-car-battery','Cell Spec','10,000mAh (38.5Wh) Li-Polymer'),S('fa-magnet','Array','N52 Ultra-strong Neodymium Ring'),S('fa-bolt','Wireless Output','15W Qi Fast Charge / MagSafe'),S('fa-plug','Wired Power','22.5W Super Charge / 20W USB-C PD'),S('fa-temperature-low','Safety','Multi-protection IC & Thermal Cutoff'),S('fa-weight-scale','Dimensions','104 x 68 x 14 mm, 185g')]],
-    ['SAM-ACC-04','GaN III 100W 4-Port Fast Desktop Charger','Universal High-Output',U('1583863788434-e58a36330cf0'),'200 Units','High-efficiency desktop charger supplying power to laptops, tablets, and smartphones simultaneously.',[S('fa-microchip','Architecture','Navitas GaN III Integrated Silicon'),S('fa-bolt-lightning','Output Wattage','100W Max Dynamic Power Allocation'),S('fa-network-wired','Port Layout','3x USB-C (PD 3.0/PPS) + 1x USB-A QC4+'),S('fa-plug-circle-check','Mains Pin','UK / UAE 3-Pin fused safety plug'),S('fa-laptop','Compatibility','MacBook Pro, Dell XPS, iPhone & Galaxy'),S('fa-award','Standard','G-Mark Gulf Conformity, CE, RoHS')]]
-]},
-appliances:{
-  code:'ACT-4754',
-  bg:U('1556911220-e15b29be8c8f'),
-  t:'Refrigerators, Washing Machines & Household Electrical Appliances',
-  short:'Refrigerators & Washers',
-  i:'fa-snowflake',
-  d:'Bulk inverter refrigerators, direct-drive AI steam washing machines, heavy cooling units, and ESMA certified white goods.',
-  tags:['T-Class Tropical 55°C','Direct Drive Inverter','AI Steam Wash','ESMA 5-Star Energy'],
-  origin:'MEA High-Ambient Rated',
-  dispatch:'Bulk Cargo / Pallet Lots',
-  p:[
-    ['SAM-APP-01','Smart Multi-Door Inverter Refrigerator 580L','Tropical T-Class 55°C',U('1571175443880-49e1d25b2bc5'),'10 Units','Dual-inverter no-frost 4-door refrigerator with multi-zone digital temperature control and deodorizer.',[S('fa-box','Net Capacity','580 Litres (Fridge 382L / Freezer 198L)'),S('fa-gears','Compressor','Dual Digital Inverter (10Y Warranty)'),S('fa-wind','Cooling System','Multi-Air 360° Surround Frost-Free'),S('fa-gauge-high','Climate Rating','T-Class (Engineered for 55°C Ambient)'),S('fa-star','Energy Class','ESMA 5-Star / Gulf EER Compliant'),S('fa-plug','Electrical','220-240V / 50-60Hz GCC standard')]],
-    ['SAM-APP-02','Front-Load AI Steam Washing Machine 10.5KG','BLDC Direct Drive',U('1626806787461-102c1bfaaea1'),'12 Units','Direct-drive front loader with 1400 RPM spin speed, anti-allergy steam sanitization, and Wi-Fi diagnostics.',[S('fa-shirt','Dry Capacity','10.5 KG Heavy Load Drum'),S('fa-rotate','Spin Velocity','Variable 400 to 1400 RPM'),S('fa-microchip','Drive Motor','Brushless Direct Drive (BLDC)'),S('fa-fire-burner','Sanitization','99.9% Anti-Bacterial Steam Cycle'),S('fa-sliders','Programs','14 Custom Fabric Programs + 15m Express'),S('fa-ruler-combined','Footprint','600 x 850 x 565 mm')]]
-]},
-'spare-parts':{
-  code:'ACT-4759',
-  bg:U('1518770660439-4636190af475'),
-  t:'Electrical & Electronic Appliances Spare Parts Trading',
-  short:'Spare Parts Trading',
-  i:'fa-microchip',
-  d:'Precision universal inverter motherboards, replacement BLDC cooling compressors, thermal sensors, and industrial electronic components.',
-  tags:['Inverter AC PCBs','Surge Protection Modules','IPM Controllers','IPC-A-610 Class 2'],
-  origin:'OEM Standard Components',
-  dispatch:'Fast Dispatch Ready',
-  p:[
-    ['SAM-SPR-01','Universal Inverter Motherboard PCB Assembly','Commercial Spare Module',U('1518770660439-4636190af475'),'50 Pieces','Modular power driver board for split ACs, commercial refrigeration units, and chiller cooling loops.',[S('fa-bolt','Input Range','180V - 265V AC, 50/60Hz Surge Protected'),S('fa-microchip','Driver IC','Intelligent Power Module (IPM) IGBT'),S('fa-shield-halved','Protection','Phase-loss, overvoltage & thermal fuse'),S('fa-temperature-arrow-up','Temp Rating','-20°C to +85°C continuous'),S('fa-spray-can','Resin Coat','Conformal anti-humidity coating'),S('fa-award','Standard','IPC-A-610 Class 2 Industrial')]]
-]},
-accessories:{
-  code:'ACT-4761',
-  bg:U('1544652478-6653e09f18a2'),
-  t:'Computer Electric Accessories Trading',
-  short:'Electric Accessories',
-  i:'fa-plug-circle-bolt',
-  d:'12-in-1 Dual 4K Thunderbolt docking solutions, high-grade surge suppressors, UPS backup units, and shielded high-speed cables.',
-  tags:['Thunderbolt 4 / Type-C','Dual 4K@60Hz HDMI','100W PD Pass-through','Heavy-Duty Alloy'],
-  origin:'CE, FCC & RoHS Standard',
-  dispatch:'Export Ready Cartons',
-  p:[
-    ['SAM-ELC-01','12-in-1 Dual 4K Thunderbolt Docking Station','Aluminium Heat-Sink',U('1544652478-6653e09f18a2'),'50 Units','Full-metal USB-C docking station supporting dual 4K displays at 60Hz, 100W power delivery, and gigabit networking.',[S('fa-bolt','Upstream Bus','Thunderbolt 4 / USB 4.0 Type-C'),S('fa-desktop','Displays','Dual 4K@60Hz (HDMI 2.0 + DP 1.4)'),S('fa-plug','Pass-through','100W USB-C Power Delivery 3.0'),S('fa-network-wired','LAN Interface','Realtek Gigabit RJ45 Ethernet'),S('b:fa-usb','I/O Ports','4x USB 3.2 Gen2 (10Gbps), SD/TF 4.0'),S('fa-shield','Housing','Anodized aerospace aluminium')]]
-]},
-computers:{
-  code:'ACT-4742',
-  bg:U('1550751827-4bd374c3f58b'),
-  t:'Computers & Peripheral Equipment Trading',
-  short:'Computers & Peripherals',
-  i:'fa-computer',
-  d:'Commercial enterprise laptops, high-performance desktop workstations, ultra-wide 4K monitors, and corporate IT accessories.',
-  tags:['Core i7 / i9 Series','Eng / Arabic Layouts','PCIe 4.0 NVMe Storage','Hardware TPM 2.0'],
-  origin:'Authorised Tier-1 Hardware',
-  dispatch:'Deira Central Batching',
-  p:[
-    ['SAM-CMP-01','Ultra-Slim 15.6" Business Laptop Core i7 16GB','Eng/Arabic Dual Layout',U('1496181133206-80ce9b88a853'),'20 Units','Magnesium alloy business notebook equipped with Intel Core i7, 16GB DDR5, 1TB NVMe, and enterprise fingerprint authentication.',[S('fa-microchip','CPU Spec','Intel Core i7-1365U, 10 Cores to 5.0GHz'),S('fa-memory','RAM Module','16GB DDR5 5200MHz Dual-Channel'),S('fa-hard-drive','Storage','1TB PCIe 4.0 x4 NVMe M.2 SSD'),S('fa-display','Display','15.6" IPS FHD Anti-Glare, 100% sRGB'),S('b:fa-windows','Operating OS','Windows 11 Pro Commercial Licensed'),S('fa-fingerprint','Security','TPM 2.0 Chip + Biometric Sensor')]]
-]},
-software:{
-  code:'ACT-4743',
-  bg:U('1558494949-ef010cbdcc31'),
-  t:'Computer Systems & Communication Software Trading',
-  short:'Systems & Software',
-  i:'fa-network-wired',
-  d:'Licensed enterprise operating environments, unified cloud security suites, hardware IPsec VPN modules, and telecom routing software.',
-  tags:['Commercial Enterprise Keys','Deep Packet Inspection','IPsec / SSL VPN','ISO 27001 Ready'],
-  origin:'Genuine Digital ESD Licenses',
-  dispatch:'Immediate Digital Delivery',
-  p:[
-    ['SAM-SFT-01','Enterprise Network Firewall & OS Software Suite','Commercial Software',U('1558494949-ef010cbdcc31'),'5 Commercial Seats','Authorized firewall software licenses for threat prevention, SD-WAN interconnectivity, and multi-site branch VPN.',[S('fa-key','License Tier','Perpetual Digital Enterprise Activation'),S('fa-shield-halved','Inspection','Deep Packet Inspection up to 5 Gbps'),S('fa-server','Deployment','Bare-metal, VMware ESXi, or Hyper-V'),S('fa-globe','VPN Protocols','IPsec / WireGuard / SSL Hardware Accelerated'),S('fa-headset','Vendor SLA','1-Year 24/7 Security Updates & Patching'),S('fa-file-shield','Compliance','ISO/IEC 27001 & GDPR Compliant')]]
-]}
+mobile:{code:'ACT-4741',bg:U('1511707171634-5f897ff02aa9'),t:'Mobile Phones & Accessories Trading',short:'Mobile & Accessories',i:'fa-mobile-screen-button',
+ d:'Wholesale flagship 5G smartphones, noise-cancelling audio, magnetic power banks and certified GaN chargers.',tags:['5G flagships','GaN chargers','ANC audio','SIM unlocked'],origin:'GCC & global spec units',dispatch:'Deira central warehouse',
+ p:[
+ P('SAM-MOB-01','Ultra 5G Flagship Smartphone 256GB / 512GB','Dubai central stock',['1592899677977-9c10ca588bbd','1511707171634-5f897ff02aa9','1601784551446-20c9e07cdbdb'],'25 units','Titanium-frame flagship with 120Hz LTPO AMOLED display and 200MP camera array, unlocked for global networks.',[['fa-microchip','Processor','Snapdragon 8 Gen 3 (4nm)'],['fa-tv','Display','6.8" Dynamic AMOLED 2X, 2600 nits'],['fa-memory','RAM / storage','12GB / 16GB + 512GB UFS 4.0'],['fa-camera','Cameras','200MP OIS + 50MP 5x + 12MP UW'],['fa-battery-full','Battery','5000mAh, 45W wired + 15W Qi2'],['fa-certificate','Approvals','TDRA UAE, CE, FCC, RoHS']],['Sealed retail box, 20 units per master carton','7-day inspection window','Ships FOB Dubai by air']),
+ P('SAM-ACC-02','Pro ANC Hybrid Wireless Earbuds','Stock ready (2000+ pcs)',['1590658268037-6bf12165a8df','1606220588913-b3aacb4d2f46','1572569511254-d8f925fe2cbb'],'100 units','True wireless earbuds with 6-mic ENC and a 36-hour charging case.',[['fa-volume-high','Acoustics','11mm beryllium drivers, aptX Lossless'],['fa-shield-halved','Noise filter','-48dB hybrid ANC'],['fa-battery-three-quarters','Endurance','8.5h play / 36h with case'],['fa-wifi','Connection','Bluetooth 5.3 multipoint'],['fa-droplet','Rating','IPX5 sweat resistant'],['fa-box-open','Packaging','Sealed retail pack']],['100 units per carton','Colour mix on request','Ships FOB Dubai']),
+ P('SAM-ACC-03','Magnetic 10,000mAh 22.5W Power Bank','Aluminium chassis',['1609592424109-dd9892f1b177','1583863788434-e58a36330cf0'],'150 units','Slim magnetic wireless battery pack with 22.5W USB-C PD and LED percentage display.',[['fa-car-battery','Cell','10,000mAh (38.5Wh) Li-Polymer'],['fa-magnet','Magnet','N52 neodymium ring'],['fa-bolt','Wireless','15W Qi fast charge'],['fa-plug','Wired','22.5W / 20W USB-C PD'],['fa-temperature-low','Safety','Multi-protection IC, thermal cutoff'],['fa-weight-scale','Size','104 x 68 x 14 mm, 185g']],['150 units per carton','OEM logo available on 1000+ units']),
+ P('SAM-ACC-04','GaN III 100W 4-Port Desktop Charger','Universal high output',['1583863788434-e58a36330cf0','1609592424109-dd9892f1b177'],'200 units','High-efficiency desktop charger for laptops, tablets and phones at once.',[['fa-microchip','Chip','Navitas GaN III'],['fa-bolt-lightning','Output','100W dynamic allocation'],['fa-network-wired','Ports','3x USB-C (PD 3.0) + 1x USB-A'],['fa-plug-circle-check','Plug','UK / UAE 3-pin fused'],['fa-laptop','Works with','MacBook, Dell XPS, iPhone, Galaxy'],['fa-award','Standard','G-Mark, CE, RoHS']],['200 units per carton','G-Mark documents supplied'])]},
+appliances:{code:'ACT-4754',bg:U('1556911220-e15b29be8c8f'),t:'Refrigerators, Washing Machines & Household Electrical Appliances',short:'Refrigerators & Washers',i:'fa-snowflake',
+ d:'Bulk inverter refrigerators, direct-drive steam washers and ESMA certified white goods for hot-climate markets.',tags:['T-class 55°C','Direct-drive inverter','Steam wash','ESMA 5-star'],origin:'MEA high-ambient rated',dispatch:'Bulk cargo / pallet lots',
+ p:[
+ P('SAM-APP-01','Smart Multi-Door Inverter Refrigerator 580L','Tropical T-class 55°C',['1571175443880-49e1d25b2bc5','1556911220-e15b29be8c8f','1584568694244-14fbdf83bd30'],'10 units','Dual-inverter no-frost 4-door refrigerator with multi-zone temperature control.',[['fa-box','Capacity','580 L (fridge 382 / freezer 198)'],['fa-gears','Compressor','Dual digital inverter, 10-year warranty'],['fa-wind','Cooling','Multi-air 360° frost-free'],['fa-gauge-high','Climate','T-class, 55°C ambient'],['fa-star','Energy','ESMA 5-star'],['fa-plug','Electrical','220-240V / 50-60Hz']],['Full 40ft container: 48 units','Ships CIF Jebel Ali','Spare parts kit on request']),
+ P('SAM-APP-02','Front-Load AI Steam Washing Machine 10.5KG','BLDC direct drive',['1626806787461-102c1bfaaea1','1610557892470-55d9e80c0bce','1585771724684-38269d6639fd'],'12 units','Direct-drive front loader, 1400 RPM spin, anti-allergy steam and Wi-Fi diagnostics.',[['fa-shirt','Capacity','10.5 KG'],['fa-rotate','Spin','400 to 1400 RPM'],['fa-microchip','Motor','Brushless direct drive'],['fa-fire-burner','Steam','99.9% anti-bacterial cycle'],['fa-sliders','Programs','14 programs + 15 min express'],['fa-ruler-combined','Size','600 x 850 x 565 mm']],['Pallet of 6 units','Ships FOB Dubai or CIF'])]},
+'spare-parts':{code:'ACT-4759',bg:U('1518770660439-4636190af475'),t:'Electrical & Electronic Appliances Spare Parts Trading',short:'Spare Parts Trading',i:'fa-microchip',
+ d:'Universal inverter motherboards, replacement compressors, thermal sensors and industrial electronic components.',tags:['Inverter AC PCBs','Surge protection','IPM controllers','IPC-A-610'],origin:'OEM standard components',dispatch:'Fast dispatch ready',
+ p:[P('SAM-SPR-01','Universal Inverter Motherboard PCB Assembly','Commercial spare module',['1518770660439-4636190af475','1580983546325-0c8a1c5b6b4c','1597852074816-d933c7d2b988'],'50 pieces','Modular power driver board for split ACs, commercial refrigeration and chiller loops.',[['fa-bolt','Input','180-265V AC, surge protected'],['fa-microchip','Driver','IPM IGBT module'],['fa-shield-halved','Protection','Phase-loss, overvoltage, thermal fuse'],['fa-temperature-arrow-up','Temp','-20°C to +85°C'],['fa-spray-can','Coating','Anti-humidity conformal coat'],['fa-award','Standard','IPC-A-610 Class 2']],['50 pieces per carton','Anti-static packing'])]},
+accessories:{code:'ACT-4761',bg:U('1544652478-6653e09f18a2'),t:'Computer Electric Accessories Trading',short:'Electric Accessories',i:'fa-plug-circle-bolt',
+ d:'Thunderbolt docking stations, surge suppressors, UPS backup units and shielded high-speed cables.',tags:['Thunderbolt 4','Dual 4K@60Hz','100W PD','Alloy build'],origin:'CE, FCC & RoHS',dispatch:'Export-ready cartons',
+ p:[P('SAM-ELC-01','12-in-1 Dual 4K Thunderbolt Docking Station','Aluminium heat-sink',['1544652478-6653e09f18a2','1625842268584-8f3296236761','1593642632559-0c6d3fc62b89'],'50 units','Full-metal USB-C dock with dual 4K displays, 100W power delivery and gigabit networking.',[['fa-bolt','Bus','Thunderbolt 4 / USB4'],['fa-desktop','Displays','Dual 4K@60Hz (HDMI 2.0 + DP 1.4)'],['fa-plug','Pass-through','100W USB-C PD 3.0'],['fa-network-wired','LAN','Gigabit RJ45'],['fa-usb','Ports','4x USB 3.2 Gen2, SD/TF 4.0'],['fa-shield','Housing','Anodised aluminium']],['25 units per carton','Cables included'])]},
+computers:{code:'ACT-4742',bg:U('1550751827-4bd374c3f58b'),t:'Computers & Peripheral Equipment Trading',short:'Computers & Peripherals',i:'fa-computer',
+ d:'Business laptops, workstations, ultra-wide 4K monitors and corporate IT accessories.',tags:['Core i7 / i9','Eng / Arabic keys','NVMe SSD','TPM 2.0'],origin:'Authorised tier-1 hardware',dispatch:'Deira central batching',
+ p:[P('SAM-CMP-01','Ultra-Slim 15.6" Business Laptop Core i7 16GB','English / Arabic layout',['1496181133206-80ce9b88a853','1517336714731-489689fd1ca8','1588872657578-7efd1f1555ed'],'20 units','Magnesium-alloy notebook with Core i7, 16GB DDR5, 1TB NVMe and fingerprint login.',[['fa-microchip','CPU','Intel Core i7-1365U, up to 5.0GHz'],['fa-memory','RAM','16GB DDR5 5200MHz'],['fa-hard-drive','Storage','1TB PCIe 4.0 NVMe'],['fa-display','Display','15.6" IPS FHD anti-glare'],['fa-windows','OS','Windows 11 Pro licensed'],['fa-fingerprint','Security','TPM 2.0 + fingerprint']],['10 units per carton','Bilingual keyboard on request'])]},
+software:{code:'ACT-4743',bg:U('1558494949-ef010cbdcc31'),t:'Computer Systems & Communication Software Trading',short:'Systems & Software',i:'fa-network-wired',
+ d:'Licensed operating environments, cloud security suites, IPsec VPN modules and telecom routing software.',tags:['Enterprise keys','Deep packet inspection','IPsec / SSL VPN','ISO 27001'],origin:'Genuine digital licenses',dispatch:'Immediate digital delivery',
+ p:[P('SAM-SFT-01','Enterprise Network Firewall & OS Software Suite','Commercial software',['1558494949-ef010cbdcc31','1563986768609-322da13575f3','1510511459019-5dda7724fd87'],'5 seats','Authorised firewall licenses for threat prevention, SD-WAN and multi-site VPN.',[['fa-key','License','Perpetual enterprise activation'],['fa-shield-halved','Inspection','Deep packet inspection to 5 Gbps'],['fa-server','Deploy on','Bare metal, VMware ESXi, Hyper-V'],['fa-globe','VPN','IPsec / WireGuard / SSL'],['fa-headset','Support','1-year 24/7 security updates'],['fa-file-shield','Compliance','ISO/IEC 27001, GDPR']],['Delivered by email as digital keys','Invoice with TRN'])]}
 };
-
 const KEYS=Object.keys(DB);
-KEYS.forEach(k=>DB[k].p=DB[k].p.map(a=>({sku:a[0],title:a[1],badge:a[2],img:a[3],moq:a[4],intro:a[5],specs:a[6]})));
-const store={
-  get(){try{return JSON.parse(localStorage.getItem('sam_products')||'{}')}catch(e){return{}}},
-  set(v){try{localStorage.setItem('sam_products',JSON.stringify(v))}catch(e){}}
-};
-function loadCustom(){
-  const c=store.get();
-  KEYS.forEach(k=>{
-    DB[k].p=DB[k].p.filter(p=>!p.custom);
-    (c[k]||[]).forEach(p=>DB[k].p.push({...p,custom:true}));
-  });
-}
-loadCustom();
+const RFQ_NAMES={mobile:'Mobile Phones & Accessories',appliances:'Refrigerators & Washing Machines','spare-parts':'Appliances Spare Parts',accessories:'Computer Electric Accessories',computers:'Computers & Peripherals',software:'Systems & Software'};
+const baseCount=()=>KEYS.reduce((n,k)=>n+DB[k].p.filter(p=>!p.custom).length,0);
 
-let tt;
-function toast(m){
-  const t=$('#toast');t.textContent=m;t.classList.add('on');
-  clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),2800);
-}
+/* storage */
+const store={get(){try{return JSON.parse(localStorage.getItem('sam_products')||'{}')}catch(e){return{}}},set(v){try{localStorage.setItem('sam_products',JSON.stringify(v));return true}catch(e){toast('Storage is full. Remove photos or export a backup.');return false}}};
+function loadCustom(){const c=store.get();KEYS.forEach(k=>{DB[k].p=DB[k].p.filter(p=>!p.custom);(c[k]||[]).forEach(p=>{const imgs=p.imgs||(p.img?[p.img]:[FALLBACK]);DB[k].p.push({...p,imgs,trade:p.trade||[],custom:true})})})}
+loadCustom();
+let tt;function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),2800)}
 let lastFocus;
 function openOv(el){lastFocus=document.activeElement;el.classList.add('on');document.body.classList.add('lock')}
 function closeOv(el){el.classList.remove('on');if(!$$('.ov.on').length)document.body.classList.remove('lock');lastFocus&&lastFocus.focus&&lastFocus.focus()}
 
-/* Hero slider */
+/* hero */
 const HERO=[
-  ['1519389950473-47ba0277781c','fa-bolt','Commercial Electronics Wholesale','Premier <em>Electronics & Mobile</em> Trading Hub','Wholesale distribution of smartphones, verified genuine accessories, and computing equipment across the GCC and international markets.','mobile','Explore Mobiles'],
-  ['1550751827-4bd374c3f58b','fa-network-wired','Corporate IT Infrastructure','Computers & <em>Communication Systems</em>','Commercial laptops, enterprise workstations, network communication infrastructure, and genuine digital operating suites.','computers','Browse Computing'],
-  ['1556911220-e15b29be8c8f','fa-snowflake','Certified White Goods','Refrigerators & <em>Washing Machines</em>','Export-grade energy-efficient refrigerators, inverter laundry systems, and household electrical units with manufacturer backing.','appliances','View Appliances'],
-  ['1518770660439-4636190af475','fa-microchip','OEM Replacement Parts','Electrical & <em>Electronic Spare Parts</em>','Original replacement motherboards, inverter compressor components, sensors, and industrial electronic accessories.','spare-parts','Search Spare Parts'],
-  ['1512453979798-5ea266f8880c','fa-location-dot','Heart of Deira District','Baniyas Complex, <em>Deira Dubai</em>','Office No.: B 805, Baniyas Complex. Centralized order batching, direct container logistics, and rapid GCC transport.',null,'Our Office']
-];
-
-$('#heroSlides').innerHTML=HERO.map((h,i)=>`
-  <div class="sl${i?'':' act'}" style="background-image:url('${U(h[0])}')">
-    <div class="hc">
-      <div class="tag"><i class="fa-solid ${h[1]}"></i> ${h[2]}</div>
-      <h1>${h[3]}</h1>
-      <p>${h[4]}</p>
-      <div class="btns">
-        ${h[5]?`<button class="b1" data-open="${h[5]}">${h[6]} <i class="fa-solid fa-arrow-right"></i></button>`:`<a class="b1" href="#contact">${h[6]} <i class="fa-solid fa-arrow-right"></i></a>`}
-        <a class="b2" href="#rfqSection"><i class="fa-solid fa-file-invoice"></i> Submit RFQ</a>
-      </div>
-    </div>
-  </div>
-`).join('');
+['1519389950473-47ba0277781c','fa-bolt','Commercial electronics wholesale','Premier <em>Electronics & Mobile</em> Trading Hub','Wholesale smartphones, genuine accessories and computing equipment for GCC and international buyers.','mobile','Explore mobiles'],
+['1550751827-4bd374c3f58b','fa-network-wired','Corporate IT infrastructure','Computers & <em>Communication Systems</em>','Business laptops, workstations, network infrastructure and genuine software suites.','computers','Browse computing'],
+['1556911220-e15b29be8c8f','fa-snowflake','Certified white goods','Refrigerators & <em>Washing Machines</em>','Energy-efficient refrigerators and inverter laundry systems with manufacturer backing.','appliances','View appliances'],
+['1518770660439-4636190af475','fa-microchip','OEM replacement parts','Electrical & <em>Electronic Spare Parts</em>','Replacement motherboards, compressor components, sensors and industrial electronics.','spare-parts','Search spare parts'],
+['1512453979798-5ea266f8880c','fa-location-dot','Heart of Deira','Baniyas Complex, <em>Deira Dubai</em>','Office B 805, Baniyas Complex. Central order batching and rapid GCC transport.',null,'See our office']];
+$('#heroSlides').innerHTML=HERO.map((h,i)=>`<div class="sl${i?'':' act'}" style="background-image:url('${U(h[0])}')"><div class="hc"><div class="tag"><i class="fa-solid ${h[1]}"></i> ${h[2]}</div><h1>${h[3]}</h1><p>${h[4]}</p><div class="btns">${h[5]?`<button class="b1" data-open="${h[5]}">${h[6]} <i class="fa-solid fa-arrow-right"></i></button>`:`<a class="b1" href="#contact">${h[6]} <i class="fa-solid fa-arrow-right"></i></a>`}<a class="b2" href="#rfqSection"><i class="fa-solid fa-file-invoice"></i> Submit RFQ</a></div></div></div>`).join('');
 $('#heroDots').innerHTML=HERO.map((_,i)=>`<button class="dot${i?'':' act'}" aria-label="Slide ${i+1}"></button>`).join('');
+let hi=0,ht;const hs=$$('.sl'),hd=$$('.dot');
+function hero(i){hi=(i+hs.length)%hs.length;hs.forEach((s,n)=>s.classList.toggle('act',n===hi));hd.forEach((s,n)=>s.classList.toggle('act',n===hi))}
+function auto(){clearInterval(ht);if(!matchMedia('(prefers-reduced-motion:reduce)').matches)ht=setInterval(()=>hero(hi+1),5500)}
+$('#hn').onclick=()=>{hero(hi+1);auto()};$('#hp').onclick=()=>{hero(hi-1);auto()};hd.forEach((d,i)=>d.onclick=()=>{hero(i);auto()});auto();
 
-let hi=0,ht;
-const hs=$$('.sl'),hd=$$('.dot');
-function hero(i){
-  hi=(i+hs.length)%hs.length;
-  hs.forEach((s,n)=>s.classList.toggle('act',n===hi));
-  hd.forEach((s,n)=>s.classList.toggle('act',n===hi));
-}
-function auto(){
-  clearInterval(ht);
-  if(!matchMedia('(prefers-reduced-motion:reduce)').matches) ht=setInterval(()=>hero(hi+1),5500);
-}
-$('#hn').onclick=()=>{hero(hi+1);auto()};
-$('#hp').onclick=()=>{hero(hi-1);auto()};
-hd.forEach((d,i)=>d.onclick=()=>{hero(i);auto()});
-auto();
-
-/* Render items */
+/* activity cards */
 function renderStatic(){
-  $('#actGrid').innerHTML=KEYS.map(k=>{
-    const item=DB[k];
-    const tagsHtml=(item.tags||[]).map(t=>`<span class="c-tag"><i class="fa-solid fa-check"></i> ${esc(t)}</span>`).join('');
-    return `
-    <button class="card" data-open="${k}">
-      <div class="card-bg" style="background-image:url('${item.bg}')"></div>
-      <div class="card-glass"></div>
-      <div class="ct">
-        <div class="ci-wrap">
-          <div class="ci"><i class="fa-solid ${item.i}"></i></div>
-          <span class="card-code">${item.code}</span>
-        </div>
-        <div class="card-badges">
-          <span class="badge"><span class="badge-dot"></span>Licensed</span>
-          <span class="stock-pill"><i class="fa-solid fa-boxes-stacked"></i> ${item.p.length} ${item.p.length===1?'item':'items'}</span>
-        </div>
-      </div>
-      <div class="card-body">
-        <h3>${item.t}</h3>
-        <p>${item.d}</p>
-        <div class="card-tags">${tagsHtml}</div>
-        <div class="card-meta">
-          <div class="meta-item"><i class="fa-solid fa-earth-americas"></i> <span>${item.origin}</span></div>
-          <div class="meta-item"><i class="fa-solid fa-warehouse"></i> <span>${item.dispatch}</span></div>
-        </div>
-      </div>
-      <div class="card-foot">
-        <span class="more">View Specs &amp; Catalog <i class="fa-solid fa-arrow-right"></i></span>
-        <span class="rfq-hint"><i class="fa-brands fa-whatsapp"></i> Instant RFQ</span>
-      </div>
-    </button>`;
-  }).join('');
-
-  $('#fLinks').innerHTML=KEYS.map(k=>`<li><button data-open="${k}"><i class="fa-solid fa-chevron-right"></i> ${DB[k].short}</button></li>`).join('');
-  $('#adCat').innerHTML=KEYS.map(k=>`<option value="${k}">${DB[k].short} (${DB[k].code})</option>`).join('');
-  updateCustomBadge();
+  $('#actGrid').innerHTML=KEYS.map(k=>{const a=DB[k];return`<button class="card" data-open="${k}">
+    <div class="card-img"><img src="${a.bg}" alt="${esc(a.short)}" loading="lazy" onerror="${imgErr}"><span class="card-lic"><i class="fa-solid fa-circle-check"></i> Licensed</span><span class="card-code">${a.code}</span><div class="card-ic"><i class="fa-solid ${a.i}"></i></div></div>
+    <div class="card-body"><h3>${esc(a.t)}</h3><p>${esc(a.d)}</p>
+    <div class="card-tags">${a.tags.map(t=>`<span class="c-tag">${esc(t)}</span>`).join('')}</div>
+    <div class="card-meta"><span><i class="fa-solid fa-earth-americas"></i>${esc(a.origin)}</span><span><i class="fa-solid fa-warehouse"></i>${esc(a.dispatch)}</span></div>
+    <div class="card-foot"><span class="more">View ${a.p.length} product${a.p.length===1?'':'s'} <i class="fa-solid fa-arrow-right"></i></span><span><i class="fa-brands fa-whatsapp"></i> Instant RFQ</span></div></div></button>`}).join('');
+  $('#fLinks').innerHTML=KEYS.map(k=>`<li><button data-open="${k}"><i class="fa-solid fa-chevron-right"></i> ${esc(DB[k].short)}</button></li>`).join('');
+  $('#adCat').innerHTML=KEYS.map(k=>`<option value="${k}">${esc(DB[k].short)} (${DB[k].code})</option>`).join('');
+  $('#rfqActivity').innerHTML=KEYS.map(k=>`<option value="${k}">${esc(RFQ_NAMES[k])}</option>`).join('');
+  $('#prodCount').textContent=KEYS.reduce((n,k)=>n+DB[k].p.length,0)+' Products';
+  updateKpis();
 }
-renderStatic();
 
-/* Modal Logic */
-let cat='mobile',idx=0;
+/* product modal */
+let cat='mobile',idx=0,gi=0,tab='specs';
 const isAdmin=()=>sessionStorage.getItem('sam_admin')==='1';
-
-function openModal(k,keepOpen){
-  cat=DB[k]?k:'mobile';idx=0;const a=DB[cat];
-  $('#mTitle').textContent=a.t;
-  $('#mIcon').innerHTML=`<i class="fa-solid ${a.i}"></i>`;
-  $('#mSub').textContent=`Verified Dubai Trading Activity: ${a.p.length} verified item${a.p.length>1?'s':''}`;
-  
-  $('#side').innerHTML=`
-    <div style="font-size:.70rem;font-weight:800;color:var(--modal-mut);padding:0 8px 6px;text-transform:uppercase">Trade Divisions</div>
-  `+KEYS.map(x=>`
-    <button class="si${x===cat?' act':''}" data-open="${x}">
-      <i class="fa-solid ${DB[x].i}"></i>
-      <span>${DB[x].short}</span>
-      <b>${DB[x].p.length}</b>
-    </button>
-  `).join('')+`
-    <a href="tel:+${PHONE}" class="si" style="margin-top:auto;background:rgba(6,59,0,0.12);border-color:#90B800">
-      <i class="fa-solid fa-headset"></i>
-      <span>Call Desk</span>
-    </a>
-  `;
-
-  const act=$('.si.act');
-  if(act) act.scrollIntoView({inline:'center',block:'nearest'});
+function openModal(k,keep){
+  cat=DB[k]?k:'mobile';idx=0;gi=0;tab='specs';const a=DB[cat];
+  $('#mTitle').textContent=a.t;$('#mIcon').innerHTML=`<i class="fa-solid ${a.i}"></i>`;
+  $('#mSub').textContent=`${a.code} - ${a.p.length} product${a.p.length>1?'s':''}`;
+  $('#side').innerHTML=`<div style="font-size:.7rem;font-weight:800;color:#314a2a;padding:0 8px 4px">Trade divisions</div>`+KEYS.map(x=>`<button class="si${x===cat?' act':''}" data-open="${x}"><i class="fa-solid ${DB[x].i}"></i><span>${esc(DB[x].short)}</span><b>${DB[x].p.length}</b></button>`).join('')+`<a href="tel:+${PHONE}" class="si" style="margin-top:auto"><i class="fa-solid fa-headset"></i><span>Call desk</span></a>`;
+  const ac=$('.si.act');if(ac)ac.scrollIntoView({inline:'center',block:'nearest'});
   $('#pills').innerHTML=a.p.map((_,i)=>`<button class="pill" data-i="${i}" aria-label="Product ${i+1}"></button>`).join('');
-  showProduct();
-  if(!keepOpen) openOv($('#modal'));
+  showProduct();if(!keep)openOv($('#modal'));
 }
-
 function showProduct(){
-  const a=DB[cat], p=a.p[idx];
-  if(!p) return;
-  const sp=p.specs.map(s=>{
-    const b=s[0].startsWith('b:');
-    return `<div class="sp">
-      <i class="${b?'fa-brands':'fa-solid'} ${b?s[0].slice(2):s[0]}"></i>
-      <div><small>${esc(s[1])}</small><span>${esc(s[2])}</span></div>
-    </div>`;
-  }).join('');
-
-  const waMsg=encodeURIComponent(`Hello SHUAA AL MADAR ELECTRONICS TRADING,\n\nI would like an official quotation for:\n- Product: ${p.title}\n- SKU: ${p.sku}\n- Activity: ${a.t}\n- MOQ: ${p.moq}\n\nPlease share price, inventory availability, and FOB Dubai dispatch time.`);
-
-  $('#pv').innerHTML=`
-    <div class="pimg">
-      <span class="pb"><i class="fa-solid fa-boxes-packing"></i> ${esc(p.badge)}</span>
-      <img src="${esc(p.img||FALLBACK)}" alt="${esc(p.title)}" loading="lazy" onerror="this.onerror=null;this.src='${FALLBACK}'">
-    </div>
-    <div>
-      <div class="sku">SKU: ${esc(p.sku)}</div>
-      <h2 class="pn">${esc(p.title)}</h2>
-      <p class="pi">${esc(p.intro)}</p>
-      <div class="sg">${sp}</div>
-      <div class="act-bar">
-        <div>
-          <small>Minimum Order (MOQ)</small>
-          <b>${esc(p.moq)}</b>
-        </div>
-        <div class="modal-actions">
-          <button class="btn-rfq-fill" onclick="fillRfqFromModal('${cat}', '${esc(p.title)}', '${esc(p.sku)}')"><i class="fa-solid fa-file-pen"></i> Fill RFQ</button>
-          <a class="wa" target="_blank" rel="noopener" href="https://wa.me/${PHONE}?text=${waMsg}"><i class="fa-brands fa-whatsapp"></i> Inquire Price</a>
-        </div>
-      </div>
-      ${p.custom&&isAdmin()?`<button class="del" data-del="${p.sku}"><i class="fa-solid fa-trash"></i> Remove custom item</button>`:''}
-    </div>
-  `;
-  $('#pv').scrollTop=0;
-  $('#cur').textContent=idx+1;
-  $('#tot').textContent=a.p.length;
+  const a=DB[cat],p=a.p[idx];if(!p)return;
+  gi=Math.min(gi,p.imgs.length-1);
+  const waMsg=encodeURIComponent(`Hello SHUAA AL MADAR,\n\nPlease quote:\n- Product: ${p.title}\n- SKU: ${p.sku}\n- Activity: ${a.t}\n- MOQ: ${p.moq}\n\nShare price, availability and FOB Dubai dispatch time.`);
+  const multi=p.imgs.length>1;
+  $('#pv').innerHTML=`<div class="gal"><div class="gal-main"><span class="pb"><i class="fa-solid fa-boxes-packing"></i> ${esc(p.badge)}</span>
+    <img id="gImg" src="${esc(p.imgs[gi])}" alt="${esc(p.title)}" onerror="${imgErr}">
+    ${multi?`<button class="gnav l" data-g="-1" aria-label="Previous photo"><i class="fa-solid fa-chevron-left"></i></button><button class="gnav r" data-g="1" aria-label="Next photo"><i class="fa-solid fa-chevron-right"></i></button>`:''}
+    <span class="gcount">${gi+1} / ${p.imgs.length}</span></div>
+    ${multi?`<div class="thumbs">${p.imgs.map((s,i)=>`<button class="${i===gi?'act':''}" data-th="${i}" aria-label="Photo ${i+1}"><img src="${esc(s)}" alt="" loading="lazy" onerror="${imgErr}"></button>`).join('')}</div>`:''}</div>
+  <div><div class="sku">SKU: ${esc(p.sku)}</div><h2 class="pn">${esc(p.title)}</h2><p class="pi">${esc(p.intro)}</p>
+    <div class="tabs" role="tablist"><button class="${tab==='specs'?'act':''}" data-tab="specs">Specifications</button><button class="${tab==='table'?'act':''}" data-tab="table">Data sheet</button><button class="${tab==='trade'?'act':''}" data-tab="trade">Trade info</button></div>
+    ${tabHtml(p,a)}
+    <div class="act-bar"><div><small>Minimum order (MOQ)</small><b>${esc(p.moq)}</b></div><div class="ma"><button class="rf" data-rfq="${idx}"><i class="fa-solid fa-file-pen"></i> Add to RFQ</button><a class="wa" target="_blank" rel="noopener" href="https://wa.me/${PHONE}?text=${waMsg}"><i class="fa-brands fa-whatsapp"></i> Ask price</a></div></div>
+    ${p.custom&&isAdmin()?`<button class="del" data-del="${esc(p.sku)}"><i class="fa-solid fa-trash"></i> Remove this product</button>`:''}</div>`;
+  $('#pv').scrollTop=0;$('#cur').textContent=idx+1;$('#tot').textContent=a.p.length;
   $$('.pill').forEach((x,i)=>x.classList.toggle('act',i===idx));
 }
-
-function fillRfqFromModal(categoryKey, title, sku){
-  closeOv($('#modal'));
-  const catNames={
-    mobile:'Mobile Phones & Accessories',
-    appliances:'Household Appliances',
-    'spare-parts':'Spare Parts',
-    accessories:'Computer Electric Accessories',
-    computers:'Computers & Peripherals',
-    software:'Systems & Software'
-  };
-  if($('#rfqActivity')) $('#rfqActivity').value=catNames[categoryKey]||$('#rfqActivity').value;
-  if($('#rfqSpecs')) $('#rfqSpecs').value=`Item: ${title} (SKU: ${sku})\nPlease provide volume discount pricing and current lead time.`;
-  location.href='#rfqSection';
-  toast('Product details loaded into RFQ form');
+function tabHtml(p,a){
+  if(tab==='table')return`<table class="tbl">${p.specs.map(s=>`<tr><td>${esc(s[1])}</td><td>${esc(s[2])}</td></tr>`).join('')}<tr><td>SKU</td><td>${esc(p.sku)}</td></tr><tr><td>MOQ</td><td>${esc(p.moq)}</td></tr></table>`;
+  if(tab==='trade')return`<div class="trade"><div><b><i class="fa-solid fa-earth-americas"></i> Origin</b>${esc(a.origin)}</div><div><b><i class="fa-solid fa-warehouse"></i> Dispatch</b>${esc(a.dispatch)}</div>${(p.trade||[]).map(t=>`<div><b><i class="fa-solid fa-circle-check"></i> Note</b>${esc(t)}</div>`).join('')}</div>`;
+  return`<div class="sg">${p.specs.map(s=>`<div class="sp"><i class="fa-solid ${esc((s[0]||'fa-circle-check').replace(/^b:/,''))}"></i><div><small>${esc(s[1])}</small><span>${esc(s[2])}</span></div></div>`).join('')}</div>`;
 }
+const step=d=>{const n=DB[cat].p.length;idx=(idx+d+n)%n;gi=0;showProduct()};
+const gstep=d=>{const n=DB[cat].p[idx].imgs.length;gi=(gi+d+n)%n;showProduct()};
+$('#mn').onclick=()=>step(1);$('#mp').onclick=()=>step(-1);$('#mClose').onclick=()=>closeOv($('#modal'));
 
-function step(d){
-  const n=DB[cat].p.length;
-  idx=(idx+d+n)%n;
-  showProduct();
-}
-$('#mn').onclick=()=>step(1);
-$('#mp').onclick=()=>step(-1);
-$('#mClose').onclick=()=>closeOv($('#modal'));
-
-/* Global Click & Keyboard Listener */
 document.addEventListener('click',e=>{
-  const o=e.target.closest('[data-open]');
-  if(o){
-    e.preventDefault();
-    openModal(o.dataset.open,$('#modal').classList.contains('on'));
-    return;
-  }
-  const pl=e.target.closest('.pill');
-  if(pl){idx=+pl.dataset.i;showProduct();return}
-  const c=e.target.closest('[data-close]');
-  if(c){closeOv(c.closest('.ov'));return}
-  if(e.target.classList.contains('ov')) closeOv(e.target);
-  
-  const d=e.target.closest('[data-del]');
-  if(d&&isAdmin()&&confirm('Delete this product?')){
-    deleteProductBySku(d.dataset.del);
-  }
+  const t=e.target;let m;
+  if(m=t.closest('[data-open]')){e.preventDefault();openModal(m.dataset.open,$('#modal').classList.contains('on'));return}
+  if(m=t.closest('.pill')){idx=+m.dataset.i;gi=0;showProduct();return}
+  if(m=t.closest('[data-g]')){gstep(+m.dataset.g);return}
+  if(m=t.closest('[data-th]')){gi=+m.dataset.th;showProduct();return}
+  if(m=t.closest('[data-tab]')){tab=m.dataset.tab;showProduct();return}
+  if(t.id==='gImg'){t.classList.toggle('zoom');return}
+  if(m=t.closest('[data-rfq]')){fillRfq(cat,DB[cat].p[+m.dataset.rfq]);return}
+  if(m=t.closest('[data-close]')){closeOv(m.closest('.ov'));return}
+  if(t.classList.contains('ov')){closeOv(t);return}
+  if((m=t.closest('[data-del]'))&&isAdmin()&&confirm('Delete this product?'))delProduct(m.dataset.del);
 });
-
-function deleteProductBySku(sku){
-  const s=store.get();
-  Object.keys(s).forEach(k=>{
-    s[k]=(s[k]||[]).filter(p=>p.sku!==sku);
-  });
-  store.set(s);
-  loadCustom();
-  renderStatic();
-  renderCustomList();
-  if($('#modal').classList.contains('on')) openModal(cat,true);
-  toast('Product removed successfully');
-}
-
 document.addEventListener('keydown',e=>{
-  const top=$$('.ov.on').pop();
-  if(e.key==='Escape'&&top) closeOv(top);
-  if($('#modal').classList.contains('on')&&top===$('#modal')&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)){
-    if(e.key==='ArrowRight') step(1);
-    if(e.key==='ArrowLeft') step(-1);
-  }
+  const top=$$('.ov.on').pop();if(e.key==='Escape'&&top)closeOv(top);
+  if(top===$('#modal')&&!/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)){
+    if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1)}
 });
+function fillRfq(k,p){
+  closeOv($('#modal'));$('#rfqActivity').value=k;
+  const cur=$('#rfqSpecs').value.trim(),line=`- ${p.title} (SKU: ${p.sku}), MOQ ${p.moq}`;
+  $('#rfqSpecs').value=(cur&&!cur.startsWith('Please quote')?cur+'\n':'Items:\n')+line;
+  $('#rfqSection').scrollIntoView({behavior:'smooth'});toast('Product added to your RFQ');
+}
+function delProduct(sku){const s=store.get();Object.keys(s).forEach(k=>s[k]=(s[k]||[]).filter(p=>p.sku!==sku));store.set(s);loadCustom();renderStatic();renderList();if($('#modal').classList.contains('on'))openModal(cat,true);toast('Product removed')}
 
-/* Mobile Drawer */
+/* drawer */
 const dr=$('#drawer'),bg=$('#burger');
-function drawer(on){
-  dr.classList.toggle('on',on);
-  bg.setAttribute('aria-expanded',on);
-  bg.innerHTML=`<i class="fa-solid fa-${on?'xmark':'bars'}"></i>`;
-  document.body.classList.toggle('lock',on||$$('.ov.on').length>0);
-}
-bg.onclick=()=>drawer(!dr.classList.contains('on'));
-$$('#drawer a').forEach(a=>a.onclick=()=>drawer(false));
-bg.style.zIndex=1600;bg.style.position='relative';
+function drawer(on){dr.classList.toggle('on',on);bg.setAttribute('aria-expanded',on);bg.innerHTML=`<i class="fa-solid fa-${on?'xmark':'bars'}"></i>`;document.body.classList.toggle('lock',on||$$('.ov.on').length>0)}
+bg.onclick=()=>drawer(!dr.classList.contains('on'));$$('#drawer a').forEach(a=>a.onclick=()=>drawer(false));
 
-/* Customer RFQ submission handling */
-function getRfqData(){
-  return {
-    company: $('#rfqCompany').value.trim(),
-    contact: $('#rfqContact').value.trim(),
-    email: $('#rfqEmail').value.trim(),
-    phone: $('#rfqPhone').value.trim(),
-    activity: $('#rfqActivity').value,
-    qty: $('#rfqQty').value.trim()||'Standard Wholesale Batch',
-    incoterm: $('#rfqIncoterm').value,
-    dest: $('#rfqDest').value.trim()||'Dubai / GCC',
-    specs: $('#rfqSpecs').value.trim()||'Please quote best available tier rates.'
-  };
-}
+/* RFQ */
+function rfqData(){return{company:$('#rfqCompany').value.trim(),contact:$('#rfqContact').value.trim(),email:$('#rfqEmail').value.trim(),phone:$('#rfqPhone').value.trim(),activity:RFQ_NAMES[$('#rfqActivity').value],qty:$('#rfqQty').value.trim()||'Standard wholesale batch',inc:$('#rfqIncoterm').value,dest:$('#rfqDest').value.trim()||'Dubai / GCC',specs:$('#rfqSpecs').value.trim()||'Please quote best available tier rates.'}}
+$('#sendWa').onclick=()=>{const d=rfqData();if(!d.company||!d.contact||!d.phone){toast('Fill in company, contact person and phone');return}
+  const t=`*WHOLESALE RFQ - SHUAA AL MADAR*\nCompany: ${d.company}\nContact: ${d.contact}\nEmail: ${d.email}\nPhone: ${d.phone}\nCategory: ${d.activity}\nQuantity: ${d.qty}\nTerms: ${d.inc}\nDestination: ${d.dest}\nDetails:\n${d.specs}`;
+  window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(t)}`,'_blank')};
+$('#rfqForm').onsubmit=e=>{e.preventDefault();const d=rfqData();
+  const body=`Wholesale Request for Quotation\n\nCompany: ${d.company}\nContact: ${d.contact}\nEmail: ${d.email}\nPhone: ${d.phone}\n\nCategory: ${d.activity}\nQuantity: ${d.qty}\nTrade term: ${d.inc}\nDestination: ${d.dest}\n\nRequirements:\n${d.specs}\n\nSent via the Shuaa Al Madar trade portal`;
+  location.href=`mailto:shuaaalmadar@gmail.com?subject=${encodeURIComponent('Wholesale RFQ: '+d.company+' - '+d.activity)}&body=${encodeURIComponent(body)}`};
 
-$('#sendRfqWhatsApp').onclick=()=>{
-  const d=getRfqData();
-  if(!d.company||!d.contact||!d.phone){
-    toast('Please fill in Company, Contact Person, and Phone');
-    return;
-  }
-  const text=`*WHOLESALE RFQ - SHUAA AL MADAR ELECTRONICS TRADING LLC*
-Company: ${d.company}
-Contact Person: ${d.contact}
-Email: ${d.email}
-Phone/WhatsApp: ${d.phone}
-Trade Category: ${d.activity}
-Quantity Target: ${d.qty}
-Shipping / Trade Terms: ${d.incoterm}
-Destination: ${d.dest}
-Details / Models:
-${d.specs}`;
-  window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`,'_blank');
-};
+/* map */
+const enc=encodeURIComponent;
+function setMap(t,from){const q=from?`saddr=${from}&daddr=${enc(ADDR)}`:`q=${enc(MAPQ)}`;$('#gmapFrame').src=`https://maps.google.com/maps?${q}&t=${t}&z=17&ie=UTF8&output=embed`}
+setMap('m');
+$('#lnkGoogle').href=`https://www.google.com/maps/search/?api=1&query=${enc(ADDR)}`;
+$('#lnkWaze').href=`https://waze.com/ul?ll=${DEST[0]},${DEST[1]}&navigate=yes`;
+$('#lnkApple').href=`https://maps.apple.com/?q=${enc('Baniyas Complex Deira Dubai')}&ll=${DEST[0]},${DEST[1]}`;
+$$('[data-mt]').forEach(b=>b.onclick=()=>{$$('[data-mt]').forEach(x=>x.classList.toggle('act',x===b));setMap(b.dataset.mt,window._from)});
+$('#copyAddr').onclick=()=>navigator.clipboard.writeText(ADDR).then(()=>toast('Office address copied')).catch(()=>toast(ADDR));
+const dist=(a,b,c,d)=>{const R=6371,r=Math.PI/180,x=(c-a)*r,y=(d-b)*r,h=Math.sin(x/2)**2+Math.cos(a*r)*Math.cos(c*r)*Math.sin(y/2)**2;return(R*2*Math.atan2(Math.sqrt(h),Math.sqrt(1-h))).toFixed(1)};
+$('#gpsBtn').onclick=()=>{const s=$('#gpsStatus');
+  if(!navigator.geolocation){s.textContent='Your browser does not support location. Use the Google Maps button instead.';return}
+  s.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Finding your location...';
+  navigator.geolocation.getCurrentPosition(p=>{const la=p.coords.latitude,lo=p.coords.longitude;window._from=`${la},${lo}`;
+    setMap($('.seg .act').dataset.mt,window._from);
+    const nav=`https://www.google.com/maps/dir/?api=1&origin=${la},${lo}&destination=${enc(ADDR)}`;
+    s.innerHTML=`<b style="color:#15803d"><i class="fa-solid fa-circle-check"></i> Located.</b> About <b>${dist(la,lo,DEST[0],DEST[1])} km</b> in a straight line. <a href="${nav}" target="_blank" rel="noopener" style="color:var(--navy);font-weight:800;text-decoration:underline">Start navigation</a>`;
+  },err=>{s.textContent='Location is blocked or unavailable ('+err.message+'). Allow location access and try again.'},{timeout:10000,enableHighAccuracy:true})};
 
-$('#custRfqForm').onsubmit=e=>{
-  e.preventDefault();
-  const d=getRfqData();
-  const subj=encodeURIComponent(`Wholesale RFQ: ${d.company} - ${d.activity}`);
-  const body=encodeURIComponent(`Official Wholesale Request for Quotation:
-
-Company Name: ${d.company}
-Contact Person: ${d.contact}
-Email Address: ${d.email}
-Phone / WhatsApp: ${d.phone}
-
-Category: ${d.activity}
-Quantity: ${d.qty}
-Trade Term: ${d.incoterm}
-Destination: ${d.dest}
-
-Specifications & Model Requirements:
-${d.specs}
-
-Sent via Shuaa Al Madar Trade Portal`);
-  location.href=`mailto:shuaaalmadar@gmail.com?subject=${subj}&body=${body}`;
-};
-
-/* Copy Address Feature */
-const copyBtn = $('#copyAddrBtn');
-if(copyBtn){
-  copyBtn.onclick=()=>{
-    navigator.clipboard.writeText(EXACT_LOCATION_QUERY).then(()=>{
-      toast('Office address copied to clipboard');
-    }).catch(()=>{
-      toast('Office: ' + EXACT_LOCATION_QUERY);
-    });
-  };
-}
-
-/* ADMIN LOGIC & PANEL CONTROLS */
-function syncAdminBtn(){
-  const on=isAdmin();
-  $('#adminBtn').classList.toggle('on',on);
-  $('#adminBtn span').textContent=on?'Admin Panel':'Admin Login';
-}
-
-$('#adminBtn').onclick=()=>{
-  hideError($('#lgErr'));
-  if(isAdmin()){
-    openAdminPanel();
-  } else {
-    openOv($('#loginModal'));
-    setTimeout(()=>$('#lgUser').focus(),100);
-  }
-};
-
-function showError(el, msg){
-  el.textContent = msg;
-  el.classList.add('show');
-}
-function hideError(el){
-  el.textContent = '';
-  el.classList.remove('show');
-}
-
-// Password toggle
-$('#pwdToggle').onclick=function(){
-  const passIn = $('#lgPass');
-  const isPwd = passIn.type === 'password';
-  passIn.type = isPwd ? 'text' : 'password';
-  this.innerHTML = `<i class="fa-solid fa-${isPwd ? 'eye-slash' : 'eye'}"></i>`;
-};
-
-// Auto-fill demo
-$('#btnAutoFill').onclick=()=>{
-  $('#lgUser').value = ADMIN.user;
-  $('#lgPass').value = ADMIN.pass;
-  hideError($('#lgErr'));
-};
-
+/* admin */
+function syncAdminBtn(){const on=isAdmin();$('#adminBtn').classList.toggle('on',on);$('#adminBtn span').textContent=on?'Admin Panel':'Admin Login'}
+const showErr=(el,m)=>{el.textContent=m;el.classList.add('show')},hideErr=el=>{el.textContent='';el.classList.remove('show')};
+$('#adminBtn').onclick=()=>{hideErr($('#lgErr'));if(isAdmin())openAdmin();else{openOv($('#loginModal'));setTimeout(()=>$('#lgUser').focus(),100)}};
+$('#eye').onclick=function(){const p=$('#lgPass'),h=p.type==='password';p.type=h?'text':'password';this.innerHTML=`<i class="fa-solid fa-eye${h?'-slash':''}"></i>`};
+$('#autoFill').onclick=()=>{$('#lgUser').value=ADMIN.user;$('#lgPass').value=ADMIN.pass;hideErr($('#lgErr'))};
+let fails=0,lockUntil=0;
 function login(){
-  if($('#lgUser').value.trim()===ADMIN.user && $('#lgPass').value===ADMIN.pass){
-    sessionStorage.setItem('sam_admin','1');
-    $('#lgPass').value='';
-    closeOv($('#loginModal'));
-    syncAdminBtn();
-    openAdminPanel();
-    toast('Authenticated as Administrator');
-  } else {
-    showError($('#lgErr'), 'Invalid username or password. Check demo credentials.');
-  }
+  const now=Date.now();if(now<lockUntil){showErr($('#lgErr'),`Too many attempts. Try again in ${Math.ceil((lockUntil-now)/1000)}s.`);return}
+  if($('#lgUser').value.trim()===ADMIN.user&&$('#lgPass').value===ADMIN.pass){fails=0;sessionStorage.setItem('sam_admin','1');$('#lgPass').value='';closeOv($('#loginModal'));syncAdminBtn();openAdmin();toast('Signed in as administrator')}
+  else{fails++;if(fails>=3){lockUntil=now+30000;fails=0;showErr($('#lgErr'),'Too many attempts. Locked for 30 seconds.')}else showErr($('#lgErr'),`Wrong username or password. ${3-fails} attempt${3-fails>1?'s':''} left.`)}
 }
-$('#lgGo').onclick=login;
-$$('#lgUser,#lgPass').forEach(i=>i.addEventListener('keydown',e=>e.key==='Enter'&&login()));
+$('#lgGo').onclick=login;$$('#lgUser,#lgPass').forEach(i=>i.addEventListener('keydown',e=>e.key==='Enter'&&login()));
+$('#adOut').onclick=()=>{sessionStorage.removeItem('sam_admin');closeOv($('#adminModal'));syncAdminBtn();toast('Signed out')};
+function openAdmin(){renderList();openOv($('#adminModal'))}
+function showTab(a){$('#tA').classList.toggle('act',a);$('#tM').classList.toggle('act',!a);$('#paneA').style.display=a?'flex':'none';$('#paneM').style.display=a?'none':'flex';if(!a)renderList()}
+$('#tA').onclick=()=>showTab(true);$('#tM').onclick=()=>showTab(false);
 
-$('#adOut').onclick=()=>{
-  sessionStorage.removeItem('sam_admin');
-  closeOv($('#adminModal'));
-  syncAdminBtn();
-  toast('Admin session logged out');
-};
-
-function openAdminPanel(){
-  renderCustomList();
-  openOv($('#adminModal'));
-}
-
-// Panel Tabs Switching
-$('#tabAddBtn').onclick=()=>{
-  $('#tabAddBtn').classList.add('act');
-  $('#tabManageBtn').classList.remove('act');
-  $('#tabAddContent').style.display='flex';
-  $('#tabManageContent').style.display='none';
-};
-$('#tabManageBtn').onclick=()=>{
-  $('#tabManageBtn').classList.add('act');
-  $('#tabAddBtn').classList.remove('act');
-  $('#tabManageContent').style.display='flex';
-  $('#tabAddContent').style.display='none';
-  renderCustomList();
-};
-
-// Live Image URL Preview
-$('#adImg').addEventListener('input', e=>{
-  const url=e.target.value.trim();
-  const box=$('#imgPrevBox');
-  if(!url){
-    box.innerHTML='<i class="fa-solid fa-image" style="color:#9bbd99"></i>';
-    return;
-  }
-  const testImg=new Image();
-  testImg.onload=()=>{
-    box.innerHTML=`<img src="${esc(url)}" alt="Preview">`;
-  };
-  testImg.onerror=()=>{
-    box.innerHTML='<i class="fa-solid fa-triangle-exclamation" style="color:#fca5a5" title="Image failed to load"></i>';
-  };
-  testImg.src=url;
-});
-
-// Spec Template Helper
-$('#btnSpecHelper').onclick=()=>{
-  $('#adSpecs').value = 
-`Voltage Spec: 220-240V / 50-60Hz
-Chassis / Housing: Industrial Reinforced Metal
-Certification: CE, RoHS & G-Mark Approved
-Origin: GCC Certified Tier-1`;
-  toast('Specification template inserted');
-};
-
-$('#adReset').onclick=()=>{
-  ['adTitle','adMoq','adImg','adIntro','adSpecs','adBadge'].forEach(i=>$('#'+i)&&($('#'+i).value=''));
-  $('#imgPrevBox').innerHTML='<i class="fa-solid fa-image" style="color:#9bbd99"></i>';
-  hideError($('#adErr'));
-};
-
+let photos=[];
+function renderPrevs(){$('#prevs').innerHTML=photos.map((s,i)=>`<div><img src="${esc(s)}" alt=""><button type="button" data-rmp="${i}" aria-label="Remove photo">&times;</button></div>`).join('')}
+$('#prevs').addEventListener('click',e=>{const b=e.target.closest('[data-rmp]');if(b){photos.splice(+b.dataset.rmp,1);renderPrevs()}});
+function shrink(file){return new Promise(res=>{const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const m=900,k=Math.min(1,m/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);res(c.toDataURL('image/jpeg',.78))};im.onerror=()=>res(null);im.src=r.result};r.onerror=()=>res(null);r.readAsDataURL(file)})}
+async function addFiles(fl){for(const f of fl){if(!f.type.startsWith('image/'))continue;const d=await shrink(f);if(d)photos.push(d)}renderPrevs()}
+$('#upl').onclick=()=>$('#adFiles').click();
+$('#adFiles').onchange=e=>{addFiles(e.target.files);e.target.value=''};
+['dragover','dragleave','drop'].forEach(ev=>$('#upl').addEventListener(ev,e=>{e.preventDefault();$('#upl').classList.toggle('drag',ev==='dragover');if(ev==='drop')addFiles(e.dataTransfer.files)}));
+$('#tpl').onclick=()=>{$('#adSpecs').value='Voltage: 220-240V / 50-60Hz\nHousing: Industrial reinforced metal\nCertification: CE, RoHS, G-Mark\nOrigin: GCC certified tier-1';toast('Template inserted')};
+$('#adReset').onclick=()=>{['adTitle','adMoq','adIntro','adSpecs','adBadge','adOrigin','adUrls'].forEach(i=>$('#'+i).value='');photos=[];renderPrevs();hideErr($('#adErr'))};
 $('#adSave').onclick=()=>{
-  const t=$('#adTitle').value.trim();
-  if(!t){
-    showError($('#adErr'), 'Product title is required.');
-    return;
-  }
-  const k=$('#adCat').value;
-  const specs=$('#adSpecs').value.split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{
-    const i=l.indexOf(':');
-    return ['fa-circle-check', i>0?l.slice(0,i).trim():'Specification', i>0?l.slice(i+1).trim():l];
-  });
-
-  const s=store.get();
-  s[k]=s[k]||[];
-  const newSku='SAM-MOD-'+Date.now().toString().slice(-5);
-  s[k].push({
-    sku: newSku,
-    title: t,
-    badge: $('#adBadge').value.trim()||'Dubai Central Batch',
-    img: $('#adImg').value.trim()||FALLBACK,
-    moq: $('#adMoq').value.trim()||'Wholesale Lot',
-    intro: $('#adIntro').value.trim()||'Available for direct inspection and delivery from Deira wholesale warehouse.',
-    specs: specs.length ? specs : [['fa-check','Guarantee','OEM Commercial Quality']]
-  });
-  
-  store.set(s);
-  loadCustom();
-  renderStatic();
-  $('#adReset').click();
-  toast(`Published: ${t}`);
-  closeOv($('#adminModal'));
-  openModal(k);
-  idx=DB[k].p.length-1;
-  showProduct();
+  const t=$('#adTitle').value.trim();if(!t){showErr($('#adErr'),'Enter a product title.');return}
+  const urls=$('#adUrls').value.split('\n').map(x=>x.trim()).filter(x=>/^https?:\/\//i.test(x));
+  const imgs=[...photos,...urls];
+  const specs=$('#adSpecs').value.split('\n').map(l=>l.trim()).filter(Boolean).map(l=>{const i=l.indexOf(':');return['fa-circle-check',i>0?l.slice(0,i).trim():'Specification',i>0?l.slice(i+1).trim():l]});
+  const k=$('#adCat').value,s=store.get();s[k]=s[k]||[];
+  const origin=$('#adOrigin').value.trim();
+  s[k].push({sku:'SAM-MOD-'+Date.now().toString().slice(-6),title:t,badge:$('#adBadge').value.trim()||'Dubai central batch',imgs:imgs.length?imgs:[FALLBACK],moq:$('#adMoq').value.trim()||'Wholesale lot',intro:$('#adIntro').value.trim()||'Available for inspection and delivery from our Deira warehouse.',specs:specs.length?specs:[['fa-check','Quality','OEM commercial grade']],trade:origin?['Origin / lead time: '+origin]:[]});
+  if(!store.set(s))return;
+  loadCustom();renderStatic();$('#adReset').click();toast('Published: '+t);closeOv($('#adminModal'));openModal(k);idx=DB[k].p.length-1;showProduct();
 };
+function allCustom(){const s=store.get(),o=[];Object.keys(s).forEach(k=>(s[k]||[]).forEach(p=>o.push({k,...p})));return o}
+function updateKpis(){const c=allCustom();$('#kBase').textContent=baseCount();$('#kCustom').textContent=c.length;$('#kPhotos').textContent=c.reduce((n,p)=>n+(p.imgs?p.imgs.length:1),0);$('#cBadge').textContent=c.length}
+function renderList(){updateKpis();const c=allCustom();
+  $('#list').innerHTML=c.length?c.map(p=>`<div class="item"><img src="${esc((p.imgs||[FALLBACK])[0])}" alt="" onerror="${imgErr}"><div style="flex:1;min-width:0"><h5>${esc(p.title)}</h5><span><b style="color:var(--g)">${esc(p.sku)}</b> - ${esc(DB[p.k]?DB[p.k].short:p.k)} - ${(p.imgs||[]).length} photo(s) - MOQ ${esc(p.moq)}</span></div><button class="sm" data-view="${p.k}">View</button><button class="sm red" data-del="${esc(p.sku)}" aria-label="Delete"><i class="fa-solid fa-trash"></i></button></div>`).join(''):`<div class="empty"><i class="fa-solid fa-boxes-stacked"></i><b>No products added yet.</b><p style="font-size:.78rem;margin-top:6px">Open "Add product" to publish your first item.</p></div>`}
+$('#list').addEventListener('click',e=>{const v=e.target.closest('[data-view]');if(v){closeOv($('#adminModal'));openModal(v.dataset.view)}});
+$('#exp').onclick=()=>{const b=new Blob([JSON.stringify(store.get(),null,1)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='shuaa-catalog-backup.json';a.click();URL.revokeObjectURL(a.href)};
+$('#imp').onclick=()=>$('#impFile').click();
+$('#impFile').onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const d=JSON.parse(r.result);if(typeof d!=='object'||Array.isArray(d))throw 0;const clean={};KEYS.forEach(k=>{if(Array.isArray(d[k]))clean[k]=d[k].filter(p=>p&&p.sku&&p.title)});if(store.set(clean)){loadCustom();renderStatic();renderList();toast('Backup imported')}}catch(x){toast('That file is not a valid backup')}};r.readAsText(f);e.target.value=''};
 
-function countCustomProducts(){
-  const s=store.get();
-  let cnt=0;
-  Object.keys(s).forEach(k=>{cnt += (s[k]||[]).length});
-  return cnt;
-}
-
-function updateCustomBadge(){
-  const b = $('#customCountBadge');
-  if(b) b.textContent = countCustomProducts();
-}
-
-function renderCustomList(){
-  updateCustomBadge();
-  const s=store.get();
-  const container=$('#customListContainer');
-  let items=[];
-  Object.keys(s).forEach(k=>{
-    (s[k]||[]).forEach(p=>{
-      items.push({catKey:k, catName:DB[k]?.short||k, ...p});
-    });
-  });
-
-  if(!items.length){
-    container.innerHTML=`
-      <div class="custom-empty">
-        <i class="fa-solid fa-boxes-stacked"></i>
-        <b>No custom inventory added yet.</b>
-        <p style="margin-top:6px;font-size:.78rem">Use the "Add New Product" tab to publish commercial lots to your catalog.</p>
-      </div>`;
-    return;
-  }
-
-  container.innerHTML = items.map(it=>`
-    <div class="custom-item-card">
-      <img src="${esc(it.img||FALLBACK)}" alt="${esc(it.title)}" class="custom-item-thumb" onerror="this.onerror=null;this.src='${FALLBACK}'">
-      <div class="custom-item-info">
-        <h5>${esc(it.title)}</h5>
-        <span><b style="color:var(--g)">${esc(it.sku)}</b> &bull; ${esc(it.catName)} &bull; MOQ: ${esc(it.moq)}</span>
-      </div>
-      <div style="display:flex;gap:8px;align-items:center">
-        <button class="btn-auto-fill" onclick="closeOv($('#adminModal'));openModal('${it.catKey}');" style="padding:6px 12px">View</button>
-        <button class="del" data-del="${esc(it.sku)}" style="margin-top:0;padding:5px 10px"><i class="fa-solid fa-trash"></i></button>
-      </div>
-    </div>
-  `).join('');
-}
-
-/* Live Dubai Open/Closed Status */
-function openStatus(){
-  const d=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Dubai'}));
-  const day=d.getDay(), h=d.getHours()+d.getMinutes()/60;
-  const isOpen = (day>=1 && day<=6 && h>=9 && h<20);
-  const el=$('#openNow');
-  el.className='open '+(isOpen?'y':'n');
-  el.textContent=isOpen?'Open Now in Dubai (9 AM - 8 PM)':'Currently Closed (Dubai Time)';
-}
-openStatus();
-setInterval(openStatus,60000);
-
-$('#toTop').onclick=()=>scrollTo({top:0,behavior:'smooth'});
-$('#yr').textContent=new Date().getFullYear();
-
-/* Navigation Highlight */
+/* open status, misc */
+function openStatus(){const d=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Dubai'})),day=d.getDay(),h=d.getHours()+d.getMinutes()/60,o=day>=1&&day<=6&&h>=9&&h<20,el=$('#openNow');el.className='open '+(o?'y':'n');el.textContent=o?'Open now in Dubai (9 AM - 8 PM)':'Closed now (Dubai time)'}
+openStatus();setInterval(openStatus,60000);
+$('#toTop').onclick=()=>scrollTo({top:0,behavior:'smooth'});$('#yr').textContent=new Date().getFullYear();
 const links=$$('nav a[href^="#"]');
-['home','activities','rfqSection','contact'].forEach(id=>{
-  const el=document.getElementById(id);
-  if(el){
-    new IntersectionObserver(es=>{
-      es.forEach(e=>{
-        if(e.isIntersecting) links.forEach(l=>l.classList.toggle('act',l.getAttribute('href')==='#'+id));
-      });
-    },{rootMargin:'-35% 0px -55% 0px'}).observe(el);
-  }
-});
-
-/* GOOGLE MAPS DISPLAY + LIVE GPS ROUTING */
-function calcDistance(lat1, lon1, lat2, lon2){
-  const R=6371;
-  const dLat=(lat2-lat1)*Math.PI/180;
-  const dLon=(lon2-lon1)*Math.PI/180;
-  const a=Math.sin(dLat/2)*Math.sin(dLat/2)+
-          Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*
-          Math.sin(dLon/2)*Math.sin(dLon/2);
-  const c=2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
-  return (R*c).toFixed(1);
-}
-
-$('#findGpsBtn').onclick=()=>{
-  const statusEl=$('#gpsStatus');
-  if(!navigator.geolocation){
-    statusEl.innerHTML='<span style="color:#ef4444"><i class="fa-solid fa-triangle-exclamation"></i> Geolocation is not supported by your browser.</span>';
-    return;
-  }
-  statusEl.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Detecting your current GPS coordinates...';
-  
-  navigator.geolocation.getCurrentPosition(pos=>{
-    const userLat=pos.coords.latitude;
-    const userLng=pos.coords.longitude;
-    const dist=calcDistance(userLat, userLng, DEST_COORDS[0], DEST_COORDS[1]);
-    
-    const directionsEmbedUrl = `https://maps.google.com/maps?saddr=${userLat},${userLng}&daddr=${encodeURIComponent(EXACT_LOCATION_QUERY)}&output=embed`;
-    const gmapFrame = $('#gmapFrame');
-    if(gmapFrame) gmapFrame.src = directionsEmbedUrl;
-
-    const directNavUrl = `https://www.google.com/maps/dir/?api=1&origin=${userLat},${userLng}&destination=${encodeURIComponent(EXACT_LOCATION_QUERY)}`;
-    const gmapLink = $('#gmapLink');
-    if(gmapLink) gmapLink.href = directNavUrl;
-
-    statusEl.innerHTML=`<b><i class="fa-solid fa-check-circle" style="color:#15803d"></i> GPS Located!</b> Distance to Deira office: <b>${dist} km</b>. <a href="${directNavUrl}" target="_blank" rel="noopener" style="color:#0F3040;text-decoration:underline;margin-left:6px;font-weight:800">Start Turn-by-Turn Navigation</a>`;
-  }, err=>{
-    statusEl.innerHTML=`<span style="color:#b91c1c"><i class="fa-solid fa-triangle-exclamation"></i> GPS permission denied or unavailable. (${err.message})</span>`;
-  }, {timeout:10000, enableHighAccuracy:true});
-};
-
-syncAdminBtn();
+['home','activities','rfqSection','contact'].forEach(id=>{const el=document.getElementById(id);if(el)new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(l=>l.classList.toggle('act',l.getAttribute('href')==='#'+id))}),{rootMargin:'-35% 0px -55% 0px'}).observe(el)});
+renderStatic();syncAdminBtn();
 </script>
 </body>
 </html>
