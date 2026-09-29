@@ -3,34 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#063B00">
-<meta name="description" content="SHUAA AL MADAR Electronics Trading LLC, Deira, Dubai. Wholesale mobile devices, appliances, electronic spare parts, computers, and enterprise software.">
+<meta name="theme-color" content="#2A7C13">
+<meta name="description" content="SHUAA AL MADAR Electronics Trading LLC, Baniyas Complex, Deira, Dubai. Wholesale mobile devices, appliances, electronic spare parts, computers, and enterprise software.">
 <title>SHUAA AL MADAR | Electronics Trading LLC - Dubai, UAE</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
 
 <style>
 :root{
-  --top-bg: #063B00;
+  --top-bg: #2A7C13;
+  --top-text: #ffffff;
   --g: #06D001;
+  --g-dark: #063B00;
   --olive: #90B800;
   --sage-bg: #C2D099;
-  --rfq-bg: #EEEEEE;
+  --rfq-bg: #059212;
+  --footer-bg: #0F3040;
   --bg: #031204;
   --card: rgba(6, 35, 11, 0.88);
   --bd: rgba(144, 184, 0, 0.32);
   --bdh: #06D001;
   --mut: #d2e4d0;
   --sub: #9bbd99;
-  --brand: linear-gradient(135deg, #06D001 0%, #063B00 100%);
-  --modal-bg: #E6EEC9;
+  --brand: linear-gradient(135deg, #06D001 0%, #2A7C13 100%);
+  --modal-bg: #F4F8EB;
   --modal-text: #062b02;
   --modal-mut: #314a2a;
-  --modal-bd: rgba(6, 59, 0, 0.22);
-  --t: .25s ease;
+  --modal-bd: rgba(6, 59, 0, 0.18);
+  --t: .25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
@@ -53,30 +55,32 @@ h1,h2,h3,h4,.brand-t{font-family:'Space Grotesk',sans-serif}
 .bgfx{
   position:fixed;inset:0;z-index:0;pointer-events:none;
   background:
-    radial-gradient(550px 380px at 0 0, rgba(6, 208, 1, 0.12), transparent),
-    radial-gradient(650px 450px at 100% 100%, rgba(144, 184, 0, 0.14), transparent);
+    radial-gradient(650px 420px at 0 0, rgba(6, 208, 1, 0.10), transparent),
+    radial-gradient(750px 480px at 100% 100%, rgba(144, 184, 0, 0.12), transparent);
 }
 
-/* TOP BAR */
+/* TOP BAR (#2A7C13) */
 .topbar{
   position:relative;z-index:1001;
   background:var(--top-bg);
-  border-bottom:1px solid rgba(144, 184, 0, 0.35);
-  padding:6px 5%;
+  border-bottom:1px solid rgba(255, 255, 255, 0.15);
+  padding:8px 5%;
   display:flex;justify-content:space-between;align-items:center;
-  font-size:.76rem;color:var(--mut)
+  font-size:.78rem;color:var(--top-text);
+  font-weight:600;
+  box-shadow:0 2px 10px rgba(0,0,0,0.15);
 }
-.topbar-left{display:flex;align-items:center;gap:16px}
-.topbar i{color:var(--g)}
+.topbar-left{display:flex;align-items:center;gap:18px}
+.topbar i{color:#dcfce7}
 .admin-btn{
-  display:inline-flex;align-items:center;gap:6px;
-  background:rgba(6, 208, 1, 0.15);
-  border:1px solid var(--bd);
+  display:inline-flex;align-items:center;gap:7px;
+  background:rgba(0,0,0,0.28);
+  border:1px solid rgba(255,255,255,0.3);
   color:#fff;
-  padding:4px 12px;border-radius:20px;
-  font-weight:600;font-size:.74rem;transition:var(--t)
+  padding:4px 14px;border-radius:20px;
+  font-weight:700;font-size:.74rem;transition:var(--t)
 }
-.admin-btn:hover,.admin-btn.on{background:var(--g);color:#031204;border-color:var(--g)}
+.admin-btn:hover,.admin-btn.on{background:#fff;color:#2A7C13;border-color:#fff}
 
 /* HEADER */
 header{
@@ -85,383 +89,244 @@ header{
   backdrop-filter:blur(16px);
   -webkit-backdrop-filter:blur(16px);
   border-bottom:1px solid rgba(144, 184, 0, 0.25);
-  padding:10px 5%;
+  padding:12px 5%;
   display:flex;justify-content:space-between;align-items:center;gap:14px
 }
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
 .brand-logo-img{
-  width:42px;height:42px;
+  width:44px;height:44px;
   object-fit:contain;
-  border-radius:8px;
-  background:rgba(6, 59, 0, 0.7);
-  padding:2px;
-  border:1px solid var(--bd);
+  border-radius:10px;
+  background:rgba(6, 59, 0, 0.85);
+  padding:3px;
+  border:1.5px solid var(--bd);
 }
-.brand-t{font-weight:700;font-size:1.05rem;letter-spacing:1px;line-height:1.1;color:#fff}
-.brand-s{font-size:.58rem;font-weight:700;color:var(--g);letter-spacing:2px;text-transform:uppercase}
+.brand-t{font-weight:800;font-size:1.08rem;letter-spacing:1px;line-height:1.1;color:#fff}
+.brand-s{font-size:.60rem;font-weight:700;color:var(--g);letter-spacing:2px;text-transform:uppercase}
 
-nav ul{display:flex;list-style:none;gap:22px}
-nav a{color:var(--mut);text-decoration:none;font-weight:600;font-size:.82rem;padding:4px 0;border-bottom:2px solid transparent;transition:var(--t)}
+nav ul{display:flex;list-style:none;gap:24px}
+nav a{color:var(--mut);text-decoration:none;font-weight:600;font-size:.84rem;padding:4px 0;border-bottom:2px solid transparent;transition:var(--t)}
 nav a:hover,nav a.act{color:var(--g);border-color:var(--g)}
 
 .cta{
   background:var(--brand);
-  padding:7px 18px;border-radius:40px;
-  text-decoration:none;font-weight:700;font-size:.8rem;
-  display:inline-flex;align-items:center;gap:7px;
+  padding:8px 20px;border-radius:40px;
+  text-decoration:none;font-weight:800;font-size:.82rem;
+  display:inline-flex;align-items:center;gap:8px;
   color:#031204;
-  border:1px solid rgba(255,255,255,.3);
+  border:1px solid rgba(255,255,255,.35);
+  box-shadow:0 4px 15px rgba(6, 208, 1, .3);
   transition:var(--t)
 }
-.cta:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(6, 208, 1, .45)}
-.burger{display:none;width:38px;height:38px;border-radius:10px;background:rgba(6, 59, 0, 0.8);border:1px solid var(--bd);font-size:1.1rem;color:var(--g)}
+.cta:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(6, 208, 1, .55)}
+.burger{display:none;width:40px;height:40px;border-radius:10px;background:rgba(6, 59, 0, 0.8);border:1px solid var(--bd);font-size:1.1rem;color:var(--g)}
 
 /* HERO */
-.hero{position:relative;z-index:2;height:75vh;min-height:500px;overflow:hidden}
+.hero{position:relative;z-index:2;height:76vh;min-height:520px;overflow:hidden}
 .sl{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .7s,visibility .7s;background:#031204 center/cover}
 .sl.act{opacity:1;visibility:visible}
 .sl::before{
   content:'';position:absolute;inset:0;
-  background:linear-gradient(90deg, rgba(3, 18, 4, 0.95) 0%, rgba(6, 59, 0, 0.82) 55%, rgba(3, 18, 4, 0.45) 100%)
+  background:linear-gradient(90deg, rgba(3, 18, 4, 0.96) 0%, rgba(6, 59, 0, 0.85) 55%, rgba(3, 18, 4, 0.5) 100%)
 }
-.hc{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 7%;max-width:850px}
+.hc{position:relative;height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 7%;max-width:860px}
 .tag{
   display:inline-flex;align-items:center;gap:8px;
   background:rgba(6, 59, 0, 0.85);
   border:1px solid var(--olive);
-  padding:4px 12px;border-radius:24px;
-  color:var(--g);font-size:.72rem;font-weight:700;width:fit-content;margin-bottom:14px;
+  padding:5px 14px;border-radius:24px;
+  color:var(--g);font-size:.74rem;font-weight:700;width:fit-content;margin-bottom:14px;
   letter-spacing:.5px;
 }
-.hero h1{font-size:clamp(1.6rem, 3.4vw, 2.6rem);line-height:1.18;margin-bottom:12px;font-weight:700}
+.hero h1{font-size:clamp(1.75rem, 3.6vw, 2.75rem);line-height:1.18;margin-bottom:14px;font-weight:800}
 .hero h1 em{font-style:normal;color:var(--g)}
-.hero p{font-size:clamp(.85rem, 1.3vw, .98rem);color:var(--mut);margin-bottom:24px;max-width:580px;line-height:1.55}
-.btns{display:flex;gap:10px;flex-wrap:wrap}
+.hero p{font-size:clamp(.88rem, 1.3vw, 1.02rem);color:var(--mut);margin-bottom:26px;max-width:600px;line-height:1.6}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
 .b1,.b2{
-  padding:10px 22px;border-radius:30px;font-weight:700;text-decoration:none;
-  display:inline-flex;align-items:center;gap:8px;font-size:.82rem;transition:var(--t)
+  padding:11px 24px;border-radius:30px;font-weight:700;text-decoration:none;
+  display:inline-flex;align-items:center;gap:8px;font-size:.84rem;transition:var(--t)
 }
 .b1{background:var(--g);color:#031204;border:1px solid #06D001}
 .b2{background:rgba(6, 59, 0, 0.7);border:1px solid var(--olive);color:#fff}
-.b1:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(6, 208, 1, .45)}
+.b1:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(6, 208, 1, .45)}
 .b2:hover{border-color:var(--g);color:var(--g)}
-.harr{position:absolute;bottom:26px;right:6%;z-index:5;display:flex;gap:10px}
-.ab{width:40px;height:40px;border-radius:50%;background:rgba(6, 59, 0, 0.85);border:1px solid var(--olive);color:#fff;transition:var(--t);display:grid;place-items:center}
+.harr{position:absolute;bottom:28px;right:6%;z-index:5;display:flex;gap:10px}
+.ab{width:42px;height:42px;border-radius:50%;background:rgba(6, 59, 0, 0.85);border:1px solid var(--olive);color:#fff;transition:var(--t);display:grid;place-items:center}
 .ab:hover{background:var(--g);color:#031204;border-color:var(--g)}
-.dots{position:absolute;bottom:34px;left:7%;z-index:5;display:flex;gap:6px}
+.dots{position:absolute;bottom:36px;left:7%;z-index:5;display:flex;gap:6px}
 .dot{width:22px;height:5px;border-radius:8px;background:rgba(255,255,255,.3);border:0;padding:0;transition:var(--t)}
-.dot.act{width:40px;background:var(--g)}
+.dot.act{width:42px;background:var(--g)}
 
 /* STATS */
 .stats{
-  position:relative;z-index:2;background:rgba(4, 25, 7, 0.95);
-  border-block:1px solid var(--bd);padding:20px 7%;
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px
+  position:relative;z-index:2;background:rgba(4, 25, 7, 0.98);
+  border-block:1px solid var(--bd);padding:22px 7%;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px
 }
-.st{display:flex;align-items:center;gap:12px}
+.st{display:flex;align-items:center;gap:14px}
 .st i{
-  width:42px;height:42px;flex:none;border-radius:10px;
+  width:44px;height:44px;flex:none;border-radius:12px;
   background:rgba(6, 208, 1, 0.12);border:1px solid var(--bd);
-  display:grid;place-items:center;font-size:1.15rem;color:var(--g)
+  display:grid;place-items:center;font-size:1.2rem;color:var(--g)
 }
-.st b{display:block;font-size:1.18rem;font-family:'Space Grotesk',sans-serif;line-height:1.15}
-.st span{font-size:.76rem;color:var(--mut)}
+.st b{display:block;font-size:1.2rem;font-family:'Space Grotesk',sans-serif;line-height:1.15}
+.st span{font-size:.78rem;color:var(--mut)}
 
 /* SECTIONS */
-section{position:relative;z-index:2;padding:64px 7%}
-.sh{text-align:center;max-width:700px;margin:0 auto 36px}
+section{position:relative;z-index:2;padding:70px 7%}
+.sh{text-align:center;max-width:720px;margin:0 auto 40px}
 .sh small{
-  color:var(--g);font-weight:700;font-size:.74rem;text-transform:uppercase;letter-spacing:1.8px;
-  background:rgba(6, 59, 0, 0.7);padding:3px 12px;border-radius:20px;border:1px solid var(--olive);
-  display:inline-block;margin-bottom:8px;
+  font-weight:800;font-size:.74rem;text-transform:uppercase;letter-spacing:1.8px;
+  padding:4px 14px;border-radius:20px;
+  display:inline-block;margin-bottom:10px;
 }
-.sh h2{font-size:clamp(1.35rem, 2.5vw, 1.85rem);line-height:1.22;margin:4px 0 8px}
-.sh p{color:var(--mut);font-size:.84rem}
+.sh h2{font-size:clamp(1.45rem, 2.6vw, 2.1rem);line-height:1.22;margin:4px 0 10px;font-weight:800}
+.sh p{font-size:.88rem;line-height:1.6}
 
-/* 1. LICENSED TRADE ACTIVITIES - BACKGROUND #C2D099 WITH CRISP WHITE CARDS */
+/* LICENSED TRADE ACTIVITIES (#C2D099) */
 #activities{
   background: var(--sage-bg) !important;
   color: #063B00;
-  position:relative;
-  border-block: 1px solid rgba(6, 59, 0, 0.2);
+  border-block: 1px solid rgba(6, 59, 0, 0.22);
 }
 #activities .sh small{
   background: #063B00;
   color: #06D001;
-  border-color: #063B00;
+  border: 1px solid #2A7C13;
 }
 #activities .sh h2{
-  color: #063B00;
-  font-weight: 800;
+  color: #062b02;
 }
 #activities .sh p{
-  color: #1f3819;
+  color: #1a3814;
   font-weight: 500;
 }
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:24px}
 
-/* Enhanced Cards on #C2D099 */
+/* Enhanced Cards */
 .card{
-  background: #ffffff;
-  border: 1px solid rgba(6, 59, 0, 0.16);
-  border-radius: 18px;
-  padding: 22px 20px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1.5px solid rgba(6, 59, 0, 0.18);
+  border-radius: 20px;
+  padding: 24px;
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  transition: transform .28s ease, border-color .28s ease, box-shadow .28s ease;
+  gap: 14px;
+  transition: transform var(--t), border-color var(--t), box-shadow var(--t), background var(--t);
   position: relative;
   overflow: hidden;
   width: 100%;
   isolation: isolate;
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(6, 59, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(6, 59, 0, 0.09);
+  backdrop-filter: blur(8px);
 }
 .card-bg{
   position: absolute; inset: 0; z-index: -2;
   background-size: cover; background-position: center;
   transition: transform .6s ease, opacity .35s ease;
-  opacity: .10;
-  filter: grayscale(20%);
+  opacity: .07;
+  filter: grayscale(30%);
 }
 .card-glass{
   position: absolute; inset: 0; z-index: -1;
-  background: linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.98) 85%);
+  background: linear-gradient(180deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.98) 90%);
   pointer-events: none;
 }
 .card:hover{
-  transform: translateY(-5px);
-  border-color: #063B00;
-  box-shadow: 0 16px 36px rgba(6, 59, 0, 0.18);
+  transform: translateY(-6px);
+  border-color: #2A7C13;
+  box-shadow: 0 18px 40px rgba(6, 59, 0, 0.2);
+  background: #ffffff;
 }
 .card:hover .card-bg{
-  transform: scale(1.06);
-  opacity: .18;
+  transform: scale(1.08);
+  opacity: .14;
 }
-.ct{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
-.ci-wrap{display:flex;align-items:center;gap:10px}
+.ct{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.ci-wrap{display:flex;align-items:center;gap:12px}
 .ci{
-  width:44px;height:44px;border-radius:12px;
+  width:46px;height:46px;border-radius:14px;
   background: #063B00;
-  border: 1px solid #90B800;
-  display:grid;place-items:center;font-size:1.15rem;color:var(--g);
-  box-shadow:0 4px 10px rgba(6,59,0,0.15)
+  border: 1.5px solid #90B800;
+  display:grid;place-items:center;font-size:1.2rem;color:var(--g);
+  box-shadow:0 4px 12px rgba(6,59,0,0.2)
 }
 .card-code{
-  font-family:'Space Grotesk',sans-serif;font-size:.68rem;letter-spacing:1px;
-  color: #063B00; background: #e3ebd0;
-  padding:2px 8px;border-radius:5px;border:1px solid #90B800;font-weight:700
+  font-family:'Space Grotesk',sans-serif;font-size:.70rem;letter-spacing:1px;
+  color: #063B00; background: #eaf1da;
+  padding:3px 9px;border-radius:6px;border:1px solid #90B800;font-weight:800
 }
 .card-badges{display:flex;align-items:center;gap:6px}
 .badge{
   display:inline-flex;align-items:center;gap:5px;
   background: rgba(6, 59, 0, 0.08);
-  border: 1px solid rgba(6, 59, 0, 0.2);
-  color: #063B00; font-size:.68rem;font-weight:700;
-  padding:3px 8px;border-radius:16px;
+  border: 1px solid rgba(6, 59, 0, 0.22);
+  color: #063B00; font-size:.70rem;font-weight:800;
+  padding:4px 9px;border-radius:18px;
 }
-.badge-dot{width:5px;height:5px;border-radius:50%;background:#06D001;box-shadow:0 0 5px #06D001}
+.badge-dot{width:6px;height:6px;border-radius:50%;background:#06D001;box-shadow:0 0 6px #06D001}
 .stock-pill{
-  background: #f1f6e5; border: 1px solid #c8d9a7;
-  color: #063B00; font-size:.68rem;font-weight:700;padding:3px 8px;border-radius:16px;
-  display:inline-flex;align-items:center;gap:4px;
+  background: #f3f7e8; border: 1px solid #c7d8a6;
+  color: #063B00; font-size:.70rem;font-weight:800;padding:4px 9px;border-radius:18px;
+  display:inline-flex;align-items:center;gap:5px;
 }
-.stock-pill i{color:#063B00;font-size:.65rem}
+.stock-pill i{color:#063B00;font-size:.7rem}
 
-.card-body{display:flex;flex-direction:column;gap:8px;flex:1}
-.card h3{font-size:1.06rem;line-height:1.3;color:#063B00;font-weight:700}
-.card p{color:#2d4724;font-size:.82rem;line-height:1.5}
+.card-body{display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{font-size:1.12rem;line-height:1.3;color:#062b02;font-weight:800}
+.card p{color:#2a4421;font-size:.84rem;line-height:1.55}
 
-.card-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:2px}
+.card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
 .c-tag{
   font-size:.68rem;font-weight:700;color:#063B00;
-  background: #f0f5e4;
-  border: 1px solid #c2d59a;
-  padding:2px 7px;border-radius:5px;display:inline-flex;align-items:center;gap:4px;
+  background: #edf5dc;
+  border: 1px solid #c0d497;
+  padding:3px 8px;border-radius:6px;display:inline-flex;align-items:center;gap:5px;
 }
-.c-tag i{font-size:.6rem;color:#063B00}
+.c-tag i{font-size:.62rem;color:#2A7C13}
 
 .card-meta{
-  display:flex;flex-wrap:wrap;gap:6px 12px;padding-top:10px;
-  border-top: 1px solid #e1ebcb;margin-top:2px
+  display:flex;flex-wrap:wrap;gap:8px 16px;padding-top:12px;
+  border-top: 1px solid #e1ebcc;margin-top:4px
 }
-.meta-item{display:flex;align-items:center;gap:6px;font-size:.72rem;color:#2b4724;font-weight:600}
-.meta-item i{color:#063B00;font-size:.74rem}
+.meta-item{display:flex;align-items:center;gap:6px;font-size:.74rem;color:#27431e;font-weight:700}
+.meta-item i{color:#2A7C13;font-size:.78rem}
 
 .card-foot{
   display:flex;justify-content:space-between;align-items:center;
-  padding-top:10px;border-top: 1px solid #e8f0d5;margin-top:auto
+  padding-top:12px;border-top: 1px solid #e7efd3;margin-top:auto
 }
-.more{color:#063B00;font-weight:700;font-size:.78rem;display:flex;align-items:center;gap:6px;transition:var(--t)}
-.card:hover .more{gap:9px;color:#06D001}
-.rfq-hint{font-size:.74rem;font-weight:700;color:#063B00;display:inline-flex;align-items:center;gap:4px}
+.more{color:#063B00;font-weight:800;font-size:.82rem;display:flex;align-items:center;gap:6px;transition:var(--t)}
+.card:hover .more{gap:10px;color:#06D001}
+.rfq-hint{font-size:.76rem;font-weight:800;color:#063B00;display:inline-flex;align-items:center;gap:5px}
 
-/* MODAL - LIGHT COLOR #E6EEC9 WITH HIGH CONTRAST DARK TEXT */
-.ov{
-  position:fixed;inset:0;z-index:2200;
-  background:rgba(2, 14, 5, 0.88);
-  backdrop-filter:blur(12px);
-  display:flex;align-items:center;justify-content:center;
-  padding:14px;opacity:0;visibility:hidden;transition:.3s
-}
-.ov.on{opacity:1;visibility:visible}
-.md{
-  background:var(--modal-bg);
-  color:var(--modal-text);
-  border:2px solid #90B800;
-  border-radius:20px;
-  width:100%;max-width:1120px;height:88vh;max-height:800px;
-  display:flex;flex-direction:column;overflow:hidden;
-  transform:translateY(24px) scale(.98);transition:.35s;
-  box-shadow:0 24px 60px rgba(0,0,0,0.6);
-}
-.ov.on .md{transform:none}
-
-.mh{
-  padding:12px 20px;
-  background:#063B00;
-  color:#fff;
-  border-bottom:2px solid #90B800;
-  display:flex;justify-content:space-between;align-items:center;gap:12px
-}
-.mh h3{font-size:1.02rem;line-height:1.2;color:#fff}
-.mh small{color:var(--g);font-size:.74rem;font-weight:600}
-.mh .ci{
-  width:38px;height:38px;font-size:1.05rem;
-  background:#90B800;color:#063B00;border:1px solid #fff
-}
-.x{
-  width:34px;height:34px;flex:none;border-radius:50%;
-  background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);
-  font-size:1.2rem;color:#fff;transition:var(--t);
-  display:grid;place-items:center;
-}
-.x:hover{background:#ef4444;border-color:#ef4444;color:#fff}
-
-.mb{flex:1;display:grid;grid-template-columns:230px 1fr;min-height:0}
-.side{
-  background:rgba(215, 227, 180, 0.7);
-  border-right:1px solid var(--modal-bd);
-  padding:14px 10px;overflow-y:auto;display:flex;flex-direction:column;gap:6px
-}
-.si{
-  display:flex;align-items:center;gap:8px;
-  padding:8px 10px;border-radius:10px;
-  background:rgba(255,255,255,0.7);
-  border:1px solid rgba(6, 59, 0, 0.15);
-  color:#063B00;font-size:.78rem;font-weight:700;
-  text-align:left;width:100%;transition:var(--t);
-}
-.si i{width:18px;text-align:center;color:#063B00}
-.si:hover{background:#fff;border-color:#90B800;color:#000}
-.si.act{background:#063B00;color:#fff;border-color:#063B00}
-.si.act i{color:var(--g)}
-.si b{margin-left:auto;background:rgba(6, 59, 0, 0.12);font-size:.68rem;padding:1px 6px;border-radius:10px;color:inherit}
-.si.act b{background:rgba(255,255,255,0.25);color:#fff}
-
-.main{display:flex;flex-direction:column;min-height:0;min-width:0;background:var(--modal-bg)}
-.pv{
-  flex:1;overflow-y:auto;padding:20px 24px;
-  display:grid;grid-template-columns:300px 1fr;gap:24px;
-  align-content:start;color:var(--modal-text);
-}
-.pimg{position:sticky;top:0;align-self:start}
-.pimg img{
-  width:100%;height:270px;object-fit:cover;
-  border-radius:14px;border:2px solid #90B800;background:#d8e4b8
-}
-.pb{
-  position:absolute;top:10px;left:10px;
-  background:#063B00;border:1px solid var(--g);
-  color:#fff;font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:16px
-}
-.sku{color:#063B00;font-size:.74rem;font-weight:800;letter-spacing:.8px;text-transform:uppercase}
-.pn{font-size:1.24rem;line-height:1.25;margin:3px 0 6px;color:#062b02;font-weight:700}
-.pi{color:var(--modal-mut);font-size:.82rem;margin-bottom:14px;line-height:1.5}
-
-.sg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
-.sp{
-  background:rgba(255,255,255,0.75);
-  border:1px solid rgba(6, 59, 0, 0.18);
-  border-radius:10px;padding:8px 10px;display:flex;gap:8px;align-items:center;
-}
-.sp i{
-  width:28px;height:28px;flex:none;border-radius:8px;
-  background:rgba(6, 59, 0, 0.1);display:grid;place-items:center;
-  color:#063B00;font-size:.82rem
-}
-.sp small{display:block;font-size:.66rem;color:var(--modal-mut);font-weight:700;text-transform:uppercase}
-.sp span{font-size:.78rem;font-weight:700;line-height:1.25;color:#062b02;display:block}
-
-.act-bar{
-  display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;
-  background:rgba(255,255,255,0.85);
-  border:1px solid #90B800;border-radius:12px;padding:10px 14px;
-}
-.act-bar small{color:var(--modal-mut);display:block;font-size:.74rem;font-weight:600}
-.act-bar b{color:#063B00;font-size:.98rem;font-family:'Space Grotesk',sans-serif}
-.modal-actions{display:flex;gap:8px;align-items:center}
-.wa{
-  background:#063B00;color:#fff;text-decoration:none;
-  padding:8px 16px;border-radius:30px;font-weight:700;font-size:.78rem;
-  display:inline-flex;align-items:center;gap:6px;transition:var(--t);
-  border:1px solid #06D001
-}
-.wa:hover{background:#06D001;color:#031204;transform:translateY(-1px)}
-.btn-rfq-fill{
-  background:#90B800;color:#031204;border:1px solid #063B00;
-  padding:8px 14px;border-radius:30px;font-weight:700;font-size:.78rem;
-  display:inline-flex;align-items:center;gap:6px;transition:var(--t)
-}
-.btn-rfq-fill:hover{background:#063B00;color:#fff}
-
-.del{
-  background:none;border:1px solid #dc2626;color:#dc2626;
-  border-radius:20px;padding:5px 12px;font-size:.72rem;margin-top:10px;font-weight:700
-}
-.mf{
-  padding:10px 20px;
-  background:#063B00;
-  color:#fff;
-  border-top:1px solid var(--olive);
-  display:flex;justify-content:space-between;align-items:center;gap:10px
-}
-.nb{
-  width:34px;height:34px;border-radius:50%;
-  background:rgba(255,255,255,.15);border:1px solid var(--olive);
-  color:#fff;transition:var(--t);display:grid;place-items:center;font-size:.85rem;
-}
-.nb:hover{background:var(--g);color:#031204;border-color:var(--g)}
-.mf>div{display:flex;gap:8px;align-items:center}
-.pills{gap:5px!important}
-.pill{width:8px;height:8px;border-radius:8px;background:rgba(255,255,255,.3);border:0;padding:0;transition:var(--t)}
-.pill.act{width:22px;background:var(--g)}
-.cnt{font-size:.78rem;color:var(--mut)}
-
-/* 2. ENHANCED WHOLESALE RFQ SECTION - BACKGROUND #EEEEEE WITH REFINED UI */
+/* REQUEST FOR QUOTATION (RFQ) (#059212) */
 #rfqSection{
   background: var(--rfq-bg) !important;
-  color: #063B00;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  color: #fff;
+  border-top: 1px solid rgba(255,255,255,0.25);
+  border-bottom: 1px solid rgba(255,255,255,0.25);
 }
 #rfqSection .sh small{
   background: #063B00;
   color: #06D001;
-  border-color: #063B00;
+  border: 1px solid #90B800;
 }
 #rfqSection .sh h2{
-  color: #063B00;
+  color: #ffffff;
   font-weight: 800;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
 #rfqSection .sh p{
-  color: #4a5568;
+  color: #eaf8eb;
+  font-weight: 500;
 }
 
 .rfq-container{
-  max-width: 1040px;
+  max-width: 1060px;
   margin: 0 auto;
 }
 .rfq-header-strip{
@@ -470,14 +335,15 @@ section{position:relative;z-index:2;padding:64px 7%}
   align-items: center;
   background: #063B00;
   color: #fff;
-  padding: 14px 24px;
-  border-radius: 18px 18px 0 0;
+  padding: 14px 26px;
+  border-radius: 20px 20px 0 0;
   border-bottom: 3px solid #90B800;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
 .rfq-header-strip span{
-  font-size: .82rem;
+  font-size: .84rem;
   font-weight: 700;
   display: inline-flex;
   align-items: center;
@@ -487,9 +353,9 @@ section{position:relative;z-index:2;padding:64px 7%}
 .rfq-badge-fast{
   background: #90B800;
   color: #063B00;
-  font-size: .7rem;
+  font-size: .72rem;
   font-weight: 800;
-  padding: 3px 10px;
+  padding: 4px 14px;
   border-radius: 20px;
   text-transform: uppercase;
   letter-spacing: .5px;
@@ -497,21 +363,22 @@ section{position:relative;z-index:2;padding:64px 7%}
 
 .rfq-card{
   background: #ffffff;
-  border: 1px solid #d8d8d8;
+  border: 1px solid rgba(0,0,0,0.1);
   border-top: 0;
-  border-radius: 0 0 18px 18px;
-  padding: 32px 30px;
-  box-shadow: 0 14px 34px rgba(0,0,0,0.06);
+  border-radius: 0 0 20px 20px;
+  padding: 34px 30px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.2);
+  color: #063B00;
 }
 .rfq-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:16px;
+  gap:18px;
 }
 .rfq-grid .full{grid-column:1 / -1}
 .f-group{display:flex;flex-direction:column;gap:6px}
 .f-group label{
-  font-size: .74rem;
+  font-size: .75rem;
   font-weight: 800;
   color: #063B00;
   text-transform: uppercase;
@@ -520,16 +387,15 @@ section{position:relative;z-index:2;padding:64px 7%}
   align-items: center;
   gap: 6px;
 }
-.f-group label i{color: #90B800}
+.f-group label i{color: #059212}
 
-/* Elevated Light Inputs for #EEEEEE Section */
 .rfq-card .in{
-  background: #fbfbfb;
-  border: 1.5px solid #d4dcd2;
-  border-radius: 10px;
-  padding: 10px 14px;
+  background: #f7faf7;
+  border: 1.5px solid #c7dcc5;
+  border-radius: 12px;
+  padding: 11px 15px;
   color: #063B00;
-  font-size: .84rem;
+  font-size: .86rem;
   font-weight: 600;
   width: 100%;
   outline: none;
@@ -537,179 +403,407 @@ section{position:relative;z-index:2;padding:64px 7%}
   font-family: inherit;
 }
 .rfq-card .in:focus{
-  border-color: #063B00;
+  border-color: #059212;
   background: #ffffff;
-  box-shadow: 0 0 0 3px rgba(6, 59, 0, 0.12);
+  box-shadow: 0 0 0 3px rgba(5, 146, 18, 0.18);
 }
-.rfq-card .in::placeholder{color: #8c9b88}
+.rfq-card .in::placeholder{color: #7d967a}
 .rfq-card select.in option{background: #fff; color: #063B00}
 
 .rfq-trust-strip{
   display: flex;
-  gap: 16px;
+  gap: 18px;
   flex-wrap: wrap;
-  padding: 14px 0 6px;
-  margin-top: 6px;
-  border-top: 1px dashed #dbe3d6;
-  font-size: .75rem;
-  color: #4a5c44;
+  padding: 16px 0 6px;
+  margin-top: 10px;
+  border-top: 1px dashed #d0e4ce;
+  font-size: .76rem;
+  color: #1e4a1a;
   font-weight: 700;
 }
 .rfq-trust-strip span{display:inline-flex;align-items:center;gap:6px}
-.rfq-trust-strip span i{color: #063B00}
+.rfq-trust-strip span i{color: #059212}
 
 .rfq-actions{
-  display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;
+  display:flex;gap:14px;flex-wrap:wrap;margin-top:16px;
 }
 .btn-wa{
-  background:#25d366;color:#041a08;border:0;padding:12px 24px;border-radius:30px;
-  font-weight:800;font-size:.84rem;display:inline-flex;align-items:center;gap:8px;
+  background:#25d366;color:#041a08;border:0;padding:12px 26px;border-radius:30px;
+  font-weight:800;font-size:.85rem;display:inline-flex;align-items:center;gap:8px;
   transition:var(--t);cursor:pointer;
-  box-shadow: 0 4px 12px rgba(37,211,102,.25);
+  box-shadow: 0 4px 14px rgba(37,211,102,.35);
 }
-.btn-wa:hover{background:#1ebe5d;transform:translateY(-2px);box-shadow:0 6px 18px rgba(37,211,102,.4)}
+.btn-wa:hover{background:#1ebe5d;transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,211,102,.5)}
 .btn-mail{
-  background: #063B00;color: #fff;border:1px solid #06D001;padding:12px 24px;border-radius:30px;
-  font-weight:800;font-size:.84rem;display:inline-flex;align-items:center;gap:8px;
+  background: #063B00;color: #fff;border:1px solid #06D001;padding:12px 26px;border-radius:30px;
+  font-weight:800;font-size:.85rem;display:inline-flex;align-items:center;gap:8px;
   transition:var(--t);cursor:pointer;
-  box-shadow: 0 4px 12px rgba(6, 59, 0, 0.25);
+  box-shadow: 0 4px 14px rgba(6, 59, 0, 0.25);
 }
-.btn-mail:hover{background: #06D001; color: #031204; transform:translateY(-2px);box-shadow:0 6px 18px rgba(6, 208, 1, .4)}
+.btn-mail:hover{background: #06D001; color: #031204; transform:translateY(-2px);box-shadow:0 6px 20px rgba(6, 208, 1, .4)}
 
-/* OFFICE AND LOCATION */
-.cs{background:rgba(2, 14, 5, 0.95);border-top:1px solid var(--bd)}
-.cg{display:grid;grid-template-columns:1fr 1.25fr;gap:24px}
+/* OFFICE AND LOCATION - #AAFFC7 GRADIENT + GLASSMORPHISM UI/UX */
+.cs{
+  background: linear-gradient(135deg, #AAFFC7 0%, #B9FFD2 45%, #CEFFE0 100%) !important;
+  color: #0A261D;
+  position: relative;
+  overflow: hidden;
+  border-block: 1px solid rgba(15, 48, 64, 0.15);
+}
+.cs::before{
+  content:'';
+  position: absolute; inset:0; pointer-events: none;
+  background:
+    radial-gradient(550px 350px at 15% 20%, rgba(255, 255, 255, 0.75), transparent),
+    radial-gradient(650px 400px at 85% 80%, rgba(42, 124, 19, 0.15), transparent);
+}
+.cs .sh small{
+  background: #0F3040;
+  color: #AAFFC7;
+  border: 1px solid #2A7C13;
+}
+.cs .sh h2{
+  color: #092219;
+  font-weight: 800;
+}
+.cs .sh p{
+  color: #174233;
+  font-weight: 600;
+}
+
+.cg{
+  display:grid;
+  grid-template-columns:1.05fr 1.25fr;
+  gap:28px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Glassmorphism Info Box */
 .ci-box{
-  background:var(--card);
-  border:1px solid var(--bd);
-  border-radius:18px;
-  padding:26px 22px;
-  display:flex;flex-direction:column;gap:18px
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  border-radius: 24px;
+  padding: 30px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 20px 45px rgba(10, 40, 25, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.9);
 }
-.cr{display:flex;gap:14px;align-items:flex-start}
+.cr{display:flex;gap:16px;align-items:flex-start}
 .cr i{
-  width:42px;height:42px;flex:none;border-radius:10px;
-  background:rgba(6, 208, 1, 0.12);border:1px solid var(--bd);
-  display:grid;place-items:center;color:var(--g);font-size:1.1rem;
+  width:46px;height:46px;flex:none;border-radius:14px;
+  background: #0F3040;
+  border: 1.5px solid #2A7C13;
+  display:grid;place-items:center;color:#AAFFC7;font-size:1.2rem;
+  box-shadow: 0 4px 12px rgba(15, 48, 64, 0.2);
 }
-.cr h5{font-size:.74rem;color:var(--mut);font-weight:700;text-transform:uppercase;letter-spacing:.5px}
-.cr p,.cr a{font-weight:600;font-size:.85rem;text-decoration:none;line-height:1.4}
-.cr a:hover{color:var(--g)}
+.cr h5{
+  font-size:.76rem;color:#1e4d3d;font-weight:800;text-transform:uppercase;letter-spacing:.6px;margin-bottom:2px
+}
+.cr p,.cr a{font-weight:700;font-size:.88rem;color:#072118;text-decoration:none;line-height:1.45}
+.cr a:hover{color:#2A7C13}
 
 .open{
-  display:inline-block;margin-top:4px;font-size:.7rem;
-  font-weight:700;padding:2px 9px;border-radius:16px;
+  display:inline-block;margin-top:6px;font-size:.72rem;
+  font-weight:800;padding:3px 12px;border-radius:20px;
 }
-.open.y{background:rgba(6, 208, 1, 0.16);color:var(--g);border:1px solid var(--g)}
-.open.n{background:rgba(239, 68, 68, 0.16);color:#fca5a5;border:1px solid rgba(239, 68, 68, 0.4)}
+.open.y{background:#dcfce7;color:#15803d;border:1.5px solid #86efac}
+.open.n{background:#fee2e2;color:#b91c1c;border:1.5px solid #fca5a5}
 
-.gps-card{
-  background:rgba(6, 59, 0, 0.45);
-  border:1px solid var(--olive);
-  border-radius:12px;
-  padding:12px 14px;
-  display:flex;flex-direction:column;gap:8px;margin-top:4px;
+.address-actions{
+  display:flex;gap:8px;margin-top:6px;flex-wrap:wrap;
 }
-.gps-header{display:flex;justify-content:space-between;align-items:center}
-.gps-header b{font-size:.78rem;color:var(--g);display:flex;align-items:center;gap:6px}
+.mini-btn{
+  background: rgba(15, 48, 64, 0.08);
+  border: 1px solid rgba(15, 48, 64, 0.2);
+  color: #0F3040;
+  font-size: .72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: var(--t);
+  cursor: pointer;
+}
+.mini-btn:hover{background:#0F3040;color:#fff}
+
+/* GPS Glassmorphism Card */
+.gps-card{
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(15, 48, 64, 0.16);
+  border-radius: 16px;
+  padding: 14px 16px;
+  display:flex;flex-direction:column;gap:10px;margin-top:4px;
+}
+.gps-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.gps-header b{font-size:.80rem;color:#0F3040;display:flex;align-items:center;gap:7px}
 .gps-btn{
-  background:var(--olive);color:#031204;border:0;
-  padding:6px 12px;border-radius:20px;font-size:.74rem;font-weight:700;
+  background:#0F3040;color:#AAFFC7;border:1px solid #2A7C13;
+  padding:7px 15px;border-radius:20px;font-size:.76rem;font-weight:800;
   display:inline-flex;align-items:center;gap:6px;transition:var(--t)
 }
-.gps-btn:hover{background:var(--g);color:#031204}
-.gps-info{font-size:.74rem;color:var(--mut)}
+.gps-btn:hover{background:#2A7C13;color:#fff;transform:translateY(-1px)}
+.gps-info{font-size:.76rem;color:#1c4b3a;font-weight:600;line-height:1.4}
 
-/* 4. SIMPLE LEAFLET MAP LOCATION DISPLAY (ZERO API KEY REQUIRED) */
+/* GOOGLE MAPS DISPLAY CONTAINER */
 .mapw{
-  border:1px solid var(--bd);border-radius:18px;overflow:hidden;
-  height:480px;display:flex;flex-direction:column;background:var(--card);position:relative;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  overflow: hidden;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 20px 45px rgba(10, 40, 25, 0.15);
+  position: relative;
 }
 .map-top-bar{
-  padding:12px 18px;background:#063B00;
-  font-size:.78rem;color:#fff;font-weight:700;
-  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;
-  border-bottom:2px solid #90B800;
+  padding:14px 20px;background:#0F3040;
+  font-size:.80rem;color:#fff;font-weight:700;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
+  border-bottom:2px solid #2A7C13;z-index:2;
 }
-.map-top-bar span{display:inline-flex;align-items:center;gap:7px}
-.map-top-bar span i{color:var(--g)}
+.map-top-bar span{display:inline-flex;align-items:center;gap:8px}
+.map-top-bar span i{color:#AAFFC7}
 .map-top-bar a{
-  background: rgba(144, 184, 0, 0.25);
-  border: 1px solid var(--olive);
+  background: rgba(170, 255, 199, 0.18);
+  border: 1px solid #AAFFC7;
   color:#fff;text-decoration:none;
-  display:inline-flex;align-items:center;gap:6px;
-  font-size:.74rem;padding:4px 10px;border-radius:20px;
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:.75rem;padding:5px 13px;border-radius:20px;
   transition: var(--t);
+  font-weight:700;
 }
-.map-top-bar a:hover{background:var(--g);color:#031204;border-color:var(--g)}
-#map{flex:1;z-index:1;min-height:300px}
+.map-top-bar a:hover{background:#AAFFC7;color:#0F3040}
+.gmap-frame{
+  width:100%;
+  flex:1;
+  border:0;
+  min-height:400px;
+  background:#dbece1;
+}
+
+/* WIDER RESPONSIVE MODAL */
+.ov{
+  position:fixed;inset:0;z-index:2200;
+  background:rgba(3, 18, 4, 0.88);
+  backdrop-filter:blur(14px);
+  display:flex;align-items:center;justify-content:center;
+  padding:20px;opacity:0;visibility:hidden;transition:.3s
+}
+.ov.on{opacity:1;visibility:visible}
+.md{
+  background:var(--modal-bg);
+  color:var(--modal-text);
+  border:2px solid #90B800;
+  border-radius:24px;
+  width:94vw;
+  max-width:1320px;
+  height:88vh;
+  max-height:860px;
+  display:flex;flex-direction:column;overflow:hidden;
+  transform:translateY(24px) scale(.98);transition:.35s;
+  box-shadow:0 30px 80px rgba(0,0,0,0.65);
+}
+.ov.on .md{transform:none}
+
+.mh{
+  padding:14px 24px;
+  background:#063B00;
+  color:#fff;
+  border-bottom:2px solid #90B800;
+  display:flex;justify-content:space-between;align-items:center;gap:14px
+}
+.mh h3{font-size:1.15rem;line-height:1.2;color:#fff;font-weight:800}
+.mh small{color:var(--g);font-size:.76rem;font-weight:700}
+.mh .ci{
+  width:42px;height:42px;font-size:1.15rem;
+  background:#90B800;color:#063B00;border:1.5px solid #fff
+}
+.x{
+  width:36px;height:36px;flex:none;border-radius:50%;
+  background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);
+  font-size:1.3rem;color:#fff;transition:var(--t);
+  display:grid;place-items:center;
+}
+.x:hover{background:#ef4444;border-color:#ef4444;color:#fff}
+
+.mb{flex:1;display:grid;grid-template-columns:260px 1fr;min-height:0}
+.side{
+  background:rgba(215, 227, 180, 0.75);
+  border-right:1px solid var(--modal-bd);
+  padding:16px 12px;overflow-y:auto;display:flex;flex-direction:column;gap:8px
+}
+.si{
+  display:flex;align-items:center;gap:10px;
+  padding:10px 12px;border-radius:12px;
+  background:rgba(255,255,255,0.75);
+  border:1px solid rgba(6, 59, 0, 0.15);
+  color:#063B00;font-size:.82rem;font-weight:700;
+  text-align:left;width:100%;transition:var(--t);
+}
+.si i{width:20px;text-align:center;color:#063B00}
+.si:hover{background:#fff;border-color:#90B800;color:#000}
+.si.act{background:#063B00;color:#fff;border-color:#063B00}
+.si.act i{color:var(--g)}
+.si b{margin-left:auto;background:rgba(6, 59, 0, 0.12);font-size:.70rem;padding:2px 7px;border-radius:10px;color:inherit}
+.si.act b{background:rgba(255,255,255,0.25);color:#fff}
+
+.main{display:flex;flex-direction:column;min-height:0;min-width:0;background:var(--modal-bg)}
+.pv{
+  flex:1;overflow-y:auto;padding:26px 32px;
+  display:grid;grid-template-columns:360px 1fr;gap:32px;
+  align-content:start;color:var(--modal-text);
+}
+.pimg{position:sticky;top:0;align-self:start}
+.pimg img{
+  width:100%;height:320px;object-fit:cover;
+  border-radius:18px;border:2px solid #90B800;background:#d8e4b8;
+  box-shadow:0 12px 28px rgba(0,0,0,0.12);
+}
+.pb{
+  position:absolute;top:12px;left:12px;
+  background:#063B00;border:1px solid var(--g);
+  color:#fff;font-size:.70rem;font-weight:800;padding:4px 12px;border-radius:18px
+}
+.sku{color:#063B00;font-size:.78rem;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+.pn{font-size:1.45rem;line-height:1.25;margin:4px 0 8px;color:#062b02;font-weight:800}
+.pi{color:var(--modal-mut);font-size:.86rem;margin-bottom:18px;line-height:1.55}
+
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-bottom:20px}
+.sp{
+  background:rgba(255,255,255,0.85);
+  border:1px solid rgba(6, 59, 0, 0.16);
+  border-radius:12px;padding:10px 12px;display:flex;gap:10px;align-items:center;
+}
+.sp i{
+  width:32px;height:32px;flex:none;border-radius:10px;
+  background:rgba(6, 59, 0, 0.1);display:grid;place-items:center;
+  color:#063B00;font-size:.9rem
+}
+.sp small{display:block;font-size:.68rem;color:var(--modal-mut);font-weight:800;text-transform:uppercase}
+.sp span{font-size:.82rem;font-weight:700;line-height:1.3;color:#062b02;display:block}
+
+.act-bar{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+  background:rgba(255,255,255,0.92);
+  border:1.5px solid #90B800;border-radius:14px;padding:12px 18px;
+}
+.act-bar small{color:var(--modal-mut);display:block;font-size:.76rem;font-weight:700}
+.act-bar b{color:#063B00;font-size:1.05rem;font-family:'Space Grotesk',sans-serif}
+.modal-actions{display:flex;gap:10px;align-items:center}
+.wa{
+  background:#063B00;color:#fff;text-decoration:none;
+  padding:9px 18px;border-radius:30px;font-weight:800;font-size:.82rem;
+  display:inline-flex;align-items:center;gap:7px;transition:var(--t);
+  border:1px solid #06D001
+}
+.wa:hover{background:#06D001;color:#031204;transform:translateY(-1px)}
+.btn-rfq-fill{
+  background:#90B800;color:#031204;border:1px solid #063B00;
+  padding:9px 16px;border-radius:30px;font-weight:800;font-size:.82rem;
+  display:inline-flex;align-items:center;gap:7px;transition:var(--t)
+}
+.btn-rfq-fill:hover{background:#063B00;color:#fff}
+
+.del{
+  background:none;border:1px solid #dc2626;color:#dc2626;
+  border-radius:20px;padding:6px 14px;font-size:.74rem;margin-top:12px;font-weight:800
+}
+.mf{
+  padding:12px 24px;
+  background:#063B00;
+  color:#fff;
+  border-top:1px solid var(--olive);
+  display:flex;justify-content:space-between;align-items:center;gap:10px
+}
+.nb{
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(255,255,255,.15);border:1px solid var(--olive);
+  color:#fff;transition:var(--t);display:grid;place-items:center;font-size:.88rem;
+}
+.nb:hover{background:var(--g);color:#031204;border-color:var(--g)}
+.mf>div{display:flex;gap:8px;align-items:center}
+.pills{gap:6px!important}
+.pill{width:8px;height:8px;border-radius:8px;background:rgba(255,255,255,.3);border:0;padding:0;transition:var(--t)}
+.pill.act{width:26px;background:var(--g)}
+.cnt{font-size:.80rem;color:var(--mut)}
 
 /* ADMIN MODALS */
-.lg{max-width:380px;height:auto}
-.lgb{padding:22px;display:flex;flex-direction:column;gap:10px}
+.lg{max-width:400px;height:auto}
+.lgb{padding:24px;display:flex;flex-direction:column;gap:12px}
 .lgb .in{
   background:rgba(6, 59, 0, 0.5);border:1px solid var(--bd);
-  border-radius:10px;padding:9px 12px;color:#fff;font-size:.84rem;width:100%;
+  border-radius:10px;padding:10px 14px;color:#fff;font-size:.86rem;width:100%;
 }
 .err{color:#fca5a5;font-size:.76rem;min-height:1.2em}
 .hint{color:var(--sub);font-size:.72rem}
-.ad{max-width:480px}
-.ad .lgb{max-height:68vh;overflow-y:auto}
+.ad{max-width:520px}
+.ad .lgb{max-height:70vh;overflow-y:auto}
 .toast{
   position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);
-  background:#063B00;border:1px solid var(--g);color:#fff;
-  padding:10px 20px;border-radius:30px;z-index:3000;
-  font-weight:700;font-size:.82rem;transition:.35s;max-width:90vw;
-  box-shadow:0 8px 24px rgba(0,0,0,.6);
+  background:#0F3040;border:1.5px solid var(--g);color:#fff;
+  padding:12px 24px;border-radius:30px;z-index:3000;
+  font-weight:700;font-size:.84rem;transition:.35s;max-width:90vw;
+  box-shadow:0 10px 28px rgba(0,0,0,.6);
 }
 .toast.on{transform:translate(-50%,0)}
 
-/* 3. FOOTER - BACKGROUND COLOR #90B800 WITH CONTRASTING #063B00 DEEP FOREST TEXT */
+/* FOOTER (#0F3040) */
 footer{
   position:relative;z-index:2;
-  background: var(--olive) !important;
-  color: #063B00 !important;
-  border-top:2px solid #063B00;
-  padding:50px 7% 24px;
+  background: var(--footer-bg) !important;
+  color: #fff !important;
+  border-top: 3px solid #06D001;
+  padding:55px 7% 24px;
 }
-.fg{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:28px;margin-bottom:34px}
-.fg p{color: #1a3814; font-size:.82rem;margin:10px 0; font-weight:600}
-.fh{font-size:.95rem;margin-bottom:12px;color: #063B00; font-weight:800; text-transform: uppercase; letter-spacing: .5px}
-.fl{list-style:none;display:flex;flex-direction:column;gap:5px}
+.fg{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:32px;margin-bottom:36px}
+.fg p{color: #c0d8e4; font-size:.84rem;margin:10px 0; font-weight:500; line-height: 1.6}
+.fh{font-size:.98rem;margin-bottom:14px;color: #ffffff; font-weight:800; text-transform: uppercase; letter-spacing: .5px}
+.fl{list-style:none;display:flex;flex-direction:column;gap:7px}
 .fl button,.fl a{
-  background:none;border:0;color: #063B00; font-size:.80rem;
-  font-weight: 700; text-align:left;padding:4px 0;text-decoration:none;
-  display:flex;gap:7px;align-items:center;
+  background:none;border:0;color: #d1e4ed; font-size:.82rem;
+  font-weight: 600; text-align:left;padding:3px 0;text-decoration:none;
+  display:flex;gap:8px;align-items:center;
   font-family:inherit;cursor:pointer;transition:var(--t)
 }
-.fl button:hover,.fl a:hover{color: #ffffff; text-shadow: 0 1px 2px rgba(0,0,0,0.3)}
-.fl i{color: #063B00; font-size:.74rem;width:12px}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.fl button:hover,.fl a:hover{color: #2dd4bf; transform: translateX(3px)}
+.fl i{color: #06D001; font-size:.74rem;width:12px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
 .chips span{
-  background: rgba(6, 59, 0, 0.12);
-  border: 1px solid rgba(6, 59, 0, 0.3);
-  font-size:.70rem;color: #063B00; font-weight: 800;
-  padding:3px 8px;border-radius:5px
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(6, 208, 1, 0.4);
+  font-size:.72rem;color: #ffffff; font-weight: 700;
+  padding:4px 10px;border-radius:6px
 }
 .fb{
-  border-top: 1px solid rgba(6, 59, 0, 0.25);
-  padding-top:18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top:20px;
   display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
-  color: #173811; font-size:.78rem; font-weight: 700;
+  color: #a0c2d3; font-size:.80rem; font-weight: 600;
 }
 .top{
-  background: #063B00;
-  border: 1px solid #063B00;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #06D001;
   color: #ffffff;
-  padding:6px 14px;border-radius:24px;font-weight:700;font-size:.74rem;
+  padding:6px 16px;border-radius:24px;font-weight:700;font-size:.76rem;
   transition: var(--t);
 }
-.top:hover{background: #06D001; color: #063B00}
+.top:hover{background: #06D001; color: #0F3040; border-color: #06D001}
 .fwa{
   position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));right:20px;
-  background:#25d366;color:#021004;width:52px;height:52px;border-radius:50%;
-  display:grid;place-items:center;font-size:1.6rem;z-index:999;
-  text-decoration:none;box-shadow:0 8px 26px rgba(37,211,102,.5);transition:var(--t)
+  background:#25d366;color:#021004;width:54px;height:54px;border-radius:50%;
+  display:grid;place-items:center;font-size:1.7rem;z-index:999;
+  text-decoration:none;box-shadow:0 8px 28px rgba(37,211,102,.5);transition:var(--t)
 }
 .fwa:hover{transform:scale(1.08)}
 
@@ -717,50 +811,54 @@ footer{
 .drawer{
   position:fixed;inset:0;z-index:1500;
   background:rgba(3, 18, 4, 0.98);
-  display:flex;flex-direction:column;padding:80px 8% 30px;gap:8px;
+  display:flex;flex-direction:column;padding:85px 8% 30px;gap:10px;
   transform:translateX(100%);transition:.35s;visibility:hidden
 }
 .drawer.on{transform:none;visibility:visible}
 .drawer a{padding:14px 4px;font-size:1.05rem;font-weight:700;text-decoration:none;border-bottom:1px solid var(--bd)}
 
-/* RESPONSIVE */
-@media(max-width:1024px){
-  .pv{grid-template-columns:1fr}
-  .pimg{position:static}.pimg img{height:220px}
+/* RESPONSIVE DESIGN */
+@media(max-width:1100px){
+  .pv{grid-template-columns:300px 1fr;gap:20px;padding:20px}
+  .pimg img{height:260px}
+  .mb{grid-template-columns:220px 1fr}
+}
+@media(max-width:920px){
+  .cg{grid-template-columns:1fr}
   .fg{grid-template-columns:1fr 1fr}
-  .mb{grid-template-columns:190px 1fr}
+  .rfq-grid{grid-template-columns:1fr}
 }
 @media(max-width:820px){
   nav,.hd-cta{display:none}
   .burger{display:grid;place-items:center}
-  .cg,.fg{grid-template-columns:1fr}
-  .rfq-grid{grid-template-columns:1fr}
-  .mapw{height:360px}
-  section{padding:48px 5%}
+  .fg{grid-template-columns:1fr}
+  .mapw{height:400px}
+  section{padding:50px 5%}
   .hero{height:72vh;min-height:480px}
   .harr{display:none}.dots{bottom:20px}
   .ov{padding:0}
-  .md{height:100%;max-height:none;border-radius:0;border:0}
+  .md{width:100vw;height:100%;max-height:none;border-radius:0;border:0}
   .mb{grid-template-columns:1fr;grid-template-rows:auto 1fr}
-  .side{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--modal-bd);padding:8px}
+  .side{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--modal-bd);padding:10px}
   .si{width:auto;flex:none}.si b{display:none}
-  .pv{padding:14px}
+  .pv{grid-template-columns:1fr;padding:16px}
+  .pimg{position:static}.pimg img{height:220px}
   .sg{grid-template-columns:1fr}
-  .pn{font-size:1.15rem}
+  .pn{font-size:1.2rem}
   .act-bar{flex-direction:column;align-items:stretch;text-align:center}
   .wa,.btn-rfq-fill{justify-content:center}
-  .mh{padding:10px 14px}
-  .mf{padding:8px 14px;padding-bottom:calc(8px + env(safe-area-inset-bottom,0px))}
+  .mh{padding:12px 16px}
+  .mf{padding:10px 16px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px))}
   .pills{display:none!important}
   .topbar span.lic{display:none}
-  .stats{grid-template-columns:1fr 1fr;gap:12px;padding:18px 5%}
+  .stats{grid-template-columns:1fr 1fr;gap:14px;padding:18px 5%}
 }
 </style>
 </head>
 <body>
 <div class="bgfx"></div>
 
-<!-- Top Bar -->
+<!-- Top Bar (#2A7C13) -->
 <div class="topbar">
   <div class="topbar-left">
     <span class="lic"><i class="fa-solid fa-circle-check"></i> Licensed UAE Electronics Entity</span>
@@ -772,7 +870,7 @@ footer{
 <!-- Header -->
 <header>
   <a href="#home" class="logo" aria-label="Shuaa Al Madar Home">
-    <img src="img/logo.png" alt="SHUAA AL MADAR" class="brand-logo-img" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'42\' height=\'42\' viewBox=\'0 0 42 42\'><rect width=\'42\' height=\'42\' fill=\'%23063B00\'/><text x=\'21\' y=\'26\' fill=\'%2306D001\' font-size=\'14\' font-weight=\'bold\' text-anchor=\'middle\'>SAM</text></svg>';">
+    <img src="img/logo.png" alt="SHUAA AL MADAR" class="brand-logo-img" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'44\' height=\'44\' viewBox=\'0 0 44 44\'><rect width=\'44\' height=\'44\' rx=\'8\' fill=\'%23063B00\'/><text x=\'22\' y=\'27\' fill=\'%2306D001\' font-size=\'15\' font-weight=\'bold\' text-anchor=\'middle\'>SAM</text></svg>';">
     <div>
       <div class="brand-t">SHUAA AL MADAR</div>
       <div class="brand-s">Electronics Trading LLC</div>
@@ -819,7 +917,7 @@ footer{
   <div class="st"><i class="fa-solid fa-truck-fast"></i><div><b>GCC &amp; Global</b><span>Air &amp; Sea FOB Dispatch</span></div></div>
 </div>
 
-<!-- 1. LICENSED TRADE ACTIVITIES - BACKGROUND #C2D099 -->
+<!-- LICENSED TRADE ACTIVITIES (#C2D099) -->
 <section id="activities">
   <div class="sh">
     <small>Verified Dubai Commercial License</small>
@@ -829,11 +927,11 @@ footer{
   <div class="grid" id="actGrid"></div>
 </section>
 
-<!-- Product Details Modal (Light background #E6EEC9 with Dark Forest Text) -->
+<!-- Product Details Modal (Ultra-Wide Responsive Layout) -->
 <div class="ov" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
   <div class="md">
     <div class="mh">
-      <div style="display:flex;gap:10px;align-items:center;min-width:0">
+      <div style="display:flex;gap:12px;align-items:center;min-width:0">
         <div class="ci" id="mIcon"></div>
         <div>
           <h3 id="mTitle"></h3>
@@ -859,12 +957,12 @@ footer{
   </div>
 </div>
 
-<!-- 2. ENHANCED WHOLESALE RFQ SECTION - BACKGROUND #EEEEEE -->
+<!-- REQUEST FOR QUOTATION (RFQ) (#059212) -->
 <section id="rfqSection">
   <div class="sh">
     <small>Direct B2B Procurement Desk</small>
     <h2>Request For Quotation (RFQ)</h2>
-    <p>Submit your quantity and delivery requirements. Receive official FOB Dubai or CIF pricing, inventory packing lists, and export paperwork promptly.</p>
+    <p>Submit your volume and delivery requirements. Receive official FOB Dubai or CIF pricing, inventory packing lists, and export paperwork promptly.</p>
   </div>
   <div class="rfq-container">
     <div class="rfq-header-strip">
@@ -940,12 +1038,12 @@ footer{
   </div>
 </section>
 
-<!-- OFFICE AND LOCATION -->
+<!-- OFFICE AND LOCATION (#AAFFC7 GRADIENT WITH GLASSMORPHISM UI) -->
 <section class="cs" id="contact">
   <div class="sh">
     <small>Deira Wholesale Hub</small>
     <h2>Office and Location</h2>
-    <p>Situated in the heart of Baniyas commercial district, offering swift cargo distribution, inspection facilities, and direct order collection.</p>
+    <p>Situated in the heart of the Baniyas commercial district, offering swift cargo distribution, inspection facilities, and direct order collection.</p>
   </div>
   <div class="cg">
     <div class="ci-box">
@@ -953,7 +1051,11 @@ footer{
         <i class="fa-solid fa-building-circle-check"></i>
         <div>
           <h5>Dubai Trading Office</h5>
-          <p>Office No.: B 805, Baniyas Complex,<br>Deira, Dubai, United Arab Emirates</p>
+          <p id="officeAddressText">Office No.: B 805, Baniyas Complex,<br>Deira, Dubai, United Arab Emirates</p>
+          <div class="address-actions">
+            <button class="mini-btn" id="copyAddrBtn"><i class="fa-regular fa-copy"></i> Copy Address</button>
+            <a class="mini-btn" href="https://www.google.com/maps/search/?api=1&query=Office+No.+B+805,+Baniyas+Complex,+Deira,+Dubai,+United+Arab+Emirates" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Open Map</a>
+          </div>
         </div>
       </div>
       <div class="cr">
@@ -974,7 +1076,7 @@ footer{
         <i class="fa-solid fa-business-time"></i>
         <div>
           <h5>Office Working Hours</h5>
-          <p>Monday - Saturday: 9:00 AM - 8:00 PM<br><span style="color:var(--g);font-size:.78rem">Sunday: Wholesale appointments only</span></p>
+          <p>Monday - Saturday: 9:00 AM - 8:00 PM<br><span style="color:#0a5528;font-size:.78rem;font-weight:700">Sunday: Wholesale appointments only</span></p>
           <span class="open" id="openNow"></span>
         </div>
       </div>
@@ -985,17 +1087,24 @@ footer{
           <b><i class="fa-solid fa-location-crosshairs"></i> Live GPS Distance &amp; Route</b>
           <button class="gps-btn" id="findGpsBtn"><i class="fa-solid fa-compass"></i> Route to Office</button>
         </div>
-        <div class="gps-info" id="gpsStatus">Click "Route to Office" to detect your real GPS coordinates and measure direct distance to our Baniyas office.</div>
+        <div class="gps-info" id="gpsStatus">Click "Route to Office" to detect your current location and calculate direct turn-by-turn navigation.</div>
       </div>
     </div>
 
-    <!-- 4. SIMPLE LEAFLET MAP DISPLAY (ZERO API KEY REQUIRED) -->
+    <!-- GOOGLE MAPS DISPLAY CONTAINER WITH EXACT OFFICE NAME -->
     <div class="mapw">
       <div class="map-top-bar">
-        <span><i class="fa-solid fa-map-location-dot"></i> Baniyas Complex B 805, Deira, Dubai</span>
-        <a href="https://www.google.com/maps/dir/?api=1&destination=25.2684,55.3085" target="_blank" rel="noopener">Directions <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <span><i class="fa-solid fa-map-location-dot"></i> Office No.: B 805, Baniyas Complex, Deira, Dubai</span>
+        <a id="gmapLink" href="https://www.google.com/maps/dir/?api=1&destination=Office+No.+B+805,+Baniyas+Complex,+Deira,+Dubai,+United+Arab+Emirates" target="_blank" rel="noopener">Open in Google Maps <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
       </div>
-      <div id="map"></div>
+      <iframe 
+        id="gmapFrame"
+        class="gmap-frame"
+        title="Office No.: B 805, Baniyas Complex, Deira, Dubai, United Arab Emirates - Shuaa Al Madar Electronics Trading"
+        src="https://maps.google.com/maps?q=Office%20No.%3A%20B%20805%2C%20Baniyas%20Complex%2C%20Deira%2C%20Dubai%2C%20United%20Arab%20Emirates&t=&z=16&ie=UTF8&iwloc=&output=embed"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
     </div>
   </div>
 </section>
@@ -1012,7 +1121,7 @@ footer{
       <input class="in" id="lgPass" type="password" placeholder="Password" autocomplete="current-password">
       <div class="err" id="lgErr" role="alert"></div>
       <button class="btn-mail" id="lgGo" style="justify-content:center"><i class="fa-solid fa-right-to-bracket"></i> Sign in</button>
-      <div class="hint">Front-end demo login (admin / admin123). Connect to back-end authentication before live production.</div>
+      <div class="hint">Front-end demo login (admin / admin123). Connect to backend authentication before live production.</div>
     </div>
   </div>
 </div>
@@ -1033,18 +1142,18 @@ footer{
       <textarea class="in" id="adSpecs" rows="3" placeholder="Specs, one per line: Spec Name: Spec Value"></textarea>
       <div class="err" id="adErr" role="alert"></div>
       <button class="btn-mail" id="adSave" style="justify-content:center"><i class="fa-solid fa-plus"></i> Save to Inventory</button>
-      <button class="btn-mail" id="adOut" style="background:#063B00;color:#fff;border:1px solid var(--olive);justify-content:center"><i class="fa-solid fa-right-from-bracket"></i> Log out</button>
+      <button class="btn-mail" id="adOut" style="background:#0F3040;color:#fff;border:1px solid #2A7C13;justify-content:center"><i class="fa-solid fa-right-from-bracket"></i> Log out</button>
     </div>
   </div>
 </div>
 
-<!-- 3. FOOTER - BACKGROUND COLOR #90B800 WITH #063B00 TEXT -->
+<!-- FOOTER (#0F3040) -->
 <footer>
   <div class="fg">
     <div>
-      <div class="brand-t" style="font-size:1.15rem;color:#063B00">SHUAA AL MADAR</div>
-      <div class="brand-s" style="margin-bottom:8px;color:#063B00">Electronics Trading LLC</div>
-      <p>Wholesale distribution of certified mobile communications, home appliances, electrical parts, enterprise computing, and licensed digital software suites.</p>
+      <div class="brand-t" style="font-size:1.2rem;color:#ffffff">SHUAA AL MADAR</div>
+      <div class="brand-s" style="margin-bottom:8px;color:#06D001">Electronics Trading LLC</div>
+      <p>Wholesale distribution of certified mobile communications, home appliances, electrical spare parts, enterprise computing, and licensed digital software suites.</p>
       <div class="chips">
         <span><i class="fa-solid fa-shield"></i> TDRA Approved</span>
         <span><i class="fa-solid fa-certificate"></i> ESMA Certified</span>
@@ -1058,7 +1167,7 @@ footer{
     <div>
       <h4 class="fh">Quick Contacts</h4>
       <ul class="fl">
-        <li><a href="#contact"><i class="fa-solid fa-location-dot"></i> B 805, Baniyas Complex, Deira</a></li>
+        <li><a href="#contact"><i class="fa-solid fa-location-dot"></i> Office B 805, Baniyas Complex</a></li>
         <li><a href="tel:+97145663256"><i class="fa-solid fa-phone"></i> +971 4 566 3256</a></li>
         <li><a href="mailto:shuaaalmadar@gmail.com"><i class="fa-solid fa-envelope"></i> shuaaalmadar@gmail.com</a></li>
         <li><a href="#rfqSection"><i class="fa-solid fa-file-lines"></i> Wholesale RFQ Portal</a></li>
@@ -1066,13 +1175,13 @@ footer{
     </div>
     <div>
       <h4 class="fh">Trade Logistics</h4>
-      <p style="margin:0 0 10px;font-size:.78rem">Bulk shipments handled daily through Deira Central &amp; Jebel Ali Free Zone.</p>
-      <a href="#rfqSection" class="btn-mail" style="font-size:.74rem;padding:8px 14px;text-decoration:none"><i class="fa-solid fa-paper-plane"></i> Submit Quotation</a>
+      <p style="margin:0 0 12px;font-size:.80rem">Bulk shipments handled daily through Deira Central Hub &amp; Jebel Ali Free Zone.</p>
+      <a href="#rfqSection" class="btn-mail" style="font-size:.76rem;padding:9px 16px;text-decoration:none;display:inline-flex"><i class="fa-solid fa-paper-plane"></i> Submit Quotation</a>
     </div>
   </div>
   <div class="fb">
     <div>&copy; 2024-<span id="yr"></span> <strong>SHUAA AL MADAR ELECTRONICS TRADING LLC</strong>. Dubai, UAE.</div>
-    <button class="top" id="toTop"><i class="fa-solid fa-arrow-up"></i> Top</button>
+    <button class="top" id="toTop"><i class="fa-solid fa-arrow-up"></i> Back to Top</button>
   </div>
 </footer>
 
@@ -1083,15 +1192,13 @@ footer{
 
 <div class="toast" id="toast" role="status"></div>
 
-<!-- Leaflet Library (Zero API key required) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
-
 <script>
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const ADMIN={user:'admin',pass:'admin123'};
 const PHONE='97145663256';
-const DEST_COORDS=[25.2684, 55.3085]; // Baniyas Complex, Deira, Dubai
+const EXACT_LOCATION_QUERY = "Office No.: B 805, Baniyas Complex, Deira, Dubai, United Arab Emirates";
+const DEST_COORDS=[25.2684, 55.3085]; // Baniyas Complex coordinates
 const FALLBACK='data:image/svg+xml;utf8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400"><rect width="600" height="400" fill="#063B00"/><text x="300" y="210" fill="#06D001" font-size="24" font-weight="bold" text-anchor="middle" font-family="sans-serif">SHUAA AL MADAR</text></svg>');
 const U=id=>`https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=900&q=80`;
 const S=(a,b,c)=>[a,b,c];
@@ -1181,7 +1288,6 @@ software:{
 ]}
 };
 
-// Convert to objects & load custom items
 const KEYS=Object.keys(DB);
 KEYS.forEach(k=>DB[k].p=DB[k].p.map(a=>({sku:a[0],title:a[1],badge:a[2],img:a[3],moq:a[4],intro:a[5],specs:a[6]})));
 const store={
@@ -1197,7 +1303,6 @@ function loadCustom(){
 }
 loadCustom();
 
-/* Toast & Modal helpers */
 let tt;
 function toast(m){
   const t=$('#toast');t.textContent=m;t.classList.add('on');
@@ -1213,7 +1318,7 @@ const HERO=[
   ['1550751827-4bd374c3f58b','fa-network-wired','Corporate IT Infrastructure','Computers & <em>Communication Systems</em>','Commercial laptops, enterprise workstations, network communication infrastructure, and genuine digital operating suites.','computers','Browse Computing'],
   ['1556911220-e15b29be8c8f','fa-snowflake','Certified White Goods','Refrigerators & <em>Washing Machines</em>','Export-grade energy-efficient refrigerators, inverter laundry systems, and household electrical units with manufacturer backing.','appliances','View Appliances'],
   ['1518770660439-4636190af475','fa-microchip','OEM Replacement Parts','Electrical & <em>Electronic Spare Parts</em>','Original replacement motherboards, inverter compressor components, sensors, and industrial electronic accessories.','spare-parts','Search Spare Parts'],
-  ['1512453979798-5ea266f8880c','fa-location-dot','Heart of Deira District','Baniyas Complex, <em>Deira Dubai</em>','Office No. B 805, Baniyas Complex. Offering centralized order batching, direct container logistics, and rapid GCC transport.',null,'Our Office']
+  ['1512453979798-5ea266f8880c','fa-location-dot','Heart of Deira District','Baniyas Complex, <em>Deira Dubai</em>','Office No.: B 805, Baniyas Complex. Centralized order batching, direct container logistics, and rapid GCC transport.',null,'Our Office']
 ];
 
 $('#heroSlides').innerHTML=HERO.map((h,i)=>`
@@ -1247,7 +1352,7 @@ $('#hp').onclick=()=>{hero(hi-1);auto()};
 hd.forEach((d,i)=>d.onclick=()=>{hero(i);auto()});
 auto();
 
-/* Render static items into #activities and footer */
+/* Render items */
 function renderStatic(){
   $('#actGrid').innerHTML=KEYS.map(k=>{
     const item=DB[k];
@@ -1298,7 +1403,7 @@ function openModal(k,keepOpen){
   $('#mSub').textContent=`Verified Dubai Trading Activity: ${a.p.length} verified item${a.p.length>1?'s':''}`;
   
   $('#side').innerHTML=`
-    <div style="font-size:.68rem;font-weight:800;color:var(--modal-mut);padding:0 6px 4px;text-transform:uppercase">Trade Divisions</div>
+    <div style="font-size:.70rem;font-weight:800;color:var(--modal-mut);padding:0 8px 6px;text-transform:uppercase">Trade Divisions</div>
   `+KEYS.map(x=>`
     <button class="si${x===cat?' act':''}" data-open="${x}">
       <i class="fa-solid ${DB[x].i}"></i>
@@ -1488,6 +1593,18 @@ Sent via Shuaa Al Madar Trade Portal`);
   location.href=`mailto:shuaaalmadar@gmail.com?subject=${subj}&body=${body}`;
 };
 
+/* Copy Address Feature */
+const copyBtn = $('#copyAddrBtn');
+if(copyBtn){
+  copyBtn.onclick=()=>{
+    navigator.clipboard.writeText(EXACT_LOCATION_QUERY).then(()=>{
+      toast('Office address copied to clipboard');
+    }).catch(()=>{
+      toast('Office: ' + EXACT_LOCATION_QUERY);
+    });
+  };
+}
+
 /* Admin Logic */
 function syncAdminBtn(){
   const on=isAdmin();
@@ -1580,31 +1697,7 @@ const links=$$('nav a[href^="#"]');
   }
 });
 
-/* 4. SIMPLE LEAFLET MAP DISPLAY (ZERO API KEY) + OPTIONAL GPS */
-let mapInstance=null, userMarker=null, routeLine=null;
-
-function initMap(){
-  if(mapInstance || typeof L==='undefined') return;
-  
-  // Standard OpenStreetMap tiles (100% Free, NO API KEY REQUIRED)
-  mapInstance = L.map('map', {scrollWheelZoom:false, tap:false}).setView(DEST_COORDS, 16);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    maxZoom: 19
-  }).addTo(mapInstance);
-
-  const officeIcon = L.divIcon({
-    className:'',
-    html:`<div style="background:#063B00;border:2px solid #06D001;color:#fff;border-radius:50%;width:34px;height:34px;display:grid;place-items:center;box-shadow:0 0 16px rgba(6,208,1,.8);font-size:16px"><i class="fa-solid fa-building"></i></div>`,
-    iconSize:[34,34],
-    iconAnchor:[17,17]
-  });
-
-  L.marker(DEST_COORDS, {icon:officeIcon}).addTo(mapInstance)
-    .bindPopup(`<b>SHUAA AL MADAR ELECTRONICS TRADING</b><br>Office No.: B 805, Baniyas Complex<br>Deira, Dubai, UAE<br><a href="tel:+97145663256">+971 4 566 3256</a>`)
-    .openPopup();
-}
-
+/* GOOGLE MAPS DISPLAY + LIVE GPS ROUTING */
 function calcDistance(lat1, lon1, lat2, lon2){
   const R=6371;
   const dLat=(lat2-lat1)*Math.PI/180;
@@ -1616,7 +1709,6 @@ function calcDistance(lat1, lon1, lat2, lon2){
   return (R*c).toFixed(1);
 }
 
-// GPS button click handler
 $('#findGpsBtn').onclick=()=>{
   const statusEl=$('#gpsStatus');
   if(!navigator.geolocation){
@@ -1630,38 +1722,20 @@ $('#findGpsBtn').onclick=()=>{
     const userLng=pos.coords.longitude;
     const dist=calcDistance(userLat, userLng, DEST_COORDS[0], DEST_COORDS[1]);
     
-    statusEl.innerHTML=`<b><i class="fa-solid fa-check-circle" style="color:var(--g)"></i> GPS Located!</b> Distance to Deira office: <b>${dist} km</b>. <a href="https://www.google.com/maps/dir/?api=1&origin=${userLat},${userLng}&destination=${DEST_COORDS[0]},${DEST_COORDS[1]}" target="_blank" rel="noopener" style="color:var(--g);text-decoration:underline;margin-left:6px">Start Turn-by-Turn Navigation</a>`;
+    // Update Google Maps embed with directions from user location to Deira office
+    const directionsEmbedUrl = `https://maps.google.com/maps?saddr=${userLat},${userLng}&daddr=${encodeURIComponent(EXACT_LOCATION_QUERY)}&output=embed`;
+    const gmapFrame = $('#gmapFrame');
+    if(gmapFrame) gmapFrame.src = directionsEmbedUrl;
 
-    initMap();
-    if(mapInstance){
-      if(userMarker) mapInstance.removeLayer(userMarker);
-      if(routeLine) mapInstance.removeLayer(routeLine);
+    const directNavUrl = `https://www.google.com/maps/dir/?api=1&origin=${userLat},${userLng}&destination=${encodeURIComponent(EXACT_LOCATION_QUERY)}`;
+    const gmapLink = $('#gmapLink');
+    if(gmapLink) gmapLink.href = directNavUrl;
 
-      const userIcon = L.divIcon({
-        className:'',
-        html:`<div style="background:#06D001;border:2px solid #063B00;width:20px;height:20px;border-radius:50%;box-shadow:0 0 12px #06D001"></div>`,
-        iconSize:[20,20],
-        iconAnchor:[10,10]
-      });
-
-      userMarker = L.marker([userLat, userLng], {icon:userIcon}).addTo(mapInstance).bindPopup(`<b>Your Location</b><br>${dist} km to Office`);
-      routeLine = L.polyline([[userLat, userLng], DEST_COORDS], {color:'#06D001', weight:3, dashArray:'6, 8'}).addTo(mapInstance);
-      mapInstance.fitBounds(L.latLngBounds([[userLat, userLng], DEST_COORDS]), {padding:[40, 40]});
-    }
+    statusEl.innerHTML=`<b><i class="fa-solid fa-check-circle" style="color:#15803d"></i> GPS Located!</b> Distance to Deira office: <b>${dist} km</b>. <a href="${directNavUrl}" target="_blank" rel="noopener" style="color:#0F3040;text-decoration:underline;margin-left:6px;font-weight:800">Start Turn-by-Turn Navigation</a>`;
   }, err=>{
-    statusEl.innerHTML=`<span style="color:#ef4444"><i class="fa-solid fa-triangle-exclamation"></i> GPS permission denied or unavailable. (${err.message})</span>`;
+    statusEl.innerHTML=`<span style="color:#b91c1c"><i class="fa-solid fa-triangle-exclamation"></i> GPS permission denied or unavailable. (${err.message})</span>`;
   }, {timeout:10000, enableHighAccuracy:true});
 };
-
-// Initialize map on scroll near contact section
-new IntersectionObserver((entries, observer)=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      initMap();
-      observer.disconnect();
-    }
-  });
-},{rootMargin:'250px'}).observe($('#contact'));
 
 syncAdminBtn();
 </script>
